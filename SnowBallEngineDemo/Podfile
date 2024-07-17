@@ -6,7 +6,7 @@ use_frameworks!
 
 target 'SnowBallEngineDemo' do
 
-	pod 'SnowBallEngine'
+	pod 'SnowBallEngine', '~> 0.2'
 	
 end
 
