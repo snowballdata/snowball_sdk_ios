@@ -1,10 +1,10 @@
 Pod::Spec.new do |spec|
 
   spec.name         = "SnowBallEngine"
-  spec.version      = "0.2"
+  spec.version      = "0.3"
   spec.homepage     = "https://thinkyeah.com"
   spec.license      = { :type => "MIT", :file => "LICENSE.txt" }
-  spec.author       = { "Liu Xudong" => "xudong_liu@thinkyeah.com" }
+  spec.author       = { "Snowball BI" => "snowballbi@thinkyeah.com" }
   spec.summary      = "SnowBall SDK 包含 SnowBallTracker 和 SnowBallPush"
   spec.description  = <<-DESC 
   SnowBall SDK 提供了事件打点、远程推送、买量安装归因和广告价值上报功能。
@@ -18,14 +18,14 @@ Pod::Spec.new do |spec|
   spec.source_files = [
     "SnowBallEngine/Extensions/*.{swift}",
     "SnowBallEngine/Log/*.{swift}",
-		"SnowBallEngine/*.{swift}",
-		"SnowBallEngine/Tracker/*.{swift}",
+    "SnowBallEngine/*.{swift}",
+    "SnowBallEngine/Tracker/*.{swift}",
     "SnowBallEngine/Push/*.{swift}"
   ]
 
   spec.static_framework = true
-  spec.dependency "CocoaLumberjack/Swift", '>= 3.8.2'
-	spec.dependency "Firebase/Analytics", '>= 10.29.0'
+  spec.dependency "CocoaLumberjack/Swift", '>= 3.8.5'
+  spec.dependency "Firebase/Analytics", '>= 10.29.0'
   spec.dependency "Firebase/Messaging", '>= 10.29.0'
   spec.swift_versions = ["5"]
 end
