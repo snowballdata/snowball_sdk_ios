@@ -7,19 +7,18 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		97E5DC38C64F0897AF339980 /* Pods_SnowBallEngineDemo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8CB1042AD1476B59031CA921 /* Pods_SnowBallEngineDemo.framework */; };
+		538B8ED00D62D1B8C34B5707 /* Pods_SnowBallEngineDemo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FCBC9B6170429A0D099C32FD /* Pods_SnowBallEngineDemo.framework */; };
 		E5118D082C3696CC0066A6C8 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5118D072C3696CC0066A6C8 /* AppDelegate.swift */; };
 		E5118D0A2C3696CC0066A6C8 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5118D092C3696CC0066A6C8 /* SceneDelegate.swift */; };
 		E5118D0C2C3696CC0066A6C8 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5118D0B2C3696CC0066A6C8 /* ViewController.swift */; };
 		E5118D0F2C3696CC0066A6C8 /* Base in Resources */ = {isa = PBXBuildFile; fileRef = E5118D0E2C3696CC0066A6C8 /* Base */; };
 		E5118D112C3696CE0066A6C8 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E5118D102C3696CE0066A6C8 /* Assets.xcassets */; };
 		E5118D142C3696CE0066A6C8 /* Base in Resources */ = {isa = PBXBuildFile; fileRef = E5118D132C3696CE0066A6C8 /* Base */; };
-		E5118D1C2C3794250066A6C8 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = E5118D1B2C3794250066A6C8 /* GoogleService-Info.plist */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		74797F61FC2C0193F3104021 /* Pods-SnowBallEngineDemo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SnowBallEngineDemo.release.xcconfig"; path = "Target Support Files/Pods-SnowBallEngineDemo/Pods-SnowBallEngineDemo.release.xcconfig"; sourceTree = "<group>"; };
-		8CB1042AD1476B59031CA921 /* Pods_SnowBallEngineDemo.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SnowBallEngineDemo.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		6284DBDE6E595BAA9987025C /* Pods-SnowBallEngineDemo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SnowBallEngineDemo.debug.xcconfig"; path = "Target Support Files/Pods-SnowBallEngineDemo/Pods-SnowBallEngineDemo.debug.xcconfig"; sourceTree = "<group>"; };
+		E45D331F237DB4BA39EAE0D4 /* Pods-SnowBallEngineDemo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SnowBallEngineDemo.release.xcconfig"; path = "Target Support Files/Pods-SnowBallEngineDemo/Pods-SnowBallEngineDemo.release.xcconfig"; sourceTree = "<group>"; };
 		E5118D042C3696CC0066A6C8 /* SnowBallEngineDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SnowBallEngineDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E5118D072C3696CC0066A6C8 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		E5118D092C3696CC0066A6C8 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -28,8 +27,8 @@
 		E5118D102C3696CE0066A6C8 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		E5118D132C3696CE0066A6C8 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		E5118D152C3696CE0066A6C8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		E5118D1B2C3794250066A6C8 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
-		EEE54045496F05FB97E58421 /* Pods-SnowBallEngineDemo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SnowBallEngineDemo.debug.xcconfig"; path = "Target Support Files/Pods-SnowBallEngineDemo/Pods-SnowBallEngineDemo.debug.xcconfig"; sourceTree = "<group>"; };
+		E543FF0E2C47952200CD0070 /* SnowBallEngineDemo.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = SnowBallEngineDemo.entitlements; sourceTree = "<group>"; };
+		FCBC9B6170429A0D099C32FD /* Pods_SnowBallEngineDemo.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SnowBallEngineDemo.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -37,17 +36,17 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				97E5DC38C64F0897AF339980 /* Pods_SnowBallEngineDemo.framework in Frameworks */,
+				538B8ED00D62D1B8C34B5707 /* Pods_SnowBallEngineDemo.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		51FC610F29466B5A7993BE0D /* Frameworks */ = {
+		D55437B9A776F83B0F35B552 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				8CB1042AD1476B59031CA921 /* Pods_SnowBallEngineDemo.framework */,
+				FCBC9B6170429A0D099C32FD /* Pods_SnowBallEngineDemo.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -58,7 +57,7 @@
 				E5118D062C3696CC0066A6C8 /* SnowBallEngineDemo */,
 				E5118D052C3696CC0066A6C8 /* Products */,
 				F85BBE1660ED67EB9AA90D15 /* Pods */,
-				51FC610F29466B5A7993BE0D /* Frameworks */,
+				D55437B9A776F83B0F35B552 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -73,7 +72,7 @@
 		E5118D062C3696CC0066A6C8 /* SnowBallEngineDemo */ = {
 			isa = PBXGroup;
 			children = (
-				E5118D1B2C3794250066A6C8 /* GoogleService-Info.plist */,
+				E543FF0E2C47952200CD0070 /* SnowBallEngineDemo.entitlements */,
 				E5118D072C3696CC0066A6C8 /* AppDelegate.swift */,
 				E5118D092C3696CC0066A6C8 /* SceneDelegate.swift */,
 				E5118D0B2C3696CC0066A6C8 /* ViewController.swift */,
@@ -88,8 +87,8 @@
 		F85BBE1660ED67EB9AA90D15 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
-				EEE54045496F05FB97E58421 /* Pods-SnowBallEngineDemo.debug.xcconfig */,
-				74797F61FC2C0193F3104021 /* Pods-SnowBallEngineDemo.release.xcconfig */,
+				6284DBDE6E595BAA9987025C /* Pods-SnowBallEngineDemo.debug.xcconfig */,
+				E45D331F237DB4BA39EAE0D4 /* Pods-SnowBallEngineDemo.release.xcconfig */,
 			);
 			path = Pods;
 			sourceTree = "<group>";
@@ -101,11 +100,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = E5118D182C3696CE0066A6C8 /* Build configuration list for PBXNativeTarget "SnowBallEngineDemo" */;
 			buildPhases = (
-				BFD8DEC707D84F50BD480D9D /* [CP] Check Pods Manifest.lock */,
+				2A62373DF9C2DB211CB3E1D3 /* [CP] Check Pods Manifest.lock */,
 				E5118D002C3696CC0066A6C8 /* Sources */,
 				E5118D012C3696CC0066A6C8 /* Frameworks */,
 				E5118D022C3696CC0066A6C8 /* Resources */,
-				0F07493E595F1AB487B83097 /* [CP] Embed Pods Frameworks */,
+				AA86E3C4B33DC55B15E9E6AF /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -155,7 +154,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				E5118D112C3696CE0066A6C8 /* Assets.xcassets in Resources */,
-				E5118D1C2C3794250066A6C8 /* GoogleService-Info.plist in Resources */,
 				E5118D142C3696CE0066A6C8 /* Base in Resources */,
 				E5118D0F2C3696CC0066A6C8 /* Base in Resources */,
 			);
@@ -164,24 +162,7 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		0F07493E595F1AB487B83097 /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-SnowBallEngineDemo/Pods-SnowBallEngineDemo-frameworks-${CONFIGURATION}-input-files.xcfilelist",
-			);
-			name = "[CP] Embed Pods Frameworks";
-			outputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-SnowBallEngineDemo/Pods-SnowBallEngineDemo-frameworks-${CONFIGURATION}-output-files.xcfilelist",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-SnowBallEngineDemo/Pods-SnowBallEngineDemo-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		BFD8DEC707D84F50BD480D9D /* [CP] Check Pods Manifest.lock */ = {
+		2A62373DF9C2DB211CB3E1D3 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -201,6 +182,23 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		AA86E3C4B33DC55B15E9E6AF /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-SnowBallEngineDemo/Pods-SnowBallEngineDemo-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-SnowBallEngineDemo/Pods-SnowBallEngineDemo-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-SnowBallEngineDemo/Pods-SnowBallEngineDemo-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */
@@ -359,27 +357,28 @@
 		};
 		E5118D192C3696CE0066A6C8 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = EEE54045496F05FB97E58421 /* Pods-SnowBallEngineDemo.debug.xcconfig */;
+			baseConfigurationReference = 6284DBDE6E595BAA9987025C /* Pods-SnowBallEngineDemo.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = SnowBallEngineDemo/SnowBallEngineDemo.entitlements;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = KHV6JJH7M8;
+				CURRENT_PROJECT_VERSION = 24;
+				DEVELOPMENT_TEAM = "";
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = SnowBallEngineDemo/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
 				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = art.coloringbook.colorbynumber.paintist.plus;
+				MARKETING_VERSION = 1.0.24;
+				PRODUCT_BUNDLE_IDENTIFIER = com.snowballbi.sdkdemo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
@@ -389,27 +388,28 @@
 		};
 		E5118D1A2C3696CE0066A6C8 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 74797F61FC2C0193F3104021 /* Pods-SnowBallEngineDemo.release.xcconfig */;
+			baseConfigurationReference = E45D331F237DB4BA39EAE0D4 /* Pods-SnowBallEngineDemo.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = SnowBallEngineDemo/SnowBallEngineDemo.entitlements;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = KHV6JJH7M8;
+				CURRENT_PROJECT_VERSION = 24;
+				DEVELOPMENT_TEAM = "";
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = SnowBallEngineDemo/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
 				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = art.coloringbook.colorbynumber.paintist.plus;
+				MARKETING_VERSION = 1.0.24;
+				PRODUCT_BUNDLE_IDENTIFIER = com.snowballbi.sdkdemo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
