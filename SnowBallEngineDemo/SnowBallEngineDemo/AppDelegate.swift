@@ -10,11 +10,7 @@ import UIKit
 import UserNotifications
 // 引入 Firebase 及 SnowBallEngine
 import FirebaseCore
-
 import SnowBallEngine
-
-import UserNotifications
-import FirebaseMessaging
 
 typealias SnowBallLog = SnowBallEngine.Log
 
@@ -43,18 +39,16 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 		
 		// Tracker
 		SnowBallTracker.shared.setup()
-		SnowBallTracker.shared.logEvent("ExampleEvent",
-										parameters: ["ExampleParameter" : "ExampleValue"])
+		SnowBallTracker.shared.logEvent("ExampleEvent", parameters: ["ExampleParameter" : "ExampleValue"])
 		
 		// Push
 		SnowBallPush.shared.setup(delegate: self)
 		
 		// 注册通知和向用户请求权限，需自行实现
 		UNUserNotificationCenter.current().delegate = self
-		application.registerForRemoteNotifications()
 		// 在必要时，向用户请求展示推送的权限
-		/*
-		let authOptions: UNAuthorizationOptions = [.alert, .badge, .sound]
+		#if DEBUG
+		let authOptions: UNAuthorizationOptions = [.alert, .badge, .sound, .provisional]
 		UNUserNotificationCenter.current().requestAuthorization(options: authOptions,
 																completionHandler: { success, error in
 			if success {
@@ -63,7 +57,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 				AppDelegate.log.d("request Notification Authorization failed, error: \(error.localizedDescription)")
 			}
 		})
-		 */
+		#endif
+		application.registerForRemoteNotifications()
 		
 		// example for shown an ad from Applovin Max
 		let info = SnowBallTracker.AdRevenueInfo(mediation: .applovingMax,
@@ -94,27 +89,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 		// If any sessions were discarded while the application was not running, this will be called shortly after application:didFinishLaunchingWithOptions.
 		// Use this method to release any resources that were specific to the discarded scenes, as they will not return.
 	}
-
-
-}
-
-extension AppDelegate: UNUserNotificationCenterDelegate {
-	
-	func userNotificationCenter(_ center: UNUserNotificationCenter, willPresent notification: UNNotification) async -> UNNotificationPresentationOptions {
-		AppDelegate.log.d(notification.request.description)
-		
-		SnowBallPush.shared.trackReceived(notification: notification.request.identifier)
-		
-		let options: UNNotificationPresentationOptions =  [.banner, .list, .sound]
-		return options
-	}
-	
-	func userNotificationCenter(_ center: UNUserNotificationCenter, didReceive response: UNNotificationResponse) async {
-		let request = response.notification.request
-		AppDelegate.log.d(request.description)
-		
-		SnowBallPush.shared.trackReceived(notification: request.identifier)
-	}
 }
 
 extension AppDelegate: SnowBallPushDelegate {
@@ -125,9 +99,32 @@ extension AppDelegate: SnowBallPushDelegate {
 	}
 	
 	func fcmTokenDidChange(to token: String?) {
-		AppDelegate.log.i("fcmToken did changed to: \(token ?? "nil")")
+		AppDelegate.log.d("fcmToken did changed to: \(token ?? "nil")")
 		// fcmToken 为 Push 设备令牌
 		// If necessary send token to application server.
 		// Note: This callback is fired at each app startup and whenever a new token is generated.
+	}
+}
+
+extension AppDelegate: UNUserNotificationCenterDelegate {
+	
+	func userNotificationCenter(_ center: UNUserNotificationCenter,
+								willPresent notification: UNNotification) async -> UNNotificationPresentationOptions {
+		// Receive displayed notifications for iOS 10 devices.
+		let userInfo = notification.request.content.userInfo
+		AppDelegate.log.d("\(userInfo)")
+		
+		SnowBallPush.shared.trackReceived(notification: notification.request.identifier)
+		
+		let options: UNNotificationPresentationOptions =  [.banner, .list, .sound]
+		return options
+	}
+	
+	func userNotificationCenter(_ center: UNUserNotificationCenter,
+								didReceive response: UNNotificationResponse) async {
+		let userInfo = response.notification.request.content.userInfo
+		AppDelegate.log.d("\(userInfo)")
+		
+		SnowBallPush.shared.trackReceived(notification: response.notification.request.identifier)
 	}
 }
