@@ -14,7 +14,6 @@
 		E5118D0F2C3696CC0066A6C8 /* Base in Resources */ = {isa = PBXBuildFile; fileRef = E5118D0E2C3696CC0066A6C8 /* Base */; };
 		E5118D112C3696CE0066A6C8 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E5118D102C3696CE0066A6C8 /* Assets.xcassets */; };
 		E5118D142C3696CE0066A6C8 /* Base in Resources */ = {isa = PBXBuildFile; fileRef = E5118D132C3696CE0066A6C8 /* Base */; };
-		E558C7B92C47A7BB00D33587 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = E558C7B82C47A7BB00D33587 /* GoogleService-Info.plist */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -29,7 +28,6 @@
 		E5118D132C3696CE0066A6C8 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		E5118D152C3696CE0066A6C8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		E543FF0E2C47952200CD0070 /* SnowBallEngineDemo.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = SnowBallEngineDemo.entitlements; sourceTree = "<group>"; };
-		E558C7B82C47A7BB00D33587 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		FCBC9B6170429A0D099C32FD /* Pods_SnowBallEngineDemo.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SnowBallEngineDemo.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -74,7 +72,6 @@
 		E5118D062C3696CC0066A6C8 /* SnowBallEngineDemo */ = {
 			isa = PBXGroup;
 			children = (
-				E558C7B82C47A7BB00D33587 /* GoogleService-Info.plist */,
 				E543FF0E2C47952200CD0070 /* SnowBallEngineDemo.entitlements */,
 				E5118D072C3696CC0066A6C8 /* AppDelegate.swift */,
 				E5118D092C3696CC0066A6C8 /* SceneDelegate.swift */,
@@ -157,7 +154,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				E5118D112C3696CE0066A6C8 /* Assets.xcassets in Resources */,
-				E558C7B92C47A7BB00D33587 /* GoogleService-Info.plist in Resources */,
 				E5118D142C3696CE0066A6C8 /* Base in Resources */,
 				E5118D0F2C3696CC0066A6C8 /* Base in Resources */,
 			);
