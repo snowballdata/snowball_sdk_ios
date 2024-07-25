@@ -116,8 +116,11 @@ extension AppDelegate: UNUserNotificationCenterDelegate {
 		
 		SnowBallPush.shared.trackReceived(notification: notification.request.identifier)
 		
-		let options: UNNotificationPresentationOptions =  [.banner, .list, .sound]
-		return options
+		if #available(iOS 14.0, *) {
+			return [.banner, .list, .sound]
+		} else {
+			return [.alert, .sound]
+		}
 	}
 	
 	func userNotificationCenter(_ center: UNUserNotificationCenter,

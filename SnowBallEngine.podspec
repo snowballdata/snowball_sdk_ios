@@ -1,7 +1,7 @@
 Pod::Spec.new do |spec|
 
   spec.name         = "SnowBallEngine"
-  spec.version      = "0.3"
+  spec.version      = "0.4"
   spec.homepage     = "https://thinkyeah.com"
   spec.license      = { :type => "MIT", :file => "LICENSE.txt" }
   spec.author       = { "Snowball BI" => "snowballbi@thinkyeah.com" }
@@ -13,7 +13,7 @@ Pod::Spec.new do |spec|
   SnowBall 平台系统基于 BigQuery 查询事件数据，进行各部分业务处理。
                    DESC
 
-  spec.ios.deployment_target = "15.0"
+  spec.ios.deployment_target = "12.0"
   spec.source       = { :git => "https://github.com/snowballdata/snowball_sdk_ios.git", :tag => "#{spec.version}" }
   spec.source_files = [
     "SnowBallEngine/Extensions/*.{swift}",
