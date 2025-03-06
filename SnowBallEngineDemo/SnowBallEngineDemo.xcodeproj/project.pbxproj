@@ -105,6 +105,7 @@
 				E5118D012C3696CC0066A6C8 /* Frameworks */,
 				E5118D022C3696CC0066A6C8 /* Resources */,
 				AA86E3C4B33DC55B15E9E6AF /* [CP] Embed Pods Frameworks */,
+				F898D66C2A2ECE7B8D2F7AB5 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -199,6 +200,23 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-SnowBallEngineDemo/Pods-SnowBallEngineDemo-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		F898D66C2A2ECE7B8D2F7AB5 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-SnowBallEngineDemo/Pods-SnowBallEngineDemo-resources-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Copy Pods Resources";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-SnowBallEngineDemo/Pods-SnowBallEngineDemo-resources-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-SnowBallEngineDemo/Pods-SnowBallEngineDemo-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */
