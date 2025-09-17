@@ -234,11 +234,22 @@ extension Tracker {
 extension Tracker {
 	
 	static func recallAttributionTokenIfNeed() {
-		self.attributionToken = nil
-		self.shouldPostAttributionToken = true
-		logAttributionTokenIfNeeded(count: 0)
+		if #available(iOS 14.3, *) {
+			self.attributionToken = nil
+			self.shouldPostAttributionToken = true
+			logAttributionTokenIfNeeded(count: 0)
+		} else {
+			if self.attributionToken == nil {
+				self.attributionToken = ""
+				self.shouldPostAttributionToken = false
+				self.log.e("iOS version is below 14.3, attributionToken not supported")
+				self.logEvent(Events.THInstallReferrerFailed,
+							  parameters: [Events.Keys.reason: "iOS version is below 14.3, attributionToken not supported"])
+			}
+		}
 	}
 	
+	@available(iOS 14.3, *)
 	private static func logAttributionTokenIfNeeded(count: Int = 0) {
 		guard count < 3 else {
 			self.attributionToken = ""
@@ -248,37 +259,28 @@ extension Tracker {
 			self.postTokenIfNeeded()
 			return
 		}
-		if #available(iOS 14.3, *) {
-			do {
-				let token = try AAAttribution.attributionToken()
-				
-				self.log.i("attributionToken = \(token)")
-				let parameter: [String: Any] = [
-					"token": token,
-					"source": "apple_search_ads",
-					"pending": true
-				]
-				self.logEvent(Events.THInstallReferrer, parameters: parameter)
-				self.attributionToken = token
-				// 自己去请求一下post 结果，然后log
-				postTokenIfNeeded()
-			} catch {
-				self.log.e("attributionToken error = " + error.localizedDescription)
-				self.logEvent(Events.THInstallReferrerFailed,
-								 parameters: [Events.Keys.reason: error.localizedDescription])
-				// 如果失败，需要重试
-				DispatchQueue.main.asyncAfter(deadline: .now() + 5) {
-					self.logAttributionTokenIfNeeded(count: count + 1)
-				}
-			}
-		} else {
-			self.log.e("iOS version is below 14.3, attributionToken not supported")
+		do {
+			let token = try AAAttribution.attributionToken()
+			
+			self.log.i("attributionToken = \(token)")
+			let parameter: [String: Any] = [
+				"token": token,
+				"source": "apple_search_ads",
+				"pending": true
+			]
+			self.logEvent(Events.THInstallReferrer, parameters: parameter)
+			self.attributionToken = token
+			// 自己去请求一下post 结果，然后log
+			postTokenIfNeeded()
+		} catch {
+			self.log.e("attributionToken error = " + error.localizedDescription)
 			self.logEvent(Events.THInstallReferrerFailed,
-							 parameters: [Events.Keys.reason: "iOS version is below 14.3, attributionToken not supported"])
-			self.attributionToken = ""
-			return
+							 parameters: [Events.Keys.reason: error.localizedDescription])
+			// 如果失败，需要重试
+			DispatchQueue.main.asyncAfter(deadline: .now() + 5) {
+				self.logAttributionTokenIfNeeded(count: count + 1)
+			}
 		}
-		
 	}
 	
 	private static func postTokenIfNeeded(count: Int = 0) {
