@@ -1,7 +1,7 @@
 Pod::Spec.new do |spec|
 
   spec.name         = "SnowBallEngine"
-  spec.version      = "0.4"
+  spec.version      = "0.5"
   spec.homepage     = "https://thinkyeah.com"
   spec.license      = { :type => "MIT", :file => "LICENSE.txt" }
   spec.author       = { "Snowball BI" => "snowballbi@thinkyeah.com" }

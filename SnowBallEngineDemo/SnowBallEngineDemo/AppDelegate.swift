@@ -60,19 +60,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 		#endif
 		application.registerForRemoteNotifications()
 		
-		// example for shown an ad from Applovin Max
-		let info = SnowBallTracker.AdRevenueInfo(mediation: .applovingMax,
-												 adsRevenueFrom: .applovingMax,
-												 adNetworkName: "applovin_sdk",
-												 adUnitId: "03c41....fe",
-												 adType: "Fullscreen",
-												 adImpressionId: "4ibWY...ZGwCg",
-												 adCurrencyCode: "USD",
-												 adValue: 0.000987204,
-												 adPrecisionType: "precise",
-												 scene: "OpenDetail")
-		SnowBallTracker.shared.trackAdRevenue(info: info)
-		
 		return true
 	}
 

@@ -5,9 +5,13 @@ platform :ios, '12.0'
 use_frameworks!
 
 target 'SnowBallEngineDemo' do
+  
+  # 通过仓库内本地SDK文件夹中导入，一般是最新版本
+	pod 'SnowBallEngine', :path => '../SDK/'
+  # 通过Cocopods远程仓库导入，不一定是最新版本
+#	pod 'SnowBallEngine', '~> 0.4'
 
-#	pod 'SnowBallEngine', :path => '..'
-	pod 'SnowBallEngine', '~> 0.4'
+  pod 'Google-Mobile-Ads-SDK'
 	
 end
 
