@@ -7,55 +7,58 @@
 
 import Foundation
 import StoreKit
+import Adjust
 
 extension Tracker {
     
-    @available(iOS 15.0, *)
-    public func trackPurchaseRevenue(transaction: Transaction,
-                                     product: Product,
+	/*
+	 记录上传，刚刚购买成功的交易订单，或有效的交易订单
+	 */
+	public func trackPurchaseRevenue(transaction: Transaction,
                                      scene: String?) {
-        let productId = transaction.productID
-        guard productId == product.id else {
-            Tracker.log.e("The product in transation (\(productId)) is not equal to the product id(\(product.id))")
-            return
-        }
-        let isFreeTrial: Bool = {
-            if #available(iOS 17.2, *) {
-                transaction.offer?.type == .introductory
-            } else {
-                transaction.offerType == .introductory
-            }
-        }()
         
-        let isSubscription = transaction.productType == .autoRenewable || transaction.productType == .nonRenewable
-        
-        let productPriceInDouble: Double = NSDecimalNumber(decimal: product.price).doubleValue
         let currency: String? = {
             if #available(iOS 16.0, *) {
-                //                transaction.currency?.identifier
-                return product.priceFormatStyle.locale.currency?.identifier
+				return transaction.currency?.identifier
             } else {
-                //                transaction.currencyCode
-                return product.priceFormatStyle.locale.currencyCode
+                return transaction.currencyCode
             }
         }()
+		
         guard let currency = currency,
               let transactionPrice = transaction.price
         else {
             return
         }
+		
+		let isFreeTrial: Bool = {
+			if #available(iOS 17.2, *) {
+				return transaction.offer?.paymentMode == .freeTrial
+			} else {
+				return transaction.offerPaymentModeStringRepresentation == "freeTrial"
+			}
+		}()
+		
+		let isSubscription = transaction.productType == .autoRenewable || transaction.productType == .nonRenewable
+		
+		let transactionPriceDouble = NSDecimalNumber(decimal: transactionPrice).doubleValue
         let transactionPriceString = "\(transactionPrice)_\(transactionPrice.exponent)"
+		let value = isFreeTrial ? 0 : transactionPriceDouble
         let parameters: [String : Any] = ["currency": currency,
-                                          "value":  isFreeTrial ? 0 : productPriceInDouble,
+                                          "value": value,
                                           "value_string": transactionPriceString,
-                                          "product_id": productId,
+                                          "product_id": transaction.productID,
                                           "subscription": isSubscription ? 1 : 0,
                                           "free_trial": isFreeTrial ? 1 : 0,
                                           "scene": scene ?? "Unknown"
         ]
-        Tracker.logEvent(Events.THInAppPurchase, parameters: parameters)
+        Tracker.logEvent(Events.SE_InAppPurchase, parameters: parameters)
+		self.trackAdjust(currency: currency, price: value)
     }
-    
+
+	/*
+	 记录非订阅类购买，例如消耗性商品或永久会员，ProductType 为 consumable 或 nonConsumable
+	 */
     public func trackInAppPurchaseRevenue(productId: String,
                                           currency: String,
                                           price: Double,
@@ -67,9 +70,13 @@ extension Tracker {
                                           "free_trial": 0,
                                           "scene": scene ?? "Unknown"
         ]
-        Tracker.logEvent(Events.THInAppPurchase, parameters: parameters)
+        Tracker.logEvent(Events.SE_InAppPurchase, parameters: parameters)
+		self.trackAdjust(currency: currency, price: price)
     }
-    
+	
+	/*
+	 记录订阅类购买，例如自动或非自动续费型订阅，ProductType 为 autoRenewable 或 nonRenewable
+	 */
     public func trackSubsPurchaseRevenue(productId: String,
                                          currency: String,
                                          price: Double,
@@ -82,7 +89,18 @@ extension Tracker {
                                           "free_trial": isFreeTrial ? 1 : 0,
                                           "scene": scene ?? "Unknown"
         ]
-        Tracker.logEvent(Events.THInAppPurchase, parameters: parameters)
+        Tracker.logEvent(Events.SE_InAppPurchase, parameters: parameters)
+		self.trackAdjust(currency: currency, price: price)
     }
     
+	private func trackAdjust(currency: String,
+							 price: Double) {
+		guard let token = self.adjustAppPurchaseToken,
+			  token.count > 0,
+			  let event = ADJEvent(eventToken: token)
+		else { return }
+		
+		event.setRevenue(price, currency: currency)
+		Adjust.trackEvent(event)
+	}
 }

@@ -244,7 +244,7 @@ extension Tracker {
             parameters["network_placement_id"] = unitId
         }
         // adgroup_id adgroup_name adgroup_type adgroup_priority
-        Tracker.logEvent(Events.TH_AD_IMPRESSION, parameters: parameters)
+        Tracker.logEvent(Events.SE_AD_IMPRESSION, parameters: parameters)
         Tracker.logEvent(Events.AD_IMPRESSION, parameters: parameters)
         
         let total = Tracker.totalAdsRevenue + info.adValue
@@ -253,7 +253,7 @@ extension Tracker {
         if total > 0.01 {
             let param: [String : Any] = ["currency": info.adCurrencyCode,
                                          "value": total]
-            Tracker.logEvent(Events.THAdjustTotalAdsRevenue,
+            Tracker.logEvent(Events.TotalAdsRevenue,
                              parameters: param)
             Tracker.totalAdsRevenue = 0
         }

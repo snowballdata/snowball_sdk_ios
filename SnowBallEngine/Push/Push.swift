@@ -28,29 +28,67 @@ public class Push: NSObject {
 		self.delegate = delegate
 	}
 	
-	public var isPro: Bool? {
+	var isPro: Bool? {
 		delegate?.isProLicense()
 	}
 	
+	/*
+	 当用户收到通知或点击通知打开后，调用上报，以统计打开率
+	 */
 	public func trackReceived(notification id: String) {
 		Tracker.logEvent(Events.DidReceiveNotification, parameters: ["push_id" : id])
 	}
 	
+	/*
+	 当用户的会员信息改变后，需手动通知 Push 系统，以改变用户订阅的 topic 是否是 pro
+	 例如：用户购买会员成功权限升级，或者会员到期后权限降级
+	 */
+	public func userLicenseChanged() {
+		let license: String? = {
+			if let isPro = Push.shared.isPro {
+				return isPro ? "pro" : "free"
+			}
+			return nil
+		}()
+		if var license = license {
+			license = "license_" + license
+			if license != Push.subscribedTopicLicense {
+				if let subscribedTopicLicense = Push.subscribedTopicLicense {
+					Push.unSubscribe(topic: subscribedTopicLicense)
+				}
+				Push.subscribe(topic: license)
+				Push.subscribedTopicLicense = license
+			}
+		}
+	}
+	
+	/*
+	 手动设置用户需要订阅的通知组
+	 */
 	public static func subscribe(topic: String) {
 		Push.log.i("Subscribe notification topic \(topic)")
 		Messaging.messaging().subscribe(toTopic: topic)
 	}
 	
+	/*
+	 手动退订用户的通知组。
+	 */
 	public static func unSubscribe(topic: String) {
 		Push.log.i("Unsubscribe notification topic \(topic)")
 		Messaging.messaging().unsubscribe(fromTopic: topic)
 	}
 	
+	/*
+	 手动设置用户需要订阅的通知组
+	 */
 	public func subscribe(topic: String) {
 		Push.log.i("Subscribe notification topic \(topic)")
 		Messaging.messaging().subscribe(toTopic: topic)
 	}
 	
+	/*
+	 手动退订用户的通知组。
+	 */
 	public func unSubscribe(topic: String) {
 		Push.log.i("Unsubscribe notification topic \(topic)")
 		Messaging.messaging().unsubscribe(fromTopic: topic)
@@ -70,9 +108,9 @@ extension Push {
 	}
 	
 	private struct Events {
-		static let DidReceiveNotification = "push_custom_receive"
-		static let NotificationTokenGetNew = "th_push_token_new"
-		static let NotificationTokenUpdate = "th_push_token_update"
+		static let DidReceiveNotification = "se_push_receive"
+		static let NotificationTokenGetNew = "se_push_token_new"
+		static let NotificationTokenUpdate = "se_push_token_update"
 	}
 	
 	fileprivate static var didTrackPushToken: Bool {

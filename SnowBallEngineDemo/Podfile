@@ -1,16 +1,18 @@
 
 source 'https://github.com/CocoaPods/Specs.git'
 
-platform :ios, '12.0'
+platform :ios, '15.6'
 use_frameworks!
 
 target 'SnowBallEngineDemo' do
   
   # 通过仓库内本地SDK文件夹中导入，一般是最新版本
-	pod 'SnowBallEngine', :path => '../SDK/'
+#	pod 'SnowBallEngine', :path => '..'
+	pod 'SnowBallEngine', :tag => '1.0', :git => 'https://github.com/snowballdata/snowball_sdk_ios.git'
   # 通过Cocopods远程仓库导入，不一定是最新版本
-#	pod 'SnowBallEngine', '~> 0.4'
+#	pod 'SnowBallEngine', '~> 1.0'
 
+	# 测试广告时，加入 Admob 广告聚合平台
   pod 'Google-Mobile-Ads-SDK'
 	
 end
@@ -19,7 +21,7 @@ post_install do |installer|
 	installer.generated_projects.each do |project|
 		project.targets.each do |target|
 			target.build_configurations.each do |config|
-				config.build_settings['IPHONEOS_DEPLOYMENT_TARGET'] = '12.0'
+				config.build_settings['IPHONEOS_DEPLOYMENT_TARGET'] = '15.6'
 			xcconfig_path = config.base_configuration_reference.real_path
 			xcconfig = File.read(xcconfig_path)
 			xcconfig_mod = xcconfig.gsub(/DT_TOOLCHAIN_DIR/, "TOOLCHAIN_DIR")

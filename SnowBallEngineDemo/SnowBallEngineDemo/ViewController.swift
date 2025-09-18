@@ -6,37 +6,91 @@
 //
 
 import UIKit
-
-import SnowBallEngine
+import StoreKit
 
 import GoogleMobileAds
+import SnowBallEngine
 
 class ViewController: UIViewController {
-    
-    private var interstitial: InterstitialAd?
-    
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        // Do any additional setup after loading the view.
-        
-    }
-    
-    // DEMO: 上传内购事件价值
-    private func recordPurchaseRevenue(unitId: String?) {
-        SnowBallTracker.shared.trackInAppPurchaseRevenue(productId: "com.xxx.lifetime",
-                                                         currency: "USD",
-                                                         price: 59.0,
-                                                         scene: "CustomScene")
-        SnowBallTracker.shared.trackSubsPurchaseRevenue(productId: "com.xxx.weekly",
-                                                        currency: "HKD",
-                                                        price: 9.9,
-                                                        isFreeTrial: true,
-                                                        scene: "CustomScene")
-//        SnowBallTracker.shared.trackPurchaseRevenue(transaction: Transaction,
-//                                                    product: Product,
-//                                                    scene: String?)
-    }
-    
+	
+	private var interstitial: InterstitialAd?
+	
+	override func viewDidLoad() {
+		super.viewDidLoad()
+		// TODO: 自行设置页面和逻辑
+		#if DEBUG
+		SnowBallTracker.shared.trackInAppPurchaseRevenue(productId: "com.xxx.lifetime",
+														 currency: "USD",
+														 price: 59.0,
+														 scene: "CustomScene")
+		SnowBallTracker.shared.trackSubsPurchaseRevenue(productId: "com.xxx.weekly",
+														currency: "HKD",
+														price: 9.9,
+														isFreeTrial: false,
+														scene: "CustomScene")
+		#endif
+
+	}
+}
+
+// MARK: 模拟用户内购成功时
+extension ViewController {
+	
+	// DEMO: 上传内购事件价值
+	private func recordPurchaseRevenue(transaction: Transaction, scene: String?) {
+		
+		/*
+		 方法1: 推荐使用订单信息上报
+		 */
+		Tracker.shared.trackPurchaseRevenue(transaction: transaction, scene: scene)
+		/*
+		 方法2: 根据订单信息自己解析后上报
+		 */
+		let currency: String? = {
+			if #available(iOS 16.0, *) {
+				return transaction.currency?.identifier
+			} else {
+				return transaction.currencyCode
+			}
+		}()
+		
+		guard let currency = currency,
+			  let transactionPrice = transaction.price else {
+			return
+		}
+		
+		let isFreeTrial: Bool = {
+			if #available(iOS 17.2, *) {
+				return transaction.offer?.paymentMode == .freeTrial
+			} else {
+				return transaction.offerPaymentModeStringRepresentation == "freeTrial"
+			}
+		}()
+		
+		let productId = transaction.productID
+		let transactionPriceInDouble = NSDecimalNumber(decimal: transactionPrice).doubleValue
+		
+		let isSubscription = transaction.productType == .autoRenewable || transaction.productType == .nonRenewable
+		
+		if isSubscription {
+			Tracker.shared.trackSubsPurchaseRevenue(productId: productId,
+													currency: currency,
+													price: transactionPriceInDouble,
+													isFreeTrial: isFreeTrial,
+													scene: scene)
+		} else {
+			Tracker.shared.trackInAppPurchaseRevenue(productId: productId,
+													 currency: currency,
+													 price: transactionPriceInDouble,
+													 scene: scene)
+		}
+	}
+	
+}
+
+// MARK: 模拟用户加载展示广告后，回传价值
+extension ViewController {
+	
     // 设置并加载插屏广告
     private func loadAdmobInterstitialAd() async {
         do {
