@@ -8,6 +8,7 @@
 import UIKit
 import StoreKit
 
+import FirebaseAnalytics
 import GoogleMobileAds
 import SnowBallEngine
 
@@ -18,23 +19,80 @@ class ViewController: UIViewController {
 	override func viewDidLoad() {
 		super.viewDidLoad()
 		// TODO: 自行设置页面和逻辑
-		#if DEBUG
-		SnowBallTracker.shared.trackInAppPurchaseRevenue(productId: "com.xxx.lifetime",
-														 currency: "USD",
-														 price: 59.0,
-														 scene: "CustomScene")
-		SnowBallTracker.shared.trackSubsPurchaseRevenue(productId: "com.xxx.weekly",
-														currency: "HKD",
-														price: 9.9,
-														isFreeTrial: false,
-														scene: "CustomScene")
-		#endif
-
+		// 模拟展示一个Admob广告
+		loadAdmobInterstitialAd()
+		// TODO: 模拟发起内购
+	}
+	
+	// 设置并加载插屏广告
+	private func loadAdmobInterstitialAd() {
+		Task {
+			do {
+				let testUnitId = "ca-app-pub-3940256099942544/4411468910"
+				interstitial = try await InterstitialAd.load(with: testUnitId, request: Request())
+				interstitial?.paidEventHandler = { [weak self] adValue in
+					guard let self else {return}
+					self.recordAdmobAdRevenue(unitId: self.interstitial?.adUnitID,
+											  id: self.interstitial?.responseInfo.responseIdentifier,
+											  format: Tracker.Format.FULLSCREEN,
+											  adValue: adValue,
+											  scene: "YourCustomSceneName")
+				}
+				interstitial?.fullScreenContentDelegate = self
+				interstitial?.present(from: self)
+			} catch {
+				print("Failed to load interstitial ad with error: \(error.localizedDescription)")
+			}
+		}
 	}
 }
 
-// MARK: 模拟用户内购成功时
+// MARK: 模拟用户内购成功后
 extension ViewController {
+	
+	private func purchaseSuccess(transaction: Transaction, scene: String?) {
+		verifyPurchase(transaction: transaction, scene: scene)
+		recordPurchaseRevenue(transaction: transaction, scene: scene)
+	}
+	
+	// DEMO: 验证购买的订单
+	private func verifyPurchase(transaction: Transaction, scene: String?) {
+		Task {
+			// TODO: App 安装后的第一次启动，设置设备的UUID，或使用其他已定义的设备ID
+//			let uuid = UUID().uuidString.lowercased()
+//			UserDefaults.standard.set(uuid, forKey: "deviceId")
+			guard let bundleId = Bundle.main.bundleIdentifier,
+				  let deviceId = UserDefaults.standard.value(forKey: "deviceId") as? String
+			else {
+				return
+			}
+			do {
+				
+				let dic = try await SnowBallStore.verify(bundleId: bundleId,
+											   transationId: String(transaction.id),
+											   productId: transaction.productID,
+											   productType: transaction.productType,
+											   deviceId: deviceId,
+											   userInstanceId: Analytics.appInstanceID(),
+											   scene: "custom_iap_scene")
+				guard let dic = dic else {
+					print("StoreServer.verify failed, wrong response")
+					return
+				}
+				if let code = dic["code"] as? Int, code == 200,
+				   let data = dic["data"] as? [String: Any]
+				{
+					print("StoreServer.verify, detail: \(data)")
+				} else if let message = dic["message"] as? String {
+					print("StoreServer.verify failed, message: \(message)")
+				} else {
+					print("StoreServer.verify failed, unknown reason")
+				}
+			} catch {
+				print("StoreServer.verify failed," + error.localizedDescription)
+			}
+		}
+	}
 	
 	// DEMO: 上传内购事件价值
 	private func recordPurchaseRevenue(transaction: Transaction, scene: String?) {
@@ -73,12 +131,14 @@ extension ViewController {
 		let isSubscription = transaction.productType == .autoRenewable || transaction.productType == .nonRenewable
 		
 		if isSubscription {
+//			e.g.(productId: "com.xxx.weekly",currency: "HKD",price: 9.9,isFreeTrial: false, scene: "CustomScene")
 			Tracker.shared.trackSubsPurchaseRevenue(productId: productId,
 													currency: currency,
 													price: transactionPriceInDouble,
 													isFreeTrial: isFreeTrial,
 													scene: scene)
 		} else {
+//			e.g.(productId: "com.xxx.lifetime", currency: "USD", price: 59.0, scene: "CustomScene")
 			Tracker.shared.trackInAppPurchaseRevenue(productId: productId,
 													 currency: currency,
 													 price: transactionPriceInDouble,
@@ -90,26 +150,6 @@ extension ViewController {
 
 // MARK: 模拟用户加载展示广告后，回传价值
 extension ViewController {
-	
-    // 设置并加载插屏广告
-    private func loadAdmobInterstitialAd() async {
-        do {
-            let testUnitId = "ca-app-pub-3940256099942544/4411468910"
-            interstitial = try await InterstitialAd.load(with: testUnitId, request: Request())
-            interstitial?.paidEventHandler = { [weak self] adValue in
-                guard let self else {return}
-                self.recordAdmobAdRevenue(unitId: self.interstitial?.adUnitID,
-                                          id: self.interstitial?.responseInfo.responseIdentifier,
-                                          format: Tracker.Format.FULLSCREEN,
-                                          adValue: adValue,
-                                          scene: "YourCustomSceneName")
-            }
-            interstitial?.fullScreenContentDelegate = self
-            interstitial?.present(from: self)
-        } catch {
-            print("Failed to load interstitial ad with error: \(error.localizedDescription)")
-        }
-    }
     
     // DEMO: 上传Admob广告事件价值
     private func recordAdmobAdRevenue(unitId: String?,

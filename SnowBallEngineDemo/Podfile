@@ -7,10 +7,10 @@ use_frameworks!
 target 'SnowBallEngineDemo' do
   
 #	Demo 开发环境导入
-#	pod 'SnowBallEngine', :path => '..'
+	pod 'SnowBallEngine', :path => '..'
 
 #	通过Git仓库中导入，一般是最新版本
-	pod 'SnowBallEngine', :tag => '1.0', :git => 'https://github.com/snowballdata/snowball_sdk_ios.git'
+#	pod 'SnowBallEngine', :tag => '1.0', :git => 'https://github.com/snowballdata/snowball_sdk_ios.git'
 
 	#	通过Cocopods远程仓库导入，不一定是最新版本
 #	pod 'SnowBallEngine', '~> 1.0'
