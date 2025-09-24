@@ -9,6 +9,7 @@ import Foundation
 public typealias SnowBallTracker = Tracker
 public typealias SnowBallPush = Push
 public typealias SnowBallLog = Log
+public typealias SnowBallStore = StoreServer
 
 public class SnowBall {
 	

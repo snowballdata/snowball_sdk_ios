@@ -20,7 +20,8 @@ Pod::Spec.new do |spec|
     "SnowBallEngine/Log/*.{swift}",
     "SnowBallEngine/*.{swift}",
     "SnowBallEngine/Tracker/*.{swift}",
-    "SnowBallEngine/Push/*.{swift}"
+    "SnowBallEngine/Push/*.{swift}",
+    "SnowBallEngine/Store/*.{swift}"
   ]
 
   spec.static_framework = true
