@@ -1,0 +1,11 @@
+
+source 'https://github.com/CocoaPods/Specs.git'
+
+platform :ios, '15.6'
+use_frameworks!
+
+target 'SnowballSDK' do
+  
+	pod 'SnowBallEngine', :path => '..'
+
+end

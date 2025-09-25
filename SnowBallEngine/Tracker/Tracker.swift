@@ -20,7 +20,7 @@ public class Tracker {
 	
 	public func setup(adjustAppPurchaseToken: String? = nil) {
 		self.adjustAppPurchaseToken = adjustAppPurchaseToken
-        Tracker.recallAttributionTokenIfNeed()
+		Tracker.recallAttributionTokenIfNeed()
     }
     
     public func logEvent(_ eventName: String, parameters: [String: Any]? = nil) {

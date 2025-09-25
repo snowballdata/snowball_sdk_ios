@@ -1,7 +1,7 @@
 Pod::Spec.new do |spec|
 
   spec.name         = "SnowBallEngine"
-  spec.version      = "1.0"
+  spec.version      = "1.1"
   spec.homepage     = "https://thinkyeah.com"
   spec.license      = { :type => "MIT", :file => "LICENSE.txt" }
   spec.author       = { "Snowball BI" => "snowballbi@thinkyeah.com" }
@@ -25,7 +25,6 @@ Pod::Spec.new do |spec|
   ]
 
   spec.static_framework = true
-  spec.dependency "CocoaLumberjack/Swift", '>= 3.8.5'
   spec.dependency "Firebase/Analytics", '>= 12.1.0'
   spec.dependency "Firebase/Messaging", '>= 12.1.0'
 	spec.dependency 'Adjust', '~> 4.36.0'
