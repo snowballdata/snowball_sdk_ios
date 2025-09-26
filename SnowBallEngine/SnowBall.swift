@@ -19,8 +19,10 @@ public class SnowBall {
 	
 	static let Config = UserDefaults(suiteName: Constants.UserDefaultsSuitName) ?? UserDefaults.standard
 	
-	public static func setup(pushDelegate: SnowBallPushDelegate? = nil,
-							 adjustAppPurchaseToken: String? = nil) {
+	public static func setup(pushDelegate: SnowBallPushDelegate?,
+							 adjustAppPurchaseToken: String?,
+							 adjustAdRevenueToken: String?,
+							 adjustAdTotalRevenueToken: String?) {
 		
 		// 配置日志系统
 		#if DEBUG
@@ -34,6 +36,8 @@ public class SnowBall {
 		if let pushDelegate = pushDelegate {
 			SnowBallPush.shared.setup(delegate: pushDelegate)
 		}
-		SnowBallTracker.shared.setup(adjustAppPurchaseToken: adjustAppPurchaseToken)
+		SnowBallTracker.shared.setup(adjustAppPurchaseToken: adjustAppPurchaseToken,
+									 adjustAdRevenueToken: adjustAdRevenueToken,
+									 adjustAdTotalRevenueToken: adjustAdTotalRevenueToken)
 	}
 }

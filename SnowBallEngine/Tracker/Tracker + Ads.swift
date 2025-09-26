@@ -6,6 +6,7 @@
 //
 
 import Foundation
+import Adjust
 
 // MARK: Ads
 extension Tracker {
@@ -246,7 +247,9 @@ extension Tracker {
         // adgroup_id adgroup_name adgroup_type adgroup_priority
         Tracker.logEvent(Events.SE_AD_IMPRESSION, parameters: parameters)
         Tracker.logEvent(Events.AD_IMPRESSION, parameters: parameters)
-        
+		self.trackAdjustAdRevenue(currency: info.adCurrencyCode, price: info.adValue)
+		
+		// Track totoal ad revenue
         let total = Tracker.totalAdsRevenue + info.adValue
         Tracker.totalAdsRevenue = total
         // 记录total revenue
@@ -256,6 +259,29 @@ extension Tracker {
             Tracker.logEvent(Events.TotalAdsRevenue,
                              parameters: param)
             Tracker.totalAdsRevenue = 0
+			self.trackAdjustTotalAdRevenue(currency: info.adCurrencyCode, price: info.adValue)
         }
     }
+	
+	private func trackAdjustAdRevenue(currency: String,
+									  price: Double) {
+		guard let token = self.adjustAdRevenueToken,
+			  token.count > 0,
+			  let event = ADJEvent(eventToken: token)
+		else { return }
+		
+		event.setRevenue(price, currency: currency)
+		Adjust.trackEvent(event)
+	}
+	
+	private func trackAdjustTotalAdRevenue(currency: String,
+									  price: Double) {
+		guard let token = self.adjustAdTotalRevenueToken,
+			  token.count > 0,
+			  let event = ADJEvent(eventToken: token)
+		else { return }
+		
+		event.setRevenue(price, currency: currency)
+		Adjust.trackEvent(event)
+	}
 }

@@ -17,9 +17,15 @@ public class Tracker {
     public static let shared = Tracker()
     
 	var adjustAppPurchaseToken: String?
+	var adjustAdRevenueToken: String?
+	var adjustAdTotalRevenueToken: String?
 	
-	public func setup(adjustAppPurchaseToken: String? = nil) {
+	public func setup(adjustAppPurchaseToken: String?,
+					  adjustAdRevenueToken: String?,
+					  adjustAdTotalRevenueToken: String?) {
 		self.adjustAppPurchaseToken = adjustAppPurchaseToken
+		self.adjustAdRevenueToken = adjustAdRevenueToken
+		self.adjustAdTotalRevenueToken = adjustAdTotalRevenueToken
 		Tracker.recallAttributionTokenIfNeed()
     }
     
