@@ -4,4 +4,4 @@
 
 import Foundation
 
-@_exported import SnowBallEngineFramework
+@_exported import SnowBallEngine
