@@ -1,5 +1,21 @@
-
+# CocoaPods
 SnowBallEngineDemo/Podfile.lock
 SnowBallEngineDemo/Pods/
 SnowBallEngineDemo/SnowBallEngineDemo.xcworkspace
 SnowBallEngineDemo/SnowBallEngineDemo/GoogleService-Info.plist
+
+# Build artifacts
+build/
+.build/
+
+# Swift Package Manager
+.swiftpm/
+Package.resolved
+
+# Xcode
+*.xcuserdata
+*.xcuserdatad
+DerivedData/
+
+# 如果使用本地 XCFramework 分发,取消注释下面这行
+# SnowBallEngine.xcframework

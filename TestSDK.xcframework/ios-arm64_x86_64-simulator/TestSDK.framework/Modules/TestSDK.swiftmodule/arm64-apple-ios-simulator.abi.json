@@ -1,0 +1,225 @@
+{
+  "ABIRoot": {
+    "kind": "Root",
+    "name": "TestSDK",
+    "printedName": "TestSDK",
+    "children": [
+      {
+        "kind": "Import",
+        "name": "Foundation",
+        "printedName": "Foundation",
+        "declKind": "Import",
+        "moduleName": "TestSDK",
+        "declAttributes": [
+          "RawDocComment"
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "FirebaseAnalytics",
+        "printedName": "FirebaseAnalytics",
+        "declKind": "Import",
+        "moduleName": "TestSDK",
+        "declAttributes": [
+          "AccessControl"
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "FirebaseMessaging",
+        "printedName": "FirebaseMessaging",
+        "declKind": "Import",
+        "moduleName": "TestSDK",
+        "declAttributes": [
+          "AccessControl"
+        ]
+      },
+      {
+        "kind": "TypeDecl",
+        "name": "TestSDK",
+        "printedName": "TestSDK",
+        "children": [
+          {
+            "kind": "Function",
+            "name": "test",
+            "printedName": "test()",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:7TestSDKAAC4testyyFZ",
+            "mangledName": "$s7TestSDKAAC4testyyFZ",
+            "moduleName": "TestSDK",
+            "static": true,
+            "declAttributes": [
+              "Final",
+              "AccessControl"
+            ],
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Var",
+            "name": "name",
+            "printedName": "name",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:7TestSDKAAC4nameSSvp",
+            "mangledName": "$s7TestSDKAAC4nameSSvp",
+            "moduleName": "TestSDK",
+            "declAttributes": [
+              "HasStorage",
+              "AccessControl"
+            ],
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:7TestSDKAAC4nameSSvg",
+                "mangledName": "$s7TestSDKAAC4nameSSvg",
+                "moduleName": "TestSDK",
+                "implicit": true,
+                "accessorKind": "get"
+              },
+              {
+                "kind": "Accessor",
+                "name": "Set",
+                "printedName": "Set()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:7TestSDKAAC4nameSSvs",
+                "mangledName": "$s7TestSDKAAC4nameSSvs",
+                "moduleName": "TestSDK",
+                "implicit": true,
+                "accessorKind": "set"
+              },
+              {
+                "kind": "Accessor",
+                "name": "Modify",
+                "printedName": "Modify()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:7TestSDKAAC4nameSSvM",
+                "mangledName": "$s7TestSDKAAC4nameSSvM",
+                "moduleName": "TestSDK",
+                "implicit": true,
+                "accessorKind": "_modify"
+              }
+            ]
+          },
+          {
+            "kind": "Constructor",
+            "name": "init",
+            "printedName": "init(name:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "TestSDK",
+                "printedName": "TestSDK.TestSDK",
+                "usr": "s:7TestSDKAAC"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              }
+            ],
+            "declKind": "Constructor",
+            "usr": "s:7TestSDKAAC4nameABSS_tcfc",
+            "mangledName": "$s7TestSDKAAC4nameABSS_tcfc",
+            "moduleName": "TestSDK",
+            "declAttributes": [
+              "AccessControl"
+            ],
+            "init_kind": "Designated"
+          },
+          {
+            "kind": "Function",
+            "name": "printSelf",
+            "printedName": "printSelf()",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:7TestSDKAAC9printSelfyyF",
+            "mangledName": "$s7TestSDKAAC9printSelfyyF",
+            "moduleName": "TestSDK",
+            "declAttributes": [
+              "AccessControl"
+            ],
+            "funcSelfKind": "NonMutating"
+          }
+        ],
+        "declKind": "Class",
+        "usr": "s:7TestSDKAAC",
+        "mangledName": "$s7TestSDKAAC",
+        "moduleName": "TestSDK",
+        "declAttributes": [
+          "AccessControl"
+        ],
+        "conformances": [
+          {
+            "kind": "Conformance",
+            "name": "Copyable",
+            "printedName": "Copyable",
+            "usr": "s:s8CopyableP",
+            "mangledName": "$ss8CopyableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Escapable",
+            "printedName": "Escapable",
+            "usr": "s:s9EscapableP",
+            "mangledName": "$ss9EscapableP"
+          }
+        ]
+      }
+    ],
+    "json_format_version": 8
+  },
+  "ConstValues": []
+}
