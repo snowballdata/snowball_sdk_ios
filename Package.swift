@@ -1,43 +1,37 @@
-// swift-tools-version: 5.9
+// swift-tools-version: 5.7
 // The swift-tools-version declares the minimum version of Swift required to build this package.
 
 import PackageDescription
 
 let package = Package(
-    name: "TestSDK",
+    name: "SnowBallEngine",
     platforms: [
-        .iOS(.v15)
+        .iOS(.v13)
     ],
     products: [
-        // Products define the executables and libraries a package produces, making them visible to other packages.
         .library(
-            name: "TestSDK",
-            targets: ["TestSDK", "TestSDKWrapper"]
+            name: "SnowBallEngine",
+            targets: ["SnowBallEngineTarget"]
         ),
     ],
     dependencies: [
-        // Firebase dependencies - 必须声明,因为 XCFramework 依赖这些库
-        .package(
-            url: "https://github.com/firebase/firebase-ios-sdk.git",
-            from: "12.1.0"
-        )
+        .package(url: "https://github.com/adjust/ios_sdk.git", exact: "4.36.0"),
+        .package(url: "https://github.com/firebase/firebase-ios-sdk.git", exact: "12.1.0"),
     ],
     targets: [
-        // Binary target - 你的预编译 XCFramework
         .binaryTarget(
-            name: "TestSDK",
-            path: "TestSDK.xcframework"
+            name: "SnowBallEngineFramework",
+            path: "SnowBallEngine.xcframework"
         ),
-
-        // Wrapper target - 声明依赖关系
         .target(
-            name: "TestSDKWrapper",
+            name: "SnowBallEngineTarget",
             dependencies: [
-                "TestSDK",
+                "SnowBallEngineFramework",
+                .product(name: "Adjust", package: "ios_sdk"),
                 .product(name: "FirebaseAnalytics", package: "firebase-ios-sdk"),
-                .product(name: "FirebaseMessaging", package: "firebase-ios-sdk")
+                .product(name: "FirebaseMessaging", package: "firebase-ios-sdk"),
             ],
-            path: "Sources/TestSDKWrapper"
-        )
+            path: "Sources/SnowBallEngineTarget"
+        ),
     ]
 )

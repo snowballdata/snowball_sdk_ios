@@ -1,0 +1,213 @@
+// swift-interface-format-version: 1.0
+// swift-compiler-version: Apple Swift version 6.2 effective-5.10 (swiftlang-6.2.0.19.9 clang-1700.3.19.1)
+// swift-module-flags: -target arm64-apple-ios15.6 -enable-objc-interop -enable-library-evolution -swift-version 5 -enforce-exclusivity=checked -O -enable-upcoming-feature DisableOutwardActorInference -enable-upcoming-feature InferSendableFromCaptures -enable-upcoming-feature GlobalActorIsolatedTypesUsability -enable-upcoming-feature MemberImportVisibility -enable-upcoming-feature InferIsolatedConformances -enable-upcoming-feature NonisolatedNonsendingByDefault -enable-experimental-feature DebugDescriptionMacro -enable-bare-slash-regex -module-name SnowBallEngine
+// swift-module-flags-ignorable:  -formal-cxx-interoperability-mode=off -interface-compiler-version 6.2
+import AdServices
+import Foundation
+import StoreKit
+import Swift
+import UIKit
+import _Concurrency
+import _StringProcessing
+import _SwiftConcurrencyShims
+import os
+extension Foundation.Bundle {
+  #if compiler(>=5.3) && $NonescapableTypes
+  public var displayName: Swift.String? {
+    get
+  }
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
+  public var bundleName: Swift.String? {
+    get
+  }
+  #endif
+  public var version: Swift.Int {
+    get
+  }
+  #if compiler(>=5.3) && $NonescapableTypes
+  public var shortVersionString: Swift.String? {
+    get
+  }
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
+  public var buildDate: Foundation.Date? {
+    get
+  }
+  #endif
+}
+extension Foundation.Locale {
+  public func language(withRegion: Swift.Bool = true) -> Swift.String
+}
+public class Log {
+  public enum Level : Swift.Int {
+    case verbose
+    case debug
+    case info
+    case warning
+    case error
+    #if compiler(>=5.3) && $NonescapableTypes
+    public init?(rawValue: Swift.Int)
+    #endif
+    public typealias RawValue = Swift.Int
+    public var rawValue: Swift.Int {
+      get
+    }
+  }
+  public static var level: SnowBallEngine.Log.Level
+  final public let tag: Swift.String
+  public init(tag: Swift.String)
+  convenience public init<Subject>(type: Subject)
+  public static func setup(level: SnowBallEngine.Log.Level = .warning)
+  #if compiler(>=5.3) && $NonescapableTypes
+  public func v(_ msg: Swift.String?, function: Swift.StaticString = #function, file: Swift.StaticString = #file, line: Swift.UInt = #line)
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
+  public func d(_ msg: Swift.String?, function: Swift.StaticString = #function, file: Swift.StaticString = #file, line: Swift.UInt = #line)
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
+  public func i(_ msg: Swift.String?, function: Swift.StaticString = #function, file: Swift.StaticString = #file, line: Swift.UInt = #line)
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
+  public func w(_ msg: Swift.String?, function: Swift.StaticString = #function, file: Swift.StaticString = #file, line: Swift.UInt = #line)
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
+  public func e(_ msg: Swift.String?, function: Swift.StaticString = #function, file: Swift.StaticString = #file, line: Swift.UInt = #line)
+  #endif
+  @objc deinit
+}
+public protocol SnowBallPushDelegate {
+  #if compiler(>=5.3) && $NonescapableTypes
+  func isProLicense() -> Swift.Bool?
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
+  func fcmTokenDidChange(to token: Swift.String?)
+  #endif
+}
+@_hasMissingDesignatedInitializers public class Push {
+  public static let shared: SnowBallEngine.Push
+  public func setup(delegate: any SnowBallEngine.SnowBallPushDelegate)
+  public func trackReceived(notification id: Swift.String)
+  public func userLicenseChanged()
+  public static func subscribe(topic: Swift.String)
+  public static func unSubscribe(topic: Swift.String)
+  public func subscribe(topic: Swift.String)
+  public func unSubscribe(topic: Swift.String)
+  @objc deinit
+}
+@_hasMissingDesignatedInitializers public class StoreServer {
+  #if compiler(>=5.3) && $NonescapableTypes && $AsyncExecutionBehaviorAttributes
+  nonisolated(nonsending) public static func verify(bundleId: Swift.String, transationId: Swift.String, productId: Swift.String, productType: StoreKit.Product.ProductType, deviceId: Swift.String, userInstanceId: Swift.String?, scene: Swift.String?) async throws -> [Swift.String : Any]?
+  #endif
+  @objc deinit
+}
+@_hasMissingDesignatedInitializers public class Tracker {
+  public static let shared: SnowBallEngine.Tracker
+  #if compiler(>=5.3) && $NonescapableTypes
+  public func setup(adjustAppPurchaseToken: Swift.String?, adjustAdRevenueToken: Swift.String?, adjustAdTotalRevenueToken: Swift.String?)
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
+  public func logEvent(_ eventName: Swift.String, parameters: [Swift.String : Any]? = nil)
+  #endif
+  @objc deinit
+}
+extension SnowBallEngine.Tracker {
+  public struct Constants {
+    public static let REPORT_DATA_VERSION: Swift.String
+  }
+}
+extension SnowBallEngine.Tracker {
+  public struct AdRevenueInfo {
+    #if compiler(>=5.3) && $NonescapableTypes
+    public init(mediation: SnowBallEngine.Tracker.Mediation, adsRevenueFrom: SnowBallEngine.Tracker.RevenueFrom, adNetworkName: Swift.String, adUnitId: Swift.String?, adType: Swift.String, adImpressionId: Swift.String?, adCurrencyCode: Swift.String, adValue: Swift.Double, adPrecisionType: Swift.String?, scene: Swift.String?)
+    #endif
+  }
+  public enum Mediation {
+    case applovinMax
+    case admob
+    case ironSource
+    case other(name: Swift.String)
+    public var rawValue: Swift.String {
+      get
+    }
+  }
+  public enum RevenueFrom {
+    case applovinMax
+    case admobPingback
+    case `self`
+    case other(name: Swift.String)
+    public var rawValue: Swift.String {
+      get
+    }
+  }
+  public enum PrecisionType {
+    case estimated
+    case publisherProvided
+    case precise
+    case unknown
+    public var rawValue: Swift.String {
+      get
+    }
+    public static func == (a: SnowBallEngine.Tracker.PrecisionType, b: SnowBallEngine.Tracker.PrecisionType) -> Swift.Bool
+    public func hash(into hasher: inout Swift.Hasher)
+    public var hashValue: Swift.Int {
+      get
+    }
+  }
+  @_hasMissingDesignatedInitializers public class NetworkName {
+    public static let ADCOLONY: Swift.String
+    public static let FACEBOOK: Swift.String
+    public static let TAPJOY: Swift.String
+    public static let ADMOB: Swift.String
+    public static let APPLOVIN: Swift.String
+    public static let PANGLE: Swift.String
+    public static let UNITY: Swift.String
+    public static let IRONSOURCE: Swift.String
+    public static let VUNGLE: Swift.String
+    public static let INMOBI: Swift.String
+    public static let SMAATO: Swift.String
+    public static let FYBER: Swift.String
+    public static func turnTo(name: Swift.String) -> Swift.String
+    @objc deinit
+  }
+  @_hasMissingDesignatedInitializers public class Format {
+    public static let APP_OPEN: Swift.String
+    public static let FULLSCREEN: Swift.String
+    public static let NATIVE: Swift.String
+    public static let REWARDED: Swift.String
+    public static let BANNER: Swift.String
+    public static let RECTANGLE: Swift.String
+    public static let REWARDED_INTERS: Swift.String
+    public static func turnTo(format: Swift.String) -> Swift.String
+    @objc deinit
+  }
+}
+extension SnowBallEngine.Tracker {
+  public func trackAdRevenue(info: SnowBallEngine.Tracker.AdRevenueInfo)
+}
+extension SnowBallEngine.Tracker {
+  #if compiler(>=5.3) && $NonescapableTypes
+  public func trackPurchaseRevenue(transaction: StoreKit.Transaction, scene: Swift.String?)
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
+  public func trackInAppPurchaseRevenue(productId: Swift.String, currency: Swift.String, price: Swift.Double, scene: Swift.String?)
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
+  public func trackSubsPurchaseRevenue(productId: Swift.String, currency: Swift.String, price: Swift.Double, isFreeTrial: Swift.Bool, scene: Swift.String?)
+  #endif
+}
+public typealias SnowBallTracker = SnowBallEngine.Tracker
+public typealias SnowBallPush = SnowBallEngine.Push
+public typealias SnowBallLog = SnowBallEngine.Log
+public typealias SnowBallStore = SnowBallEngine.StoreServer
+@_hasMissingDesignatedInitializers public class SnowBall {
+  #if compiler(>=5.3) && $NonescapableTypes
+  public static func setup(pushDelegate: (any SnowBallEngine.SnowBallPushDelegate)?, adjustAppPurchaseToken: Swift.String?, adjustAdRevenueToken: Swift.String?, adjustAdTotalRevenueToken: Swift.String?)
+  #endif
+  @objc deinit
+}
+extension SnowBallEngine.Log.Level : Swift.Equatable {}
+extension SnowBallEngine.Log.Level : Swift.Hashable {}
+extension SnowBallEngine.Log.Level : Swift.RawRepresentable {}
+extension SnowBallEngine.Tracker.PrecisionType : Swift.Equatable {}
+extension SnowBallEngine.Tracker.PrecisionType : Swift.Hashable {}

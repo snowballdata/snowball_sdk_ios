@@ -1,0 +1,5214 @@
+{
+  "ABIRoot": {
+    "kind": "Root",
+    "name": "SnowBallEngine",
+    "printedName": "SnowBallEngine",
+    "children": [
+      {
+        "kind": "Import",
+        "name": "UIKit",
+        "printedName": "UIKit",
+        "declKind": "Import",
+        "moduleName": "SnowBallEngine"
+      },
+      {
+        "kind": "Import",
+        "name": "Foundation",
+        "printedName": "Foundation",
+        "declKind": "Import",
+        "moduleName": "SnowBallEngine",
+        "declAttributes": [
+          "RawDocComment"
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "Foundation",
+        "printedName": "Foundation",
+        "declKind": "Import",
+        "moduleName": "SnowBallEngine",
+        "declAttributes": [
+          "RawDocComment"
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "os",
+        "printedName": "os",
+        "declKind": "Import",
+        "moduleName": "SnowBallEngine"
+      },
+      {
+        "kind": "TypeDecl",
+        "name": "Log",
+        "printedName": "Log",
+        "children": [
+          {
+            "kind": "TypeDecl",
+            "name": "Level",
+            "printedName": "Level",
+            "children": [
+              {
+                "kind": "Var",
+                "name": "verbose",
+                "printedName": "verbose",
+                "children": [
+                  {
+                    "kind": "TypeFunc",
+                    "name": "Function",
+                    "printedName": "(SnowBallEngine.Log.Level.Type) -> SnowBallEngine.Log.Level",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "Level",
+                        "printedName": "SnowBallEngine.Log.Level",
+                        "usr": "s:14SnowBallEngine3LogC5LevelO"
+                      },
+                      {
+                        "kind": "TypeNominal",
+                        "name": "Metatype",
+                        "printedName": "SnowBallEngine.Log.Level.Type",
+                        "children": [
+                          {
+                            "kind": "TypeNominal",
+                            "name": "Level",
+                            "printedName": "SnowBallEngine.Log.Level",
+                            "usr": "s:14SnowBallEngine3LogC5LevelO"
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ],
+                "declKind": "EnumElement",
+                "usr": "s:14SnowBallEngine3LogC5LevelO7verboseyA2EmF",
+                "mangledName": "$s14SnowBallEngine3LogC5LevelO7verboseyA2EmF",
+                "moduleName": "SnowBallEngine"
+              },
+              {
+                "kind": "Var",
+                "name": "debug",
+                "printedName": "debug",
+                "children": [
+                  {
+                    "kind": "TypeFunc",
+                    "name": "Function",
+                    "printedName": "(SnowBallEngine.Log.Level.Type) -> SnowBallEngine.Log.Level",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "Level",
+                        "printedName": "SnowBallEngine.Log.Level",
+                        "usr": "s:14SnowBallEngine3LogC5LevelO"
+                      },
+                      {
+                        "kind": "TypeNominal",
+                        "name": "Metatype",
+                        "printedName": "SnowBallEngine.Log.Level.Type",
+                        "children": [
+                          {
+                            "kind": "TypeNominal",
+                            "name": "Level",
+                            "printedName": "SnowBallEngine.Log.Level",
+                            "usr": "s:14SnowBallEngine3LogC5LevelO"
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ],
+                "declKind": "EnumElement",
+                "usr": "s:14SnowBallEngine3LogC5LevelO5debugyA2EmF",
+                "mangledName": "$s14SnowBallEngine3LogC5LevelO5debugyA2EmF",
+                "moduleName": "SnowBallEngine"
+              },
+              {
+                "kind": "Var",
+                "name": "info",
+                "printedName": "info",
+                "children": [
+                  {
+                    "kind": "TypeFunc",
+                    "name": "Function",
+                    "printedName": "(SnowBallEngine.Log.Level.Type) -> SnowBallEngine.Log.Level",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "Level",
+                        "printedName": "SnowBallEngine.Log.Level",
+                        "usr": "s:14SnowBallEngine3LogC5LevelO"
+                      },
+                      {
+                        "kind": "TypeNominal",
+                        "name": "Metatype",
+                        "printedName": "SnowBallEngine.Log.Level.Type",
+                        "children": [
+                          {
+                            "kind": "TypeNominal",
+                            "name": "Level",
+                            "printedName": "SnowBallEngine.Log.Level",
+                            "usr": "s:14SnowBallEngine3LogC5LevelO"
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ],
+                "declKind": "EnumElement",
+                "usr": "s:14SnowBallEngine3LogC5LevelO4infoyA2EmF",
+                "mangledName": "$s14SnowBallEngine3LogC5LevelO4infoyA2EmF",
+                "moduleName": "SnowBallEngine"
+              },
+              {
+                "kind": "Var",
+                "name": "warning",
+                "printedName": "warning",
+                "children": [
+                  {
+                    "kind": "TypeFunc",
+                    "name": "Function",
+                    "printedName": "(SnowBallEngine.Log.Level.Type) -> SnowBallEngine.Log.Level",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "Level",
+                        "printedName": "SnowBallEngine.Log.Level",
+                        "usr": "s:14SnowBallEngine3LogC5LevelO"
+                      },
+                      {
+                        "kind": "TypeNominal",
+                        "name": "Metatype",
+                        "printedName": "SnowBallEngine.Log.Level.Type",
+                        "children": [
+                          {
+                            "kind": "TypeNominal",
+                            "name": "Level",
+                            "printedName": "SnowBallEngine.Log.Level",
+                            "usr": "s:14SnowBallEngine3LogC5LevelO"
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ],
+                "declKind": "EnumElement",
+                "usr": "s:14SnowBallEngine3LogC5LevelO7warningyA2EmF",
+                "mangledName": "$s14SnowBallEngine3LogC5LevelO7warningyA2EmF",
+                "moduleName": "SnowBallEngine"
+              },
+              {
+                "kind": "Var",
+                "name": "error",
+                "printedName": "error",
+                "children": [
+                  {
+                    "kind": "TypeFunc",
+                    "name": "Function",
+                    "printedName": "(SnowBallEngine.Log.Level.Type) -> SnowBallEngine.Log.Level",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "Level",
+                        "printedName": "SnowBallEngine.Log.Level",
+                        "usr": "s:14SnowBallEngine3LogC5LevelO"
+                      },
+                      {
+                        "kind": "TypeNominal",
+                        "name": "Metatype",
+                        "printedName": "SnowBallEngine.Log.Level.Type",
+                        "children": [
+                          {
+                            "kind": "TypeNominal",
+                            "name": "Level",
+                            "printedName": "SnowBallEngine.Log.Level",
+                            "usr": "s:14SnowBallEngine3LogC5LevelO"
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ],
+                "declKind": "EnumElement",
+                "usr": "s:14SnowBallEngine3LogC5LevelO5erroryA2EmF",
+                "mangledName": "$s14SnowBallEngine3LogC5LevelO5erroryA2EmF",
+                "moduleName": "SnowBallEngine"
+              },
+              {
+                "kind": "Constructor",
+                "name": "init",
+                "printedName": "init(rawValue:)",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Optional",
+                    "printedName": "SnowBallEngine.Log.Level?",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "Level",
+                        "printedName": "SnowBallEngine.Log.Level",
+                        "usr": "s:14SnowBallEngine3LogC5LevelO"
+                      }
+                    ],
+                    "usr": "s:Sq"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Int",
+                    "printedName": "Swift.Int",
+                    "usr": "s:Si"
+                  }
+                ],
+                "declKind": "Constructor",
+                "usr": "s:14SnowBallEngine3LogC5LevelO8rawValueAESgSi_tcfc",
+                "mangledName": "$s14SnowBallEngine3LogC5LevelO8rawValueAESgSi_tcfc",
+                "moduleName": "SnowBallEngine",
+                "implicit": true,
+                "init_kind": "Designated"
+              },
+              {
+                "kind": "Var",
+                "name": "rawValue",
+                "printedName": "rawValue",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Int",
+                    "printedName": "Swift.Int",
+                    "usr": "s:Si"
+                  }
+                ],
+                "declKind": "Var",
+                "usr": "s:14SnowBallEngine3LogC5LevelO8rawValueSivp",
+                "mangledName": "$s14SnowBallEngine3LogC5LevelO8rawValueSivp",
+                "moduleName": "SnowBallEngine",
+                "implicit": true,
+                "accessors": [
+                  {
+                    "kind": "Accessor",
+                    "name": "Get",
+                    "printedName": "Get()",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "Int",
+                        "printedName": "Swift.Int",
+                        "usr": "s:Si"
+                      }
+                    ],
+                    "declKind": "Accessor",
+                    "usr": "s:14SnowBallEngine3LogC5LevelO8rawValueSivg",
+                    "mangledName": "$s14SnowBallEngine3LogC5LevelO8rawValueSivg",
+                    "moduleName": "SnowBallEngine",
+                    "implicit": true,
+                    "accessorKind": "get"
+                  }
+                ]
+              }
+            ],
+            "declKind": "Enum",
+            "usr": "s:14SnowBallEngine3LogC5LevelO",
+            "mangledName": "$s14SnowBallEngine3LogC5LevelO",
+            "moduleName": "SnowBallEngine",
+            "declAttributes": [
+              "AccessControl"
+            ],
+            "enumRawTypeName": "Int",
+            "conformances": [
+              {
+                "kind": "Conformance",
+                "name": "Copyable",
+                "printedName": "Copyable",
+                "usr": "s:s8CopyableP",
+                "mangledName": "$ss8CopyableP"
+              },
+              {
+                "kind": "Conformance",
+                "name": "Escapable",
+                "printedName": "Escapable",
+                "usr": "s:s9EscapableP",
+                "mangledName": "$ss9EscapableP"
+              },
+              {
+                "kind": "Conformance",
+                "name": "Equatable",
+                "printedName": "Equatable",
+                "usr": "s:SQ",
+                "mangledName": "$sSQ"
+              },
+              {
+                "kind": "Conformance",
+                "name": "Hashable",
+                "printedName": "Hashable",
+                "usr": "s:SH",
+                "mangledName": "$sSH"
+              },
+              {
+                "kind": "Conformance",
+                "name": "RawRepresentable",
+                "printedName": "RawRepresentable",
+                "children": [
+                  {
+                    "kind": "TypeWitness",
+                    "name": "RawValue",
+                    "printedName": "RawValue",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "Int",
+                        "printedName": "Swift.Int",
+                        "usr": "s:Si"
+                      }
+                    ]
+                  }
+                ],
+                "usr": "s:SY",
+                "mangledName": "$sSY"
+              }
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "level",
+            "printedName": "level",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Level",
+                "printedName": "SnowBallEngine.Log.Level",
+                "usr": "s:14SnowBallEngine3LogC5LevelO"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:14SnowBallEngine3LogC5levelAC5LevelOvpZ",
+            "mangledName": "$s14SnowBallEngine3LogC5levelAC5LevelOvpZ",
+            "moduleName": "SnowBallEngine",
+            "static": true,
+            "declAttributes": [
+              "HasInitialValue",
+              "Final",
+              "HasStorage",
+              "AccessControl"
+            ],
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Level",
+                    "printedName": "SnowBallEngine.Log.Level",
+                    "usr": "s:14SnowBallEngine3LogC5LevelO"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:14SnowBallEngine3LogC5levelAC5LevelOvgZ",
+                "mangledName": "$s14SnowBallEngine3LogC5levelAC5LevelOvgZ",
+                "moduleName": "SnowBallEngine",
+                "static": true,
+                "implicit": true,
+                "declAttributes": [
+                  "Final"
+                ],
+                "accessorKind": "get"
+              },
+              {
+                "kind": "Accessor",
+                "name": "Set",
+                "printedName": "Set()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Level",
+                    "printedName": "SnowBallEngine.Log.Level",
+                    "usr": "s:14SnowBallEngine3LogC5LevelO"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:14SnowBallEngine3LogC5levelAC5LevelOvsZ",
+                "mangledName": "$s14SnowBallEngine3LogC5levelAC5LevelOvsZ",
+                "moduleName": "SnowBallEngine",
+                "static": true,
+                "implicit": true,
+                "declAttributes": [
+                  "Final"
+                ],
+                "accessorKind": "set"
+              },
+              {
+                "kind": "Accessor",
+                "name": "Modify",
+                "printedName": "Modify()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:14SnowBallEngine3LogC5levelAC5LevelOvMZ",
+                "mangledName": "$s14SnowBallEngine3LogC5levelAC5LevelOvMZ",
+                "moduleName": "SnowBallEngine",
+                "static": true,
+                "implicit": true,
+                "declAttributes": [
+                  "Final"
+                ],
+                "accessorKind": "_modify"
+              }
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "tag",
+            "printedName": "tag",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:14SnowBallEngine3LogC3tagSSvp",
+            "mangledName": "$s14SnowBallEngine3LogC3tagSSvp",
+            "moduleName": "SnowBallEngine",
+            "declAttributes": [
+              "Final",
+              "HasStorage",
+              "AccessControl"
+            ],
+            "isLet": true,
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:14SnowBallEngine3LogC3tagSSvg",
+                "mangledName": "$s14SnowBallEngine3LogC3tagSSvg",
+                "moduleName": "SnowBallEngine",
+                "implicit": true,
+                "declAttributes": [
+                  "Final"
+                ],
+                "accessorKind": "get"
+              }
+            ]
+          },
+          {
+            "kind": "Constructor",
+            "name": "init",
+            "printedName": "init(tag:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Log",
+                "printedName": "SnowBallEngine.Log",
+                "usr": "s:14SnowBallEngine3LogC"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              }
+            ],
+            "declKind": "Constructor",
+            "usr": "s:14SnowBallEngine3LogC3tagACSS_tcfc",
+            "mangledName": "$s14SnowBallEngine3LogC3tagACSS_tcfc",
+            "moduleName": "SnowBallEngine",
+            "declAttributes": [
+              "AccessControl"
+            ],
+            "init_kind": "Designated"
+          },
+          {
+            "kind": "Constructor",
+            "name": "init",
+            "printedName": "init(type:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Log",
+                "printedName": "SnowBallEngine.Log",
+                "usr": "s:14SnowBallEngine3LogC"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "GenericTypeParam",
+                "printedName": "τ_0_0"
+              }
+            ],
+            "declKind": "Constructor",
+            "usr": "s:14SnowBallEngine3LogC4typeACx_tclufc",
+            "mangledName": "$s14SnowBallEngine3LogC4typeACx_tclufc",
+            "moduleName": "SnowBallEngine",
+            "genericSig": "<τ_0_0>",
+            "sugared_genericSig": "<Subject>",
+            "declAttributes": [
+              "Convenience",
+              "AccessControl"
+            ],
+            "init_kind": "Convenience"
+          },
+          {
+            "kind": "Function",
+            "name": "setup",
+            "printedName": "setup(level:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Level",
+                "printedName": "SnowBallEngine.Log.Level",
+                "hasDefaultArg": true,
+                "usr": "s:14SnowBallEngine3LogC5LevelO"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:14SnowBallEngine3LogC5setup5levelyAC5LevelO_tFZ",
+            "mangledName": "$s14SnowBallEngine3LogC5setup5levelyAC5LevelO_tFZ",
+            "moduleName": "SnowBallEngine",
+            "static": true,
+            "declAttributes": [
+              "Final",
+              "AccessControl"
+            ],
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "v",
+            "printedName": "v(_:function:file:line:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "Swift.String?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ],
+                "usr": "s:Sq"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "StaticString",
+                "printedName": "Swift.StaticString",
+                "hasDefaultArg": true,
+                "usr": "s:s12StaticStringV"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "StaticString",
+                "printedName": "Swift.StaticString",
+                "hasDefaultArg": true,
+                "usr": "s:s12StaticStringV"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "UInt",
+                "printedName": "Swift.UInt",
+                "hasDefaultArg": true,
+                "usr": "s:Su"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:14SnowBallEngine3LogC1v_8function4file4lineySSSg_s12StaticStringVAJSutF",
+            "mangledName": "$s14SnowBallEngine3LogC1v_8function4file4lineySSSg_s12StaticStringVAJSutF",
+            "moduleName": "SnowBallEngine",
+            "declAttributes": [
+              "AccessControl"
+            ],
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "d",
+            "printedName": "d(_:function:file:line:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "Swift.String?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ],
+                "usr": "s:Sq"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "StaticString",
+                "printedName": "Swift.StaticString",
+                "hasDefaultArg": true,
+                "usr": "s:s12StaticStringV"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "StaticString",
+                "printedName": "Swift.StaticString",
+                "hasDefaultArg": true,
+                "usr": "s:s12StaticStringV"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "UInt",
+                "printedName": "Swift.UInt",
+                "hasDefaultArg": true,
+                "usr": "s:Su"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:14SnowBallEngine3LogC1d_8function4file4lineySSSg_s12StaticStringVAJSutF",
+            "mangledName": "$s14SnowBallEngine3LogC1d_8function4file4lineySSSg_s12StaticStringVAJSutF",
+            "moduleName": "SnowBallEngine",
+            "declAttributes": [
+              "AccessControl"
+            ],
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "i",
+            "printedName": "i(_:function:file:line:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "Swift.String?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ],
+                "usr": "s:Sq"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "StaticString",
+                "printedName": "Swift.StaticString",
+                "hasDefaultArg": true,
+                "usr": "s:s12StaticStringV"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "StaticString",
+                "printedName": "Swift.StaticString",
+                "hasDefaultArg": true,
+                "usr": "s:s12StaticStringV"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "UInt",
+                "printedName": "Swift.UInt",
+                "hasDefaultArg": true,
+                "usr": "s:Su"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:14SnowBallEngine3LogC1i_8function4file4lineySSSg_s12StaticStringVAJSutF",
+            "mangledName": "$s14SnowBallEngine3LogC1i_8function4file4lineySSSg_s12StaticStringVAJSutF",
+            "moduleName": "SnowBallEngine",
+            "declAttributes": [
+              "AccessControl"
+            ],
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "w",
+            "printedName": "w(_:function:file:line:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "Swift.String?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ],
+                "usr": "s:Sq"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "StaticString",
+                "printedName": "Swift.StaticString",
+                "hasDefaultArg": true,
+                "usr": "s:s12StaticStringV"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "StaticString",
+                "printedName": "Swift.StaticString",
+                "hasDefaultArg": true,
+                "usr": "s:s12StaticStringV"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "UInt",
+                "printedName": "Swift.UInt",
+                "hasDefaultArg": true,
+                "usr": "s:Su"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:14SnowBallEngine3LogC1w_8function4file4lineySSSg_s12StaticStringVAJSutF",
+            "mangledName": "$s14SnowBallEngine3LogC1w_8function4file4lineySSSg_s12StaticStringVAJSutF",
+            "moduleName": "SnowBallEngine",
+            "declAttributes": [
+              "AccessControl"
+            ],
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "e",
+            "printedName": "e(_:function:file:line:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "Swift.String?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ],
+                "usr": "s:Sq"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "StaticString",
+                "printedName": "Swift.StaticString",
+                "hasDefaultArg": true,
+                "usr": "s:s12StaticStringV"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "StaticString",
+                "printedName": "Swift.StaticString",
+                "hasDefaultArg": true,
+                "usr": "s:s12StaticStringV"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "UInt",
+                "printedName": "Swift.UInt",
+                "hasDefaultArg": true,
+                "usr": "s:Su"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:14SnowBallEngine3LogC1e_8function4file4lineySSSg_s12StaticStringVAJSutF",
+            "mangledName": "$s14SnowBallEngine3LogC1e_8function4file4lineySSSg_s12StaticStringVAJSutF",
+            "moduleName": "SnowBallEngine",
+            "declAttributes": [
+              "AccessControl"
+            ],
+            "funcSelfKind": "NonMutating"
+          }
+        ],
+        "declKind": "Class",
+        "usr": "s:14SnowBallEngine3LogC",
+        "mangledName": "$s14SnowBallEngine3LogC",
+        "moduleName": "SnowBallEngine",
+        "declAttributes": [
+          "AccessControl"
+        ],
+        "conformances": [
+          {
+            "kind": "Conformance",
+            "name": "Copyable",
+            "printedName": "Copyable",
+            "usr": "s:s8CopyableP",
+            "mangledName": "$ss8CopyableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Escapable",
+            "printedName": "Escapable",
+            "usr": "s:s9EscapableP",
+            "mangledName": "$ss9EscapableP"
+          }
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "FirebaseMessaging",
+        "printedName": "FirebaseMessaging",
+        "declKind": "Import",
+        "moduleName": "SnowBallEngine",
+        "declAttributes": [
+          "AccessControl",
+          "RawDocComment"
+        ]
+      },
+      {
+        "kind": "TypeDecl",
+        "name": "SnowBallPushDelegate",
+        "printedName": "SnowBallPushDelegate",
+        "children": [
+          {
+            "kind": "Function",
+            "name": "isProLicense",
+            "printedName": "isProLicense()",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "Swift.Bool?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Bool",
+                    "printedName": "Swift.Bool",
+                    "usr": "s:Sb"
+                  }
+                ],
+                "usr": "s:Sq"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:14SnowBallEngine0aB12PushDelegateP12isProLicenseSbSgyF",
+            "mangledName": "$s14SnowBallEngine0aB12PushDelegateP12isProLicenseSbSgyF",
+            "moduleName": "SnowBallEngine",
+            "genericSig": "<τ_0_0 where τ_0_0 : SnowBallEngine.SnowBallPushDelegate>",
+            "sugared_genericSig": "<Self where Self : SnowBallEngine.SnowBallPushDelegate>",
+            "protocolReq": true,
+            "reqNewWitnessTableEntry": true,
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "fcmTokenDidChange",
+            "printedName": "fcmTokenDidChange(to:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "Swift.String?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ],
+                "usr": "s:Sq"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:14SnowBallEngine0aB12PushDelegateP17fcmTokenDidChange2toySSSg_tF",
+            "mangledName": "$s14SnowBallEngine0aB12PushDelegateP17fcmTokenDidChange2toySSSg_tF",
+            "moduleName": "SnowBallEngine",
+            "genericSig": "<τ_0_0 where τ_0_0 : SnowBallEngine.SnowBallPushDelegate>",
+            "sugared_genericSig": "<Self where Self : SnowBallEngine.SnowBallPushDelegate>",
+            "protocolReq": true,
+            "reqNewWitnessTableEntry": true,
+            "funcSelfKind": "NonMutating"
+          }
+        ],
+        "declKind": "Protocol",
+        "usr": "s:14SnowBallEngine0aB12PushDelegateP",
+        "mangledName": "$s14SnowBallEngine0aB12PushDelegateP",
+        "moduleName": "SnowBallEngine",
+        "declAttributes": [
+          "AccessControl"
+        ],
+        "conformances": [
+          {
+            "kind": "Conformance",
+            "name": "Escapable",
+            "printedName": "Escapable",
+            "usr": "s:s9EscapableP",
+            "mangledName": "$ss9EscapableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Copyable",
+            "printedName": "Copyable",
+            "usr": "s:s8CopyableP",
+            "mangledName": "$ss8CopyableP"
+          }
+        ]
+      },
+      {
+        "kind": "TypeDecl",
+        "name": "Push",
+        "printedName": "Push",
+        "children": [
+          {
+            "kind": "Var",
+            "name": "shared",
+            "printedName": "shared",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Push",
+                "printedName": "SnowBallEngine.Push",
+                "usr": "s:14SnowBallEngine4PushC"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:14SnowBallEngine4PushC6sharedACvpZ",
+            "mangledName": "$s14SnowBallEngine4PushC6sharedACvpZ",
+            "moduleName": "SnowBallEngine",
+            "static": true,
+            "declAttributes": [
+              "HasInitialValue",
+              "Final",
+              "HasStorage",
+              "AccessControl"
+            ],
+            "isLet": true,
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Push",
+                    "printedName": "SnowBallEngine.Push",
+                    "usr": "s:14SnowBallEngine4PushC"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:14SnowBallEngine4PushC6sharedACvgZ",
+                "mangledName": "$s14SnowBallEngine4PushC6sharedACvgZ",
+                "moduleName": "SnowBallEngine",
+                "static": true,
+                "implicit": true,
+                "declAttributes": [
+                  "Final"
+                ],
+                "accessorKind": "get"
+              }
+            ]
+          },
+          {
+            "kind": "Function",
+            "name": "setup",
+            "printedName": "setup(delegate:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "SnowBallPushDelegate",
+                "printedName": "any SnowBallEngine.SnowBallPushDelegate",
+                "usr": "s:14SnowBallEngine0aB12PushDelegateP"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:14SnowBallEngine4PushC5setup8delegateyAA0abD8Delegate_p_tF",
+            "mangledName": "$s14SnowBallEngine4PushC5setup8delegateyAA0abD8Delegate_p_tF",
+            "moduleName": "SnowBallEngine",
+            "declAttributes": [
+              "AccessControl"
+            ],
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "trackReceived",
+            "printedName": "trackReceived(notification:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:14SnowBallEngine4PushC13trackReceived12notificationySS_tF",
+            "mangledName": "$s14SnowBallEngine4PushC13trackReceived12notificationySS_tF",
+            "moduleName": "SnowBallEngine",
+            "declAttributes": [
+              "AccessControl",
+              "RawDocComment"
+            ],
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "userLicenseChanged",
+            "printedName": "userLicenseChanged()",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:14SnowBallEngine4PushC18userLicenseChangedyyF",
+            "mangledName": "$s14SnowBallEngine4PushC18userLicenseChangedyyF",
+            "moduleName": "SnowBallEngine",
+            "declAttributes": [
+              "AccessControl",
+              "RawDocComment"
+            ],
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "subscribe",
+            "printedName": "subscribe(topic:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:14SnowBallEngine4PushC9subscribe5topicySS_tFZ",
+            "mangledName": "$s14SnowBallEngine4PushC9subscribe5topicySS_tFZ",
+            "moduleName": "SnowBallEngine",
+            "static": true,
+            "declAttributes": [
+              "Final",
+              "AccessControl",
+              "RawDocComment"
+            ],
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "unSubscribe",
+            "printedName": "unSubscribe(topic:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:14SnowBallEngine4PushC11unSubscribe5topicySS_tFZ",
+            "mangledName": "$s14SnowBallEngine4PushC11unSubscribe5topicySS_tFZ",
+            "moduleName": "SnowBallEngine",
+            "static": true,
+            "declAttributes": [
+              "Final",
+              "AccessControl",
+              "RawDocComment"
+            ],
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "subscribe",
+            "printedName": "subscribe(topic:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:14SnowBallEngine4PushC9subscribe5topicySS_tF",
+            "mangledName": "$s14SnowBallEngine4PushC9subscribe5topicySS_tF",
+            "moduleName": "SnowBallEngine",
+            "declAttributes": [
+              "AccessControl",
+              "RawDocComment"
+            ],
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "unSubscribe",
+            "printedName": "unSubscribe(topic:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:14SnowBallEngine4PushC11unSubscribe5topicySS_tF",
+            "mangledName": "$s14SnowBallEngine4PushC11unSubscribe5topicySS_tF",
+            "moduleName": "SnowBallEngine",
+            "declAttributes": [
+              "AccessControl",
+              "RawDocComment"
+            ],
+            "funcSelfKind": "NonMutating"
+          }
+        ],
+        "declKind": "Class",
+        "usr": "s:14SnowBallEngine4PushC",
+        "mangledName": "$s14SnowBallEngine4PushC",
+        "moduleName": "SnowBallEngine",
+        "declAttributes": [
+          "AccessControl"
+        ],
+        "hasMissingDesignatedInitializers": true,
+        "conformances": [
+          {
+            "kind": "Conformance",
+            "name": "Copyable",
+            "printedName": "Copyable",
+            "usr": "s:s8CopyableP",
+            "mangledName": "$ss8CopyableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Escapable",
+            "printedName": "Escapable",
+            "usr": "s:s9EscapableP",
+            "mangledName": "$ss9EscapableP"
+          }
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "Foundation",
+        "printedName": "Foundation",
+        "declKind": "Import",
+        "moduleName": "SnowBallEngine",
+        "declAttributes": [
+          "RawDocComment"
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "StoreKit",
+        "printedName": "StoreKit",
+        "declKind": "Import",
+        "moduleName": "SnowBallEngine"
+      },
+      {
+        "kind": "TypeDecl",
+        "name": "StoreServer",
+        "printedName": "StoreServer",
+        "children": [
+          {
+            "kind": "Function",
+            "name": "verify",
+            "printedName": "verify(bundleId:transationId:productId:productType:deviceId:userInstanceId:scene:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "[Swift.String : Any]?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Dictionary",
+                    "printedName": "[Swift.String : Any]",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "String",
+                        "printedName": "Swift.String",
+                        "usr": "s:SS"
+                      },
+                      {
+                        "kind": "TypeNominal",
+                        "name": "ProtocolComposition",
+                        "printedName": "Any"
+                      }
+                    ],
+                    "usr": "s:SD"
+                  }
+                ],
+                "usr": "s:Sq"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "ProductType",
+                "printedName": "StoreKit.Product.ProductType",
+                "usr": "s:8StoreKit7ProductV0C4TypeV"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "Swift.String?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ],
+                "usr": "s:Sq"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "Swift.String?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ],
+                "usr": "s:Sq"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:14SnowBallEngine11StoreServerC6verify8bundleId010transationH007productH00J4Type06deviceH0012userInstanceH05sceneSDySSypGSgSS_S2S0D3Kit7ProductV0qK0VS2SSgAStYaKFZ",
+            "mangledName": "$s14SnowBallEngine11StoreServerC6verify8bundleId010transationH007productH00J4Type06deviceH0012userInstanceH05sceneSDySSypGSgSS_S2S0D3Kit7ProductV0qK0VS2SSgAStYaKFZ",
+            "moduleName": "SnowBallEngine",
+            "static": true,
+            "declAttributes": [
+              "Nonisolated",
+              "Final",
+              "AccessControl",
+              "RawDocComment"
+            ],
+            "throwing": true,
+            "funcSelfKind": "NonMutating"
+          }
+        ],
+        "declKind": "Class",
+        "usr": "s:14SnowBallEngine11StoreServerC",
+        "mangledName": "$s14SnowBallEngine11StoreServerC",
+        "moduleName": "SnowBallEngine",
+        "declAttributes": [
+          "AccessControl"
+        ],
+        "hasMissingDesignatedInitializers": true,
+        "conformances": [
+          {
+            "kind": "Conformance",
+            "name": "Copyable",
+            "printedName": "Copyable",
+            "usr": "s:s8CopyableP",
+            "mangledName": "$ss8CopyableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Escapable",
+            "printedName": "Escapable",
+            "usr": "s:s9EscapableP",
+            "mangledName": "$ss9EscapableP"
+          }
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "AdServices",
+        "printedName": "AdServices",
+        "declKind": "Import",
+        "moduleName": "SnowBallEngine",
+        "declAttributes": [
+          "RawDocComment"
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "FirebaseAnalytics",
+        "printedName": "FirebaseAnalytics",
+        "declKind": "Import",
+        "moduleName": "SnowBallEngine",
+        "declAttributes": [
+          "AccessControl"
+        ]
+      },
+      {
+        "kind": "TypeDecl",
+        "name": "Tracker",
+        "printedName": "Tracker",
+        "children": [
+          {
+            "kind": "Var",
+            "name": "shared",
+            "printedName": "shared",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Tracker",
+                "printedName": "SnowBallEngine.Tracker",
+                "usr": "s:14SnowBallEngine7TrackerC"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:14SnowBallEngine7TrackerC6sharedACvpZ",
+            "mangledName": "$s14SnowBallEngine7TrackerC6sharedACvpZ",
+            "moduleName": "SnowBallEngine",
+            "static": true,
+            "declAttributes": [
+              "HasInitialValue",
+              "Final",
+              "HasStorage",
+              "AccessControl"
+            ],
+            "isLet": true,
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Tracker",
+                    "printedName": "SnowBallEngine.Tracker",
+                    "usr": "s:14SnowBallEngine7TrackerC"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:14SnowBallEngine7TrackerC6sharedACvgZ",
+                "mangledName": "$s14SnowBallEngine7TrackerC6sharedACvgZ",
+                "moduleName": "SnowBallEngine",
+                "static": true,
+                "implicit": true,
+                "declAttributes": [
+                  "Final"
+                ],
+                "accessorKind": "get"
+              }
+            ]
+          },
+          {
+            "kind": "Function",
+            "name": "setup",
+            "printedName": "setup(adjustAppPurchaseToken:adjustAdRevenueToken:adjustAdTotalRevenueToken:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "Swift.String?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ],
+                "usr": "s:Sq"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "Swift.String?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ],
+                "usr": "s:Sq"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "Swift.String?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ],
+                "usr": "s:Sq"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:14SnowBallEngine7TrackerC5setup22adjustAppPurchaseToken0f9AdRevenueI00fj5TotalkI0ySSSg_A2HtF",
+            "mangledName": "$s14SnowBallEngine7TrackerC5setup22adjustAppPurchaseToken0f9AdRevenueI00fj5TotalkI0ySSSg_A2HtF",
+            "moduleName": "SnowBallEngine",
+            "declAttributes": [
+              "AccessControl"
+            ],
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "logEvent",
+            "printedName": "logEvent(_:parameters:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "[Swift.String : Any]?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Dictionary",
+                    "printedName": "[Swift.String : Any]",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "String",
+                        "printedName": "Swift.String",
+                        "usr": "s:SS"
+                      },
+                      {
+                        "kind": "TypeNominal",
+                        "name": "ProtocolComposition",
+                        "printedName": "Any"
+                      }
+                    ],
+                    "usr": "s:SD"
+                  }
+                ],
+                "hasDefaultArg": true,
+                "usr": "s:Sq"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:14SnowBallEngine7TrackerC8logEvent_10parametersySS_SDySSypGSgtF",
+            "mangledName": "$s14SnowBallEngine7TrackerC8logEvent_10parametersySS_SDySSypGSgtF",
+            "moduleName": "SnowBallEngine",
+            "declAttributes": [
+              "AccessControl"
+            ],
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "TypeDecl",
+            "name": "Constants",
+            "printedName": "Constants",
+            "children": [
+              {
+                "kind": "Var",
+                "name": "REPORT_DATA_VERSION",
+                "printedName": "REPORT_DATA_VERSION",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ],
+                "declKind": "Var",
+                "usr": "s:14SnowBallEngine7TrackerC9ConstantsV19REPORT_DATA_VERSIONSSvpZ",
+                "mangledName": "$s14SnowBallEngine7TrackerC9ConstantsV19REPORT_DATA_VERSIONSSvpZ",
+                "moduleName": "SnowBallEngine",
+                "static": true,
+                "declAttributes": [
+                  "HasInitialValue",
+                  "HasStorage",
+                  "AccessControl"
+                ],
+                "isLet": true,
+                "hasStorage": true,
+                "accessors": [
+                  {
+                    "kind": "Accessor",
+                    "name": "Get",
+                    "printedName": "Get()",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "String",
+                        "printedName": "Swift.String",
+                        "usr": "s:SS"
+                      }
+                    ],
+                    "declKind": "Accessor",
+                    "usr": "s:14SnowBallEngine7TrackerC9ConstantsV19REPORT_DATA_VERSIONSSvgZ",
+                    "mangledName": "$s14SnowBallEngine7TrackerC9ConstantsV19REPORT_DATA_VERSIONSSvgZ",
+                    "moduleName": "SnowBallEngine",
+                    "static": true,
+                    "implicit": true,
+                    "accessorKind": "get"
+                  }
+                ]
+              }
+            ],
+            "declKind": "Struct",
+            "usr": "s:14SnowBallEngine7TrackerC9ConstantsV",
+            "mangledName": "$s14SnowBallEngine7TrackerC9ConstantsV",
+            "moduleName": "SnowBallEngine",
+            "declAttributes": [
+              "AccessControl"
+            ],
+            "isFromExtension": true,
+            "conformances": [
+              {
+                "kind": "Conformance",
+                "name": "Copyable",
+                "printedName": "Copyable",
+                "usr": "s:s8CopyableP",
+                "mangledName": "$ss8CopyableP"
+              },
+              {
+                "kind": "Conformance",
+                "name": "Escapable",
+                "printedName": "Escapable",
+                "usr": "s:s9EscapableP",
+                "mangledName": "$ss9EscapableP"
+              }
+            ]
+          },
+          {
+            "kind": "TypeDecl",
+            "name": "AdRevenueInfo",
+            "printedName": "AdRevenueInfo",
+            "children": [
+              {
+                "kind": "Constructor",
+                "name": "init",
+                "printedName": "init(mediation:adsRevenueFrom:adNetworkName:adUnitId:adType:adImpressionId:adCurrencyCode:adValue:adPrecisionType:scene:)",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "AdRevenueInfo",
+                    "printedName": "SnowBallEngine.Tracker.AdRevenueInfo",
+                    "usr": "s:14SnowBallEngine7TrackerC13AdRevenueInfoV"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Mediation",
+                    "printedName": "SnowBallEngine.Tracker.Mediation",
+                    "usr": "s:14SnowBallEngine7TrackerC9MediationO"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "RevenueFrom",
+                    "printedName": "SnowBallEngine.Tracker.RevenueFrom",
+                    "usr": "s:14SnowBallEngine7TrackerC11RevenueFromO"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Optional",
+                    "printedName": "Swift.String?",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "String",
+                        "printedName": "Swift.String",
+                        "usr": "s:SS"
+                      }
+                    ],
+                    "usr": "s:Sq"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Optional",
+                    "printedName": "Swift.String?",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "String",
+                        "printedName": "Swift.String",
+                        "usr": "s:SS"
+                      }
+                    ],
+                    "usr": "s:Sq"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Double",
+                    "printedName": "Swift.Double",
+                    "usr": "s:Sd"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Optional",
+                    "printedName": "Swift.String?",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "String",
+                        "printedName": "Swift.String",
+                        "usr": "s:SS"
+                      }
+                    ],
+                    "usr": "s:Sq"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Optional",
+                    "printedName": "Swift.String?",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "String",
+                        "printedName": "Swift.String",
+                        "usr": "s:SS"
+                      }
+                    ],
+                    "usr": "s:Sq"
+                  }
+                ],
+                "declKind": "Constructor",
+                "usr": "s:14SnowBallEngine7TrackerC13AdRevenueInfoV9mediation03adsF4From13adNetworkName0K6UnitId0K4Type0k10ImpressionO00K12CurrencyCode0K5Value0k9PrecisionP05sceneAeC9MediationO_AC0fJ0OS2SSgSSATSSSdA2Ttcfc",
+                "mangledName": "$s14SnowBallEngine7TrackerC13AdRevenueInfoV9mediation03adsF4From13adNetworkName0K6UnitId0K4Type0k10ImpressionO00K12CurrencyCode0K5Value0k9PrecisionP05sceneAeC9MediationO_AC0fJ0OS2SSgSSATSSSdA2Ttcfc",
+                "moduleName": "SnowBallEngine",
+                "declAttributes": [
+                  "AccessControl"
+                ],
+                "init_kind": "Designated"
+              }
+            ],
+            "declKind": "Struct",
+            "usr": "s:14SnowBallEngine7TrackerC13AdRevenueInfoV",
+            "mangledName": "$s14SnowBallEngine7TrackerC13AdRevenueInfoV",
+            "moduleName": "SnowBallEngine",
+            "declAttributes": [
+              "AccessControl",
+              "RawDocComment"
+            ],
+            "isFromExtension": true,
+            "conformances": [
+              {
+                "kind": "Conformance",
+                "name": "Copyable",
+                "printedName": "Copyable",
+                "usr": "s:s8CopyableP",
+                "mangledName": "$ss8CopyableP"
+              },
+              {
+                "kind": "Conformance",
+                "name": "Escapable",
+                "printedName": "Escapable",
+                "usr": "s:s9EscapableP",
+                "mangledName": "$ss9EscapableP"
+              }
+            ]
+          },
+          {
+            "kind": "TypeDecl",
+            "name": "Mediation",
+            "printedName": "Mediation",
+            "children": [
+              {
+                "kind": "Var",
+                "name": "applovinMax",
+                "printedName": "applovinMax",
+                "children": [
+                  {
+                    "kind": "TypeFunc",
+                    "name": "Function",
+                    "printedName": "(SnowBallEngine.Tracker.Mediation.Type) -> SnowBallEngine.Tracker.Mediation",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "Mediation",
+                        "printedName": "SnowBallEngine.Tracker.Mediation",
+                        "usr": "s:14SnowBallEngine7TrackerC9MediationO"
+                      },
+                      {
+                        "kind": "TypeNominal",
+                        "name": "Metatype",
+                        "printedName": "SnowBallEngine.Tracker.Mediation.Type",
+                        "children": [
+                          {
+                            "kind": "TypeNominal",
+                            "name": "Mediation",
+                            "printedName": "SnowBallEngine.Tracker.Mediation",
+                            "usr": "s:14SnowBallEngine7TrackerC9MediationO"
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ],
+                "declKind": "EnumElement",
+                "usr": "s:14SnowBallEngine7TrackerC9MediationO11applovinMaxyA2EmF",
+                "mangledName": "$s14SnowBallEngine7TrackerC9MediationO11applovinMaxyA2EmF",
+                "moduleName": "SnowBallEngine"
+              },
+              {
+                "kind": "Var",
+                "name": "admob",
+                "printedName": "admob",
+                "children": [
+                  {
+                    "kind": "TypeFunc",
+                    "name": "Function",
+                    "printedName": "(SnowBallEngine.Tracker.Mediation.Type) -> SnowBallEngine.Tracker.Mediation",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "Mediation",
+                        "printedName": "SnowBallEngine.Tracker.Mediation",
+                        "usr": "s:14SnowBallEngine7TrackerC9MediationO"
+                      },
+                      {
+                        "kind": "TypeNominal",
+                        "name": "Metatype",
+                        "printedName": "SnowBallEngine.Tracker.Mediation.Type",
+                        "children": [
+                          {
+                            "kind": "TypeNominal",
+                            "name": "Mediation",
+                            "printedName": "SnowBallEngine.Tracker.Mediation",
+                            "usr": "s:14SnowBallEngine7TrackerC9MediationO"
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ],
+                "declKind": "EnumElement",
+                "usr": "s:14SnowBallEngine7TrackerC9MediationO5admobyA2EmF",
+                "mangledName": "$s14SnowBallEngine7TrackerC9MediationO5admobyA2EmF",
+                "moduleName": "SnowBallEngine"
+              },
+              {
+                "kind": "Var",
+                "name": "ironSource",
+                "printedName": "ironSource",
+                "children": [
+                  {
+                    "kind": "TypeFunc",
+                    "name": "Function",
+                    "printedName": "(SnowBallEngine.Tracker.Mediation.Type) -> SnowBallEngine.Tracker.Mediation",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "Mediation",
+                        "printedName": "SnowBallEngine.Tracker.Mediation",
+                        "usr": "s:14SnowBallEngine7TrackerC9MediationO"
+                      },
+                      {
+                        "kind": "TypeNominal",
+                        "name": "Metatype",
+                        "printedName": "SnowBallEngine.Tracker.Mediation.Type",
+                        "children": [
+                          {
+                            "kind": "TypeNominal",
+                            "name": "Mediation",
+                            "printedName": "SnowBallEngine.Tracker.Mediation",
+                            "usr": "s:14SnowBallEngine7TrackerC9MediationO"
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ],
+                "declKind": "EnumElement",
+                "usr": "s:14SnowBallEngine7TrackerC9MediationO10ironSourceyA2EmF",
+                "mangledName": "$s14SnowBallEngine7TrackerC9MediationO10ironSourceyA2EmF",
+                "moduleName": "SnowBallEngine"
+              },
+              {
+                "kind": "Var",
+                "name": "other",
+                "printedName": "other",
+                "children": [
+                  {
+                    "kind": "TypeFunc",
+                    "name": "Function",
+                    "printedName": "(SnowBallEngine.Tracker.Mediation.Type) -> (Swift.String) -> SnowBallEngine.Tracker.Mediation",
+                    "children": [
+                      {
+                        "kind": "TypeFunc",
+                        "name": "Function",
+                        "printedName": "(Swift.String) -> SnowBallEngine.Tracker.Mediation",
+                        "children": [
+                          {
+                            "kind": "TypeNominal",
+                            "name": "Mediation",
+                            "printedName": "SnowBallEngine.Tracker.Mediation",
+                            "usr": "s:14SnowBallEngine7TrackerC9MediationO"
+                          },
+                          {
+                            "kind": "TypeNominal",
+                            "name": "Tuple",
+                            "printedName": "(name: Swift.String)",
+                            "children": [
+                              {
+                                "kind": "TypeNominal",
+                                "name": "String",
+                                "printedName": "Swift.String",
+                                "usr": "s:SS"
+                              }
+                            ]
+                          }
+                        ]
+                      },
+                      {
+                        "kind": "TypeNominal",
+                        "name": "Metatype",
+                        "printedName": "SnowBallEngine.Tracker.Mediation.Type",
+                        "children": [
+                          {
+                            "kind": "TypeNominal",
+                            "name": "Mediation",
+                            "printedName": "SnowBallEngine.Tracker.Mediation",
+                            "usr": "s:14SnowBallEngine7TrackerC9MediationO"
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ],
+                "declKind": "EnumElement",
+                "usr": "s:14SnowBallEngine7TrackerC9MediationO5otheryAESS_tcAEmF",
+                "mangledName": "$s14SnowBallEngine7TrackerC9MediationO5otheryAESS_tcAEmF",
+                "moduleName": "SnowBallEngine"
+              },
+              {
+                "kind": "Var",
+                "name": "rawValue",
+                "printedName": "rawValue",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ],
+                "declKind": "Var",
+                "usr": "s:14SnowBallEngine7TrackerC9MediationO8rawValueSSvp",
+                "mangledName": "$s14SnowBallEngine7TrackerC9MediationO8rawValueSSvp",
+                "moduleName": "SnowBallEngine",
+                "declAttributes": [
+                  "AccessControl"
+                ],
+                "accessors": [
+                  {
+                    "kind": "Accessor",
+                    "name": "Get",
+                    "printedName": "Get()",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "String",
+                        "printedName": "Swift.String",
+                        "usr": "s:SS"
+                      }
+                    ],
+                    "declKind": "Accessor",
+                    "usr": "s:14SnowBallEngine7TrackerC9MediationO8rawValueSSvg",
+                    "mangledName": "$s14SnowBallEngine7TrackerC9MediationO8rawValueSSvg",
+                    "moduleName": "SnowBallEngine",
+                    "accessorKind": "get"
+                  }
+                ]
+              }
+            ],
+            "declKind": "Enum",
+            "usr": "s:14SnowBallEngine7TrackerC9MediationO",
+            "mangledName": "$s14SnowBallEngine7TrackerC9MediationO",
+            "moduleName": "SnowBallEngine",
+            "declAttributes": [
+              "AccessControl"
+            ],
+            "isFromExtension": true,
+            "conformances": [
+              {
+                "kind": "Conformance",
+                "name": "Copyable",
+                "printedName": "Copyable",
+                "usr": "s:s8CopyableP",
+                "mangledName": "$ss8CopyableP"
+              },
+              {
+                "kind": "Conformance",
+                "name": "Escapable",
+                "printedName": "Escapable",
+                "usr": "s:s9EscapableP",
+                "mangledName": "$ss9EscapableP"
+              }
+            ]
+          },
+          {
+            "kind": "TypeDecl",
+            "name": "RevenueFrom",
+            "printedName": "RevenueFrom",
+            "children": [
+              {
+                "kind": "Var",
+                "name": "applovinMax",
+                "printedName": "applovinMax",
+                "children": [
+                  {
+                    "kind": "TypeFunc",
+                    "name": "Function",
+                    "printedName": "(SnowBallEngine.Tracker.RevenueFrom.Type) -> SnowBallEngine.Tracker.RevenueFrom",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "RevenueFrom",
+                        "printedName": "SnowBallEngine.Tracker.RevenueFrom",
+                        "usr": "s:14SnowBallEngine7TrackerC11RevenueFromO"
+                      },
+                      {
+                        "kind": "TypeNominal",
+                        "name": "Metatype",
+                        "printedName": "SnowBallEngine.Tracker.RevenueFrom.Type",
+                        "children": [
+                          {
+                            "kind": "TypeNominal",
+                            "name": "RevenueFrom",
+                            "printedName": "SnowBallEngine.Tracker.RevenueFrom",
+                            "usr": "s:14SnowBallEngine7TrackerC11RevenueFromO"
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ],
+                "declKind": "EnumElement",
+                "usr": "s:14SnowBallEngine7TrackerC11RevenueFromO11applovinMaxyA2EmF",
+                "mangledName": "$s14SnowBallEngine7TrackerC11RevenueFromO11applovinMaxyA2EmF",
+                "moduleName": "SnowBallEngine"
+              },
+              {
+                "kind": "Var",
+                "name": "admobPingback",
+                "printedName": "admobPingback",
+                "children": [
+                  {
+                    "kind": "TypeFunc",
+                    "name": "Function",
+                    "printedName": "(SnowBallEngine.Tracker.RevenueFrom.Type) -> SnowBallEngine.Tracker.RevenueFrom",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "RevenueFrom",
+                        "printedName": "SnowBallEngine.Tracker.RevenueFrom",
+                        "usr": "s:14SnowBallEngine7TrackerC11RevenueFromO"
+                      },
+                      {
+                        "kind": "TypeNominal",
+                        "name": "Metatype",
+                        "printedName": "SnowBallEngine.Tracker.RevenueFrom.Type",
+                        "children": [
+                          {
+                            "kind": "TypeNominal",
+                            "name": "RevenueFrom",
+                            "printedName": "SnowBallEngine.Tracker.RevenueFrom",
+                            "usr": "s:14SnowBallEngine7TrackerC11RevenueFromO"
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ],
+                "declKind": "EnumElement",
+                "usr": "s:14SnowBallEngine7TrackerC11RevenueFromO13admobPingbackyA2EmF",
+                "mangledName": "$s14SnowBallEngine7TrackerC11RevenueFromO13admobPingbackyA2EmF",
+                "moduleName": "SnowBallEngine"
+              },
+              {
+                "kind": "Var",
+                "name": "self",
+                "printedName": "self",
+                "children": [
+                  {
+                    "kind": "TypeFunc",
+                    "name": "Function",
+                    "printedName": "(SnowBallEngine.Tracker.RevenueFrom.Type) -> SnowBallEngine.Tracker.RevenueFrom",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "RevenueFrom",
+                        "printedName": "SnowBallEngine.Tracker.RevenueFrom",
+                        "usr": "s:14SnowBallEngine7TrackerC11RevenueFromO"
+                      },
+                      {
+                        "kind": "TypeNominal",
+                        "name": "Metatype",
+                        "printedName": "SnowBallEngine.Tracker.RevenueFrom.Type",
+                        "children": [
+                          {
+                            "kind": "TypeNominal",
+                            "name": "RevenueFrom",
+                            "printedName": "SnowBallEngine.Tracker.RevenueFrom",
+                            "usr": "s:14SnowBallEngine7TrackerC11RevenueFromO"
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ],
+                "declKind": "EnumElement",
+                "usr": "s:14SnowBallEngine7TrackerC11RevenueFromO4selfyA2EmF",
+                "mangledName": "$s14SnowBallEngine7TrackerC11RevenueFromO4selfyA2EmF",
+                "moduleName": "SnowBallEngine"
+              },
+              {
+                "kind": "Var",
+                "name": "other",
+                "printedName": "other",
+                "children": [
+                  {
+                    "kind": "TypeFunc",
+                    "name": "Function",
+                    "printedName": "(SnowBallEngine.Tracker.RevenueFrom.Type) -> (Swift.String) -> SnowBallEngine.Tracker.RevenueFrom",
+                    "children": [
+                      {
+                        "kind": "TypeFunc",
+                        "name": "Function",
+                        "printedName": "(Swift.String) -> SnowBallEngine.Tracker.RevenueFrom",
+                        "children": [
+                          {
+                            "kind": "TypeNominal",
+                            "name": "RevenueFrom",
+                            "printedName": "SnowBallEngine.Tracker.RevenueFrom",
+                            "usr": "s:14SnowBallEngine7TrackerC11RevenueFromO"
+                          },
+                          {
+                            "kind": "TypeNominal",
+                            "name": "Tuple",
+                            "printedName": "(name: Swift.String)",
+                            "children": [
+                              {
+                                "kind": "TypeNominal",
+                                "name": "String",
+                                "printedName": "Swift.String",
+                                "usr": "s:SS"
+                              }
+                            ]
+                          }
+                        ]
+                      },
+                      {
+                        "kind": "TypeNominal",
+                        "name": "Metatype",
+                        "printedName": "SnowBallEngine.Tracker.RevenueFrom.Type",
+                        "children": [
+                          {
+                            "kind": "TypeNominal",
+                            "name": "RevenueFrom",
+                            "printedName": "SnowBallEngine.Tracker.RevenueFrom",
+                            "usr": "s:14SnowBallEngine7TrackerC11RevenueFromO"
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ],
+                "declKind": "EnumElement",
+                "usr": "s:14SnowBallEngine7TrackerC11RevenueFromO5otheryAESS_tcAEmF",
+                "mangledName": "$s14SnowBallEngine7TrackerC11RevenueFromO5otheryAESS_tcAEmF",
+                "moduleName": "SnowBallEngine"
+              },
+              {
+                "kind": "Var",
+                "name": "rawValue",
+                "printedName": "rawValue",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ],
+                "declKind": "Var",
+                "usr": "s:14SnowBallEngine7TrackerC11RevenueFromO8rawValueSSvp",
+                "mangledName": "$s14SnowBallEngine7TrackerC11RevenueFromO8rawValueSSvp",
+                "moduleName": "SnowBallEngine",
+                "declAttributes": [
+                  "AccessControl"
+                ],
+                "accessors": [
+                  {
+                    "kind": "Accessor",
+                    "name": "Get",
+                    "printedName": "Get()",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "String",
+                        "printedName": "Swift.String",
+                        "usr": "s:SS"
+                      }
+                    ],
+                    "declKind": "Accessor",
+                    "usr": "s:14SnowBallEngine7TrackerC11RevenueFromO8rawValueSSvg",
+                    "mangledName": "$s14SnowBallEngine7TrackerC11RevenueFromO8rawValueSSvg",
+                    "moduleName": "SnowBallEngine",
+                    "accessorKind": "get"
+                  }
+                ]
+              }
+            ],
+            "declKind": "Enum",
+            "usr": "s:14SnowBallEngine7TrackerC11RevenueFromO",
+            "mangledName": "$s14SnowBallEngine7TrackerC11RevenueFromO",
+            "moduleName": "SnowBallEngine",
+            "declAttributes": [
+              "AccessControl"
+            ],
+            "isFromExtension": true,
+            "conformances": [
+              {
+                "kind": "Conformance",
+                "name": "Copyable",
+                "printedName": "Copyable",
+                "usr": "s:s8CopyableP",
+                "mangledName": "$ss8CopyableP"
+              },
+              {
+                "kind": "Conformance",
+                "name": "Escapable",
+                "printedName": "Escapable",
+                "usr": "s:s9EscapableP",
+                "mangledName": "$ss9EscapableP"
+              }
+            ]
+          },
+          {
+            "kind": "TypeDecl",
+            "name": "PrecisionType",
+            "printedName": "PrecisionType",
+            "children": [
+              {
+                "kind": "Var",
+                "name": "estimated",
+                "printedName": "estimated",
+                "children": [
+                  {
+                    "kind": "TypeFunc",
+                    "name": "Function",
+                    "printedName": "(SnowBallEngine.Tracker.PrecisionType.Type) -> SnowBallEngine.Tracker.PrecisionType",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "PrecisionType",
+                        "printedName": "SnowBallEngine.Tracker.PrecisionType",
+                        "usr": "s:14SnowBallEngine7TrackerC13PrecisionTypeO"
+                      },
+                      {
+                        "kind": "TypeNominal",
+                        "name": "Metatype",
+                        "printedName": "SnowBallEngine.Tracker.PrecisionType.Type",
+                        "children": [
+                          {
+                            "kind": "TypeNominal",
+                            "name": "PrecisionType",
+                            "printedName": "SnowBallEngine.Tracker.PrecisionType",
+                            "usr": "s:14SnowBallEngine7TrackerC13PrecisionTypeO"
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ],
+                "declKind": "EnumElement",
+                "usr": "s:14SnowBallEngine7TrackerC13PrecisionTypeO9estimatedyA2EmF",
+                "mangledName": "$s14SnowBallEngine7TrackerC13PrecisionTypeO9estimatedyA2EmF",
+                "moduleName": "SnowBallEngine"
+              },
+              {
+                "kind": "Var",
+                "name": "publisherProvided",
+                "printedName": "publisherProvided",
+                "children": [
+                  {
+                    "kind": "TypeFunc",
+                    "name": "Function",
+                    "printedName": "(SnowBallEngine.Tracker.PrecisionType.Type) -> SnowBallEngine.Tracker.PrecisionType",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "PrecisionType",
+                        "printedName": "SnowBallEngine.Tracker.PrecisionType",
+                        "usr": "s:14SnowBallEngine7TrackerC13PrecisionTypeO"
+                      },
+                      {
+                        "kind": "TypeNominal",
+                        "name": "Metatype",
+                        "printedName": "SnowBallEngine.Tracker.PrecisionType.Type",
+                        "children": [
+                          {
+                            "kind": "TypeNominal",
+                            "name": "PrecisionType",
+                            "printedName": "SnowBallEngine.Tracker.PrecisionType",
+                            "usr": "s:14SnowBallEngine7TrackerC13PrecisionTypeO"
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ],
+                "declKind": "EnumElement",
+                "usr": "s:14SnowBallEngine7TrackerC13PrecisionTypeO17publisherProvidedyA2EmF",
+                "mangledName": "$s14SnowBallEngine7TrackerC13PrecisionTypeO17publisherProvidedyA2EmF",
+                "moduleName": "SnowBallEngine"
+              },
+              {
+                "kind": "Var",
+                "name": "precise",
+                "printedName": "precise",
+                "children": [
+                  {
+                    "kind": "TypeFunc",
+                    "name": "Function",
+                    "printedName": "(SnowBallEngine.Tracker.PrecisionType.Type) -> SnowBallEngine.Tracker.PrecisionType",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "PrecisionType",
+                        "printedName": "SnowBallEngine.Tracker.PrecisionType",
+                        "usr": "s:14SnowBallEngine7TrackerC13PrecisionTypeO"
+                      },
+                      {
+                        "kind": "TypeNominal",
+                        "name": "Metatype",
+                        "printedName": "SnowBallEngine.Tracker.PrecisionType.Type",
+                        "children": [
+                          {
+                            "kind": "TypeNominal",
+                            "name": "PrecisionType",
+                            "printedName": "SnowBallEngine.Tracker.PrecisionType",
+                            "usr": "s:14SnowBallEngine7TrackerC13PrecisionTypeO"
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ],
+                "declKind": "EnumElement",
+                "usr": "s:14SnowBallEngine7TrackerC13PrecisionTypeO7preciseyA2EmF",
+                "mangledName": "$s14SnowBallEngine7TrackerC13PrecisionTypeO7preciseyA2EmF",
+                "moduleName": "SnowBallEngine"
+              },
+              {
+                "kind": "Var",
+                "name": "unknown",
+                "printedName": "unknown",
+                "children": [
+                  {
+                    "kind": "TypeFunc",
+                    "name": "Function",
+                    "printedName": "(SnowBallEngine.Tracker.PrecisionType.Type) -> SnowBallEngine.Tracker.PrecisionType",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "PrecisionType",
+                        "printedName": "SnowBallEngine.Tracker.PrecisionType",
+                        "usr": "s:14SnowBallEngine7TrackerC13PrecisionTypeO"
+                      },
+                      {
+                        "kind": "TypeNominal",
+                        "name": "Metatype",
+                        "printedName": "SnowBallEngine.Tracker.PrecisionType.Type",
+                        "children": [
+                          {
+                            "kind": "TypeNominal",
+                            "name": "PrecisionType",
+                            "printedName": "SnowBallEngine.Tracker.PrecisionType",
+                            "usr": "s:14SnowBallEngine7TrackerC13PrecisionTypeO"
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ],
+                "declKind": "EnumElement",
+                "usr": "s:14SnowBallEngine7TrackerC13PrecisionTypeO7unknownyA2EmF",
+                "mangledName": "$s14SnowBallEngine7TrackerC13PrecisionTypeO7unknownyA2EmF",
+                "moduleName": "SnowBallEngine"
+              },
+              {
+                "kind": "Var",
+                "name": "rawValue",
+                "printedName": "rawValue",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ],
+                "declKind": "Var",
+                "usr": "s:14SnowBallEngine7TrackerC13PrecisionTypeO8rawValueSSvp",
+                "mangledName": "$s14SnowBallEngine7TrackerC13PrecisionTypeO8rawValueSSvp",
+                "moduleName": "SnowBallEngine",
+                "declAttributes": [
+                  "AccessControl"
+                ],
+                "accessors": [
+                  {
+                    "kind": "Accessor",
+                    "name": "Get",
+                    "printedName": "Get()",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "String",
+                        "printedName": "Swift.String",
+                        "usr": "s:SS"
+                      }
+                    ],
+                    "declKind": "Accessor",
+                    "usr": "s:14SnowBallEngine7TrackerC13PrecisionTypeO8rawValueSSvg",
+                    "mangledName": "$s14SnowBallEngine7TrackerC13PrecisionTypeO8rawValueSSvg",
+                    "moduleName": "SnowBallEngine",
+                    "accessorKind": "get"
+                  }
+                ]
+              },
+              {
+                "kind": "Function",
+                "name": "==",
+                "printedName": "==(_:_:)",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Bool",
+                    "printedName": "Swift.Bool",
+                    "usr": "s:Sb"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "PrecisionType",
+                    "printedName": "SnowBallEngine.Tracker.PrecisionType",
+                    "usr": "s:14SnowBallEngine7TrackerC13PrecisionTypeO"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "PrecisionType",
+                    "printedName": "SnowBallEngine.Tracker.PrecisionType",
+                    "usr": "s:14SnowBallEngine7TrackerC13PrecisionTypeO"
+                  }
+                ],
+                "declKind": "Func",
+                "usr": "s:14SnowBallEngine7TrackerC13PrecisionTypeO2eeoiySbAE_AEtFZ",
+                "mangledName": "$s14SnowBallEngine7TrackerC13PrecisionTypeO2eeoiySbAE_AEtFZ",
+                "moduleName": "SnowBallEngine",
+                "static": true,
+                "implicit": true,
+                "funcSelfKind": "NonMutating"
+              },
+              {
+                "kind": "Var",
+                "name": "hashValue",
+                "printedName": "hashValue",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Int",
+                    "printedName": "Swift.Int",
+                    "usr": "s:Si"
+                  }
+                ],
+                "declKind": "Var",
+                "usr": "s:14SnowBallEngine7TrackerC13PrecisionTypeO9hashValueSivp",
+                "mangledName": "$s14SnowBallEngine7TrackerC13PrecisionTypeO9hashValueSivp",
+                "moduleName": "SnowBallEngine",
+                "implicit": true,
+                "accessors": [
+                  {
+                    "kind": "Accessor",
+                    "name": "Get",
+                    "printedName": "Get()",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "Int",
+                        "printedName": "Swift.Int",
+                        "usr": "s:Si"
+                      }
+                    ],
+                    "declKind": "Accessor",
+                    "usr": "s:14SnowBallEngine7TrackerC13PrecisionTypeO9hashValueSivg",
+                    "mangledName": "$s14SnowBallEngine7TrackerC13PrecisionTypeO9hashValueSivg",
+                    "moduleName": "SnowBallEngine",
+                    "implicit": true,
+                    "accessorKind": "get"
+                  }
+                ]
+              },
+              {
+                "kind": "Function",
+                "name": "hash",
+                "printedName": "hash(into:)",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Hasher",
+                    "printedName": "Swift.Hasher",
+                    "paramValueOwnership": "InOut",
+                    "usr": "s:s6HasherV"
+                  }
+                ],
+                "declKind": "Func",
+                "usr": "s:14SnowBallEngine7TrackerC13PrecisionTypeO4hash4intoys6HasherVz_tF",
+                "mangledName": "$s14SnowBallEngine7TrackerC13PrecisionTypeO4hash4intoys6HasherVz_tF",
+                "moduleName": "SnowBallEngine",
+                "implicit": true,
+                "funcSelfKind": "NonMutating"
+              }
+            ],
+            "declKind": "Enum",
+            "usr": "s:14SnowBallEngine7TrackerC13PrecisionTypeO",
+            "mangledName": "$s14SnowBallEngine7TrackerC13PrecisionTypeO",
+            "moduleName": "SnowBallEngine",
+            "declAttributes": [
+              "AccessControl"
+            ],
+            "isFromExtension": true,
+            "conformances": [
+              {
+                "kind": "Conformance",
+                "name": "Copyable",
+                "printedName": "Copyable",
+                "usr": "s:s8CopyableP",
+                "mangledName": "$ss8CopyableP"
+              },
+              {
+                "kind": "Conformance",
+                "name": "Escapable",
+                "printedName": "Escapable",
+                "usr": "s:s9EscapableP",
+                "mangledName": "$ss9EscapableP"
+              },
+              {
+                "kind": "Conformance",
+                "name": "Equatable",
+                "printedName": "Equatable",
+                "usr": "s:SQ",
+                "mangledName": "$sSQ"
+              },
+              {
+                "kind": "Conformance",
+                "name": "Hashable",
+                "printedName": "Hashable",
+                "usr": "s:SH",
+                "mangledName": "$sSH"
+              }
+            ]
+          },
+          {
+            "kind": "TypeDecl",
+            "name": "NetworkName",
+            "printedName": "NetworkName",
+            "children": [
+              {
+                "kind": "Var",
+                "name": "ADCOLONY",
+                "printedName": "ADCOLONY",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ],
+                "declKind": "Var",
+                "usr": "s:14SnowBallEngine7TrackerC11NetworkNameC8ADCOLONYSSvpZ",
+                "mangledName": "$s14SnowBallEngine7TrackerC11NetworkNameC8ADCOLONYSSvpZ",
+                "moduleName": "SnowBallEngine",
+                "static": true,
+                "declAttributes": [
+                  "HasInitialValue",
+                  "Final",
+                  "HasStorage",
+                  "AccessControl"
+                ],
+                "isLet": true,
+                "hasStorage": true,
+                "accessors": [
+                  {
+                    "kind": "Accessor",
+                    "name": "Get",
+                    "printedName": "Get()",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "String",
+                        "printedName": "Swift.String",
+                        "usr": "s:SS"
+                      }
+                    ],
+                    "declKind": "Accessor",
+                    "usr": "s:14SnowBallEngine7TrackerC11NetworkNameC8ADCOLONYSSvgZ",
+                    "mangledName": "$s14SnowBallEngine7TrackerC11NetworkNameC8ADCOLONYSSvgZ",
+                    "moduleName": "SnowBallEngine",
+                    "static": true,
+                    "implicit": true,
+                    "declAttributes": [
+                      "Final"
+                    ],
+                    "accessorKind": "get"
+                  }
+                ]
+              },
+              {
+                "kind": "Var",
+                "name": "FACEBOOK",
+                "printedName": "FACEBOOK",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ],
+                "declKind": "Var",
+                "usr": "s:14SnowBallEngine7TrackerC11NetworkNameC8FACEBOOKSSvpZ",
+                "mangledName": "$s14SnowBallEngine7TrackerC11NetworkNameC8FACEBOOKSSvpZ",
+                "moduleName": "SnowBallEngine",
+                "static": true,
+                "declAttributes": [
+                  "HasInitialValue",
+                  "Final",
+                  "HasStorage",
+                  "AccessControl"
+                ],
+                "isLet": true,
+                "hasStorage": true,
+                "accessors": [
+                  {
+                    "kind": "Accessor",
+                    "name": "Get",
+                    "printedName": "Get()",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "String",
+                        "printedName": "Swift.String",
+                        "usr": "s:SS"
+                      }
+                    ],
+                    "declKind": "Accessor",
+                    "usr": "s:14SnowBallEngine7TrackerC11NetworkNameC8FACEBOOKSSvgZ",
+                    "mangledName": "$s14SnowBallEngine7TrackerC11NetworkNameC8FACEBOOKSSvgZ",
+                    "moduleName": "SnowBallEngine",
+                    "static": true,
+                    "implicit": true,
+                    "declAttributes": [
+                      "Final"
+                    ],
+                    "accessorKind": "get"
+                  }
+                ]
+              },
+              {
+                "kind": "Var",
+                "name": "TAPJOY",
+                "printedName": "TAPJOY",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ],
+                "declKind": "Var",
+                "usr": "s:14SnowBallEngine7TrackerC11NetworkNameC6TAPJOYSSvpZ",
+                "mangledName": "$s14SnowBallEngine7TrackerC11NetworkNameC6TAPJOYSSvpZ",
+                "moduleName": "SnowBallEngine",
+                "static": true,
+                "declAttributes": [
+                  "HasInitialValue",
+                  "Final",
+                  "HasStorage",
+                  "AccessControl"
+                ],
+                "isLet": true,
+                "hasStorage": true,
+                "accessors": [
+                  {
+                    "kind": "Accessor",
+                    "name": "Get",
+                    "printedName": "Get()",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "String",
+                        "printedName": "Swift.String",
+                        "usr": "s:SS"
+                      }
+                    ],
+                    "declKind": "Accessor",
+                    "usr": "s:14SnowBallEngine7TrackerC11NetworkNameC6TAPJOYSSvgZ",
+                    "mangledName": "$s14SnowBallEngine7TrackerC11NetworkNameC6TAPJOYSSvgZ",
+                    "moduleName": "SnowBallEngine",
+                    "static": true,
+                    "implicit": true,
+                    "declAttributes": [
+                      "Final"
+                    ],
+                    "accessorKind": "get"
+                  }
+                ]
+              },
+              {
+                "kind": "Var",
+                "name": "ADMOB",
+                "printedName": "ADMOB",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ],
+                "declKind": "Var",
+                "usr": "s:14SnowBallEngine7TrackerC11NetworkNameC5ADMOBSSvpZ",
+                "mangledName": "$s14SnowBallEngine7TrackerC11NetworkNameC5ADMOBSSvpZ",
+                "moduleName": "SnowBallEngine",
+                "static": true,
+                "declAttributes": [
+                  "HasInitialValue",
+                  "Final",
+                  "HasStorage",
+                  "AccessControl"
+                ],
+                "isLet": true,
+                "hasStorage": true,
+                "accessors": [
+                  {
+                    "kind": "Accessor",
+                    "name": "Get",
+                    "printedName": "Get()",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "String",
+                        "printedName": "Swift.String",
+                        "usr": "s:SS"
+                      }
+                    ],
+                    "declKind": "Accessor",
+                    "usr": "s:14SnowBallEngine7TrackerC11NetworkNameC5ADMOBSSvgZ",
+                    "mangledName": "$s14SnowBallEngine7TrackerC11NetworkNameC5ADMOBSSvgZ",
+                    "moduleName": "SnowBallEngine",
+                    "static": true,
+                    "implicit": true,
+                    "declAttributes": [
+                      "Final"
+                    ],
+                    "accessorKind": "get"
+                  }
+                ]
+              },
+              {
+                "kind": "Var",
+                "name": "APPLOVIN",
+                "printedName": "APPLOVIN",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ],
+                "declKind": "Var",
+                "usr": "s:14SnowBallEngine7TrackerC11NetworkNameC8APPLOVINSSvpZ",
+                "mangledName": "$s14SnowBallEngine7TrackerC11NetworkNameC8APPLOVINSSvpZ",
+                "moduleName": "SnowBallEngine",
+                "static": true,
+                "declAttributes": [
+                  "HasInitialValue",
+                  "Final",
+                  "HasStorage",
+                  "AccessControl"
+                ],
+                "isLet": true,
+                "hasStorage": true,
+                "accessors": [
+                  {
+                    "kind": "Accessor",
+                    "name": "Get",
+                    "printedName": "Get()",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "String",
+                        "printedName": "Swift.String",
+                        "usr": "s:SS"
+                      }
+                    ],
+                    "declKind": "Accessor",
+                    "usr": "s:14SnowBallEngine7TrackerC11NetworkNameC8APPLOVINSSvgZ",
+                    "mangledName": "$s14SnowBallEngine7TrackerC11NetworkNameC8APPLOVINSSvgZ",
+                    "moduleName": "SnowBallEngine",
+                    "static": true,
+                    "implicit": true,
+                    "declAttributes": [
+                      "Final"
+                    ],
+                    "accessorKind": "get"
+                  }
+                ]
+              },
+              {
+                "kind": "Var",
+                "name": "PANGLE",
+                "printedName": "PANGLE",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ],
+                "declKind": "Var",
+                "usr": "s:14SnowBallEngine7TrackerC11NetworkNameC6PANGLESSvpZ",
+                "mangledName": "$s14SnowBallEngine7TrackerC11NetworkNameC6PANGLESSvpZ",
+                "moduleName": "SnowBallEngine",
+                "static": true,
+                "declAttributes": [
+                  "HasInitialValue",
+                  "Final",
+                  "HasStorage",
+                  "AccessControl"
+                ],
+                "isLet": true,
+                "hasStorage": true,
+                "accessors": [
+                  {
+                    "kind": "Accessor",
+                    "name": "Get",
+                    "printedName": "Get()",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "String",
+                        "printedName": "Swift.String",
+                        "usr": "s:SS"
+                      }
+                    ],
+                    "declKind": "Accessor",
+                    "usr": "s:14SnowBallEngine7TrackerC11NetworkNameC6PANGLESSvgZ",
+                    "mangledName": "$s14SnowBallEngine7TrackerC11NetworkNameC6PANGLESSvgZ",
+                    "moduleName": "SnowBallEngine",
+                    "static": true,
+                    "implicit": true,
+                    "declAttributes": [
+                      "Final"
+                    ],
+                    "accessorKind": "get"
+                  }
+                ]
+              },
+              {
+                "kind": "Var",
+                "name": "UNITY",
+                "printedName": "UNITY",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ],
+                "declKind": "Var",
+                "usr": "s:14SnowBallEngine7TrackerC11NetworkNameC5UNITYSSvpZ",
+                "mangledName": "$s14SnowBallEngine7TrackerC11NetworkNameC5UNITYSSvpZ",
+                "moduleName": "SnowBallEngine",
+                "static": true,
+                "declAttributes": [
+                  "HasInitialValue",
+                  "Final",
+                  "HasStorage",
+                  "AccessControl"
+                ],
+                "isLet": true,
+                "hasStorage": true,
+                "accessors": [
+                  {
+                    "kind": "Accessor",
+                    "name": "Get",
+                    "printedName": "Get()",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "String",
+                        "printedName": "Swift.String",
+                        "usr": "s:SS"
+                      }
+                    ],
+                    "declKind": "Accessor",
+                    "usr": "s:14SnowBallEngine7TrackerC11NetworkNameC5UNITYSSvgZ",
+                    "mangledName": "$s14SnowBallEngine7TrackerC11NetworkNameC5UNITYSSvgZ",
+                    "moduleName": "SnowBallEngine",
+                    "static": true,
+                    "implicit": true,
+                    "declAttributes": [
+                      "Final"
+                    ],
+                    "accessorKind": "get"
+                  }
+                ]
+              },
+              {
+                "kind": "Var",
+                "name": "IRONSOURCE",
+                "printedName": "IRONSOURCE",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ],
+                "declKind": "Var",
+                "usr": "s:14SnowBallEngine7TrackerC11NetworkNameC10IRONSOURCESSvpZ",
+                "mangledName": "$s14SnowBallEngine7TrackerC11NetworkNameC10IRONSOURCESSvpZ",
+                "moduleName": "SnowBallEngine",
+                "static": true,
+                "declAttributes": [
+                  "HasInitialValue",
+                  "Final",
+                  "HasStorage",
+                  "AccessControl"
+                ],
+                "isLet": true,
+                "hasStorage": true,
+                "accessors": [
+                  {
+                    "kind": "Accessor",
+                    "name": "Get",
+                    "printedName": "Get()",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "String",
+                        "printedName": "Swift.String",
+                        "usr": "s:SS"
+                      }
+                    ],
+                    "declKind": "Accessor",
+                    "usr": "s:14SnowBallEngine7TrackerC11NetworkNameC10IRONSOURCESSvgZ",
+                    "mangledName": "$s14SnowBallEngine7TrackerC11NetworkNameC10IRONSOURCESSvgZ",
+                    "moduleName": "SnowBallEngine",
+                    "static": true,
+                    "implicit": true,
+                    "declAttributes": [
+                      "Final"
+                    ],
+                    "accessorKind": "get"
+                  }
+                ]
+              },
+              {
+                "kind": "Var",
+                "name": "VUNGLE",
+                "printedName": "VUNGLE",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ],
+                "declKind": "Var",
+                "usr": "s:14SnowBallEngine7TrackerC11NetworkNameC6VUNGLESSvpZ",
+                "mangledName": "$s14SnowBallEngine7TrackerC11NetworkNameC6VUNGLESSvpZ",
+                "moduleName": "SnowBallEngine",
+                "static": true,
+                "declAttributes": [
+                  "HasInitialValue",
+                  "Final",
+                  "HasStorage",
+                  "AccessControl"
+                ],
+                "isLet": true,
+                "hasStorage": true,
+                "accessors": [
+                  {
+                    "kind": "Accessor",
+                    "name": "Get",
+                    "printedName": "Get()",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "String",
+                        "printedName": "Swift.String",
+                        "usr": "s:SS"
+                      }
+                    ],
+                    "declKind": "Accessor",
+                    "usr": "s:14SnowBallEngine7TrackerC11NetworkNameC6VUNGLESSvgZ",
+                    "mangledName": "$s14SnowBallEngine7TrackerC11NetworkNameC6VUNGLESSvgZ",
+                    "moduleName": "SnowBallEngine",
+                    "static": true,
+                    "implicit": true,
+                    "declAttributes": [
+                      "Final"
+                    ],
+                    "accessorKind": "get"
+                  }
+                ]
+              },
+              {
+                "kind": "Var",
+                "name": "INMOBI",
+                "printedName": "INMOBI",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ],
+                "declKind": "Var",
+                "usr": "s:14SnowBallEngine7TrackerC11NetworkNameC6INMOBISSvpZ",
+                "mangledName": "$s14SnowBallEngine7TrackerC11NetworkNameC6INMOBISSvpZ",
+                "moduleName": "SnowBallEngine",
+                "static": true,
+                "declAttributes": [
+                  "HasInitialValue",
+                  "Final",
+                  "HasStorage",
+                  "AccessControl"
+                ],
+                "isLet": true,
+                "hasStorage": true,
+                "accessors": [
+                  {
+                    "kind": "Accessor",
+                    "name": "Get",
+                    "printedName": "Get()",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "String",
+                        "printedName": "Swift.String",
+                        "usr": "s:SS"
+                      }
+                    ],
+                    "declKind": "Accessor",
+                    "usr": "s:14SnowBallEngine7TrackerC11NetworkNameC6INMOBISSvgZ",
+                    "mangledName": "$s14SnowBallEngine7TrackerC11NetworkNameC6INMOBISSvgZ",
+                    "moduleName": "SnowBallEngine",
+                    "static": true,
+                    "implicit": true,
+                    "declAttributes": [
+                      "Final"
+                    ],
+                    "accessorKind": "get"
+                  }
+                ]
+              },
+              {
+                "kind": "Var",
+                "name": "SMAATO",
+                "printedName": "SMAATO",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ],
+                "declKind": "Var",
+                "usr": "s:14SnowBallEngine7TrackerC11NetworkNameC6SMAATOSSvpZ",
+                "mangledName": "$s14SnowBallEngine7TrackerC11NetworkNameC6SMAATOSSvpZ",
+                "moduleName": "SnowBallEngine",
+                "static": true,
+                "declAttributes": [
+                  "HasInitialValue",
+                  "Final",
+                  "HasStorage",
+                  "AccessControl"
+                ],
+                "isLet": true,
+                "hasStorage": true,
+                "accessors": [
+                  {
+                    "kind": "Accessor",
+                    "name": "Get",
+                    "printedName": "Get()",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "String",
+                        "printedName": "Swift.String",
+                        "usr": "s:SS"
+                      }
+                    ],
+                    "declKind": "Accessor",
+                    "usr": "s:14SnowBallEngine7TrackerC11NetworkNameC6SMAATOSSvgZ",
+                    "mangledName": "$s14SnowBallEngine7TrackerC11NetworkNameC6SMAATOSSvgZ",
+                    "moduleName": "SnowBallEngine",
+                    "static": true,
+                    "implicit": true,
+                    "declAttributes": [
+                      "Final"
+                    ],
+                    "accessorKind": "get"
+                  }
+                ]
+              },
+              {
+                "kind": "Var",
+                "name": "FYBER",
+                "printedName": "FYBER",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ],
+                "declKind": "Var",
+                "usr": "s:14SnowBallEngine7TrackerC11NetworkNameC5FYBERSSvpZ",
+                "mangledName": "$s14SnowBallEngine7TrackerC11NetworkNameC5FYBERSSvpZ",
+                "moduleName": "SnowBallEngine",
+                "static": true,
+                "declAttributes": [
+                  "HasInitialValue",
+                  "Final",
+                  "HasStorage",
+                  "AccessControl"
+                ],
+                "isLet": true,
+                "hasStorage": true,
+                "accessors": [
+                  {
+                    "kind": "Accessor",
+                    "name": "Get",
+                    "printedName": "Get()",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "String",
+                        "printedName": "Swift.String",
+                        "usr": "s:SS"
+                      }
+                    ],
+                    "declKind": "Accessor",
+                    "usr": "s:14SnowBallEngine7TrackerC11NetworkNameC5FYBERSSvgZ",
+                    "mangledName": "$s14SnowBallEngine7TrackerC11NetworkNameC5FYBERSSvgZ",
+                    "moduleName": "SnowBallEngine",
+                    "static": true,
+                    "implicit": true,
+                    "declAttributes": [
+                      "Final"
+                    ],
+                    "accessorKind": "get"
+                  }
+                ]
+              },
+              {
+                "kind": "Function",
+                "name": "turnTo",
+                "printedName": "turnTo(name:)",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ],
+                "declKind": "Func",
+                "usr": "s:14SnowBallEngine7TrackerC11NetworkNameC6turnTo4nameS2S_tFZ",
+                "mangledName": "$s14SnowBallEngine7TrackerC11NetworkNameC6turnTo4nameS2S_tFZ",
+                "moduleName": "SnowBallEngine",
+                "static": true,
+                "declAttributes": [
+                  "Final",
+                  "AccessControl"
+                ],
+                "funcSelfKind": "NonMutating"
+              }
+            ],
+            "declKind": "Class",
+            "usr": "s:14SnowBallEngine7TrackerC11NetworkNameC",
+            "mangledName": "$s14SnowBallEngine7TrackerC11NetworkNameC",
+            "moduleName": "SnowBallEngine",
+            "declAttributes": [
+              "AccessControl"
+            ],
+            "isFromExtension": true,
+            "hasMissingDesignatedInitializers": true,
+            "conformances": [
+              {
+                "kind": "Conformance",
+                "name": "Copyable",
+                "printedName": "Copyable",
+                "usr": "s:s8CopyableP",
+                "mangledName": "$ss8CopyableP"
+              },
+              {
+                "kind": "Conformance",
+                "name": "Escapable",
+                "printedName": "Escapable",
+                "usr": "s:s9EscapableP",
+                "mangledName": "$ss9EscapableP"
+              }
+            ]
+          },
+          {
+            "kind": "TypeDecl",
+            "name": "Format",
+            "printedName": "Format",
+            "children": [
+              {
+                "kind": "Var",
+                "name": "APP_OPEN",
+                "printedName": "APP_OPEN",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ],
+                "declKind": "Var",
+                "usr": "s:14SnowBallEngine7TrackerC6FormatC8APP_OPENSSvpZ",
+                "mangledName": "$s14SnowBallEngine7TrackerC6FormatC8APP_OPENSSvpZ",
+                "moduleName": "SnowBallEngine",
+                "static": true,
+                "declAttributes": [
+                  "HasInitialValue",
+                  "Final",
+                  "HasStorage",
+                  "AccessControl"
+                ],
+                "isLet": true,
+                "hasStorage": true,
+                "accessors": [
+                  {
+                    "kind": "Accessor",
+                    "name": "Get",
+                    "printedName": "Get()",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "String",
+                        "printedName": "Swift.String",
+                        "usr": "s:SS"
+                      }
+                    ],
+                    "declKind": "Accessor",
+                    "usr": "s:14SnowBallEngine7TrackerC6FormatC8APP_OPENSSvgZ",
+                    "mangledName": "$s14SnowBallEngine7TrackerC6FormatC8APP_OPENSSvgZ",
+                    "moduleName": "SnowBallEngine",
+                    "static": true,
+                    "implicit": true,
+                    "declAttributes": [
+                      "Final"
+                    ],
+                    "accessorKind": "get"
+                  }
+                ]
+              },
+              {
+                "kind": "Var",
+                "name": "FULLSCREEN",
+                "printedName": "FULLSCREEN",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ],
+                "declKind": "Var",
+                "usr": "s:14SnowBallEngine7TrackerC6FormatC10FULLSCREENSSvpZ",
+                "mangledName": "$s14SnowBallEngine7TrackerC6FormatC10FULLSCREENSSvpZ",
+                "moduleName": "SnowBallEngine",
+                "static": true,
+                "declAttributes": [
+                  "HasInitialValue",
+                  "Final",
+                  "HasStorage",
+                  "AccessControl"
+                ],
+                "isLet": true,
+                "hasStorage": true,
+                "accessors": [
+                  {
+                    "kind": "Accessor",
+                    "name": "Get",
+                    "printedName": "Get()",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "String",
+                        "printedName": "Swift.String",
+                        "usr": "s:SS"
+                      }
+                    ],
+                    "declKind": "Accessor",
+                    "usr": "s:14SnowBallEngine7TrackerC6FormatC10FULLSCREENSSvgZ",
+                    "mangledName": "$s14SnowBallEngine7TrackerC6FormatC10FULLSCREENSSvgZ",
+                    "moduleName": "SnowBallEngine",
+                    "static": true,
+                    "implicit": true,
+                    "declAttributes": [
+                      "Final"
+                    ],
+                    "accessorKind": "get"
+                  }
+                ]
+              },
+              {
+                "kind": "Var",
+                "name": "NATIVE",
+                "printedName": "NATIVE",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ],
+                "declKind": "Var",
+                "usr": "s:14SnowBallEngine7TrackerC6FormatC6NATIVESSvpZ",
+                "mangledName": "$s14SnowBallEngine7TrackerC6FormatC6NATIVESSvpZ",
+                "moduleName": "SnowBallEngine",
+                "static": true,
+                "declAttributes": [
+                  "HasInitialValue",
+                  "Final",
+                  "HasStorage",
+                  "AccessControl"
+                ],
+                "isLet": true,
+                "hasStorage": true,
+                "accessors": [
+                  {
+                    "kind": "Accessor",
+                    "name": "Get",
+                    "printedName": "Get()",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "String",
+                        "printedName": "Swift.String",
+                        "usr": "s:SS"
+                      }
+                    ],
+                    "declKind": "Accessor",
+                    "usr": "s:14SnowBallEngine7TrackerC6FormatC6NATIVESSvgZ",
+                    "mangledName": "$s14SnowBallEngine7TrackerC6FormatC6NATIVESSvgZ",
+                    "moduleName": "SnowBallEngine",
+                    "static": true,
+                    "implicit": true,
+                    "declAttributes": [
+                      "Final"
+                    ],
+                    "accessorKind": "get"
+                  }
+                ]
+              },
+              {
+                "kind": "Var",
+                "name": "REWARDED",
+                "printedName": "REWARDED",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ],
+                "declKind": "Var",
+                "usr": "s:14SnowBallEngine7TrackerC6FormatC8REWARDEDSSvpZ",
+                "mangledName": "$s14SnowBallEngine7TrackerC6FormatC8REWARDEDSSvpZ",
+                "moduleName": "SnowBallEngine",
+                "static": true,
+                "declAttributes": [
+                  "HasInitialValue",
+                  "Final",
+                  "HasStorage",
+                  "AccessControl"
+                ],
+                "isLet": true,
+                "hasStorage": true,
+                "accessors": [
+                  {
+                    "kind": "Accessor",
+                    "name": "Get",
+                    "printedName": "Get()",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "String",
+                        "printedName": "Swift.String",
+                        "usr": "s:SS"
+                      }
+                    ],
+                    "declKind": "Accessor",
+                    "usr": "s:14SnowBallEngine7TrackerC6FormatC8REWARDEDSSvgZ",
+                    "mangledName": "$s14SnowBallEngine7TrackerC6FormatC8REWARDEDSSvgZ",
+                    "moduleName": "SnowBallEngine",
+                    "static": true,
+                    "implicit": true,
+                    "declAttributes": [
+                      "Final"
+                    ],
+                    "accessorKind": "get"
+                  }
+                ]
+              },
+              {
+                "kind": "Var",
+                "name": "BANNER",
+                "printedName": "BANNER",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ],
+                "declKind": "Var",
+                "usr": "s:14SnowBallEngine7TrackerC6FormatC6BANNERSSvpZ",
+                "mangledName": "$s14SnowBallEngine7TrackerC6FormatC6BANNERSSvpZ",
+                "moduleName": "SnowBallEngine",
+                "static": true,
+                "declAttributes": [
+                  "HasInitialValue",
+                  "Final",
+                  "HasStorage",
+                  "AccessControl"
+                ],
+                "isLet": true,
+                "hasStorage": true,
+                "accessors": [
+                  {
+                    "kind": "Accessor",
+                    "name": "Get",
+                    "printedName": "Get()",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "String",
+                        "printedName": "Swift.String",
+                        "usr": "s:SS"
+                      }
+                    ],
+                    "declKind": "Accessor",
+                    "usr": "s:14SnowBallEngine7TrackerC6FormatC6BANNERSSvgZ",
+                    "mangledName": "$s14SnowBallEngine7TrackerC6FormatC6BANNERSSvgZ",
+                    "moduleName": "SnowBallEngine",
+                    "static": true,
+                    "implicit": true,
+                    "declAttributes": [
+                      "Final"
+                    ],
+                    "accessorKind": "get"
+                  }
+                ]
+              },
+              {
+                "kind": "Var",
+                "name": "RECTANGLE",
+                "printedName": "RECTANGLE",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ],
+                "declKind": "Var",
+                "usr": "s:14SnowBallEngine7TrackerC6FormatC9RECTANGLESSvpZ",
+                "mangledName": "$s14SnowBallEngine7TrackerC6FormatC9RECTANGLESSvpZ",
+                "moduleName": "SnowBallEngine",
+                "static": true,
+                "declAttributes": [
+                  "HasInitialValue",
+                  "Final",
+                  "HasStorage",
+                  "AccessControl"
+                ],
+                "isLet": true,
+                "hasStorage": true,
+                "accessors": [
+                  {
+                    "kind": "Accessor",
+                    "name": "Get",
+                    "printedName": "Get()",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "String",
+                        "printedName": "Swift.String",
+                        "usr": "s:SS"
+                      }
+                    ],
+                    "declKind": "Accessor",
+                    "usr": "s:14SnowBallEngine7TrackerC6FormatC9RECTANGLESSvgZ",
+                    "mangledName": "$s14SnowBallEngine7TrackerC6FormatC9RECTANGLESSvgZ",
+                    "moduleName": "SnowBallEngine",
+                    "static": true,
+                    "implicit": true,
+                    "declAttributes": [
+                      "Final"
+                    ],
+                    "accessorKind": "get"
+                  }
+                ]
+              },
+              {
+                "kind": "Var",
+                "name": "REWARDED_INTERS",
+                "printedName": "REWARDED_INTERS",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ],
+                "declKind": "Var",
+                "usr": "s:14SnowBallEngine7TrackerC6FormatC15REWARDED_INTERSSSvpZ",
+                "mangledName": "$s14SnowBallEngine7TrackerC6FormatC15REWARDED_INTERSSSvpZ",
+                "moduleName": "SnowBallEngine",
+                "static": true,
+                "declAttributes": [
+                  "HasInitialValue",
+                  "Final",
+                  "HasStorage",
+                  "AccessControl"
+                ],
+                "isLet": true,
+                "hasStorage": true,
+                "accessors": [
+                  {
+                    "kind": "Accessor",
+                    "name": "Get",
+                    "printedName": "Get()",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "String",
+                        "printedName": "Swift.String",
+                        "usr": "s:SS"
+                      }
+                    ],
+                    "declKind": "Accessor",
+                    "usr": "s:14SnowBallEngine7TrackerC6FormatC15REWARDED_INTERSSSvgZ",
+                    "mangledName": "$s14SnowBallEngine7TrackerC6FormatC15REWARDED_INTERSSSvgZ",
+                    "moduleName": "SnowBallEngine",
+                    "static": true,
+                    "implicit": true,
+                    "declAttributes": [
+                      "Final"
+                    ],
+                    "accessorKind": "get"
+                  }
+                ]
+              },
+              {
+                "kind": "Function",
+                "name": "turnTo",
+                "printedName": "turnTo(format:)",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ],
+                "declKind": "Func",
+                "usr": "s:14SnowBallEngine7TrackerC6FormatC6turnTo6formatS2S_tFZ",
+                "mangledName": "$s14SnowBallEngine7TrackerC6FormatC6turnTo6formatS2S_tFZ",
+                "moduleName": "SnowBallEngine",
+                "static": true,
+                "declAttributes": [
+                  "Final",
+                  "AccessControl"
+                ],
+                "funcSelfKind": "NonMutating"
+              }
+            ],
+            "declKind": "Class",
+            "usr": "s:14SnowBallEngine7TrackerC6FormatC",
+            "mangledName": "$s14SnowBallEngine7TrackerC6FormatC",
+            "moduleName": "SnowBallEngine",
+            "declAttributes": [
+              "AccessControl"
+            ],
+            "isFromExtension": true,
+            "hasMissingDesignatedInitializers": true,
+            "conformances": [
+              {
+                "kind": "Conformance",
+                "name": "Copyable",
+                "printedName": "Copyable",
+                "usr": "s:s8CopyableP",
+                "mangledName": "$ss8CopyableP"
+              },
+              {
+                "kind": "Conformance",
+                "name": "Escapable",
+                "printedName": "Escapable",
+                "usr": "s:s9EscapableP",
+                "mangledName": "$ss9EscapableP"
+              }
+            ]
+          },
+          {
+            "kind": "Function",
+            "name": "trackAdRevenue",
+            "printedName": "trackAdRevenue(info:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "AdRevenueInfo",
+                "printedName": "SnowBallEngine.Tracker.AdRevenueInfo",
+                "usr": "s:14SnowBallEngine7TrackerC13AdRevenueInfoV"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:14SnowBallEngine7TrackerC14trackAdRevenue4infoyAC0fG4InfoV_tF",
+            "mangledName": "$s14SnowBallEngine7TrackerC14trackAdRevenue4infoyAC0fG4InfoV_tF",
+            "moduleName": "SnowBallEngine",
+            "declAttributes": [
+              "AccessControl"
+            ],
+            "isFromExtension": true,
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "trackPurchaseRevenue",
+            "printedName": "trackPurchaseRevenue(transaction:scene:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Transaction",
+                "printedName": "StoreKit.Transaction",
+                "usr": "s:8StoreKit11TransactionV"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "Swift.String?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ],
+                "usr": "s:Sq"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:14SnowBallEngine7TrackerC20trackPurchaseRevenue11transaction5sceney8StoreKit11TransactionV_SSSgtF",
+            "mangledName": "$s14SnowBallEngine7TrackerC20trackPurchaseRevenue11transaction5sceney8StoreKit11TransactionV_SSSgtF",
+            "moduleName": "SnowBallEngine",
+            "declAttributes": [
+              "AccessControl",
+              "RawDocComment"
+            ],
+            "isFromExtension": true,
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "trackInAppPurchaseRevenue",
+            "printedName": "trackInAppPurchaseRevenue(productId:currency:price:scene:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Double",
+                "printedName": "Swift.Double",
+                "usr": "s:Sd"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "Swift.String?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ],
+                "usr": "s:Sq"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:14SnowBallEngine7TrackerC25trackInAppPurchaseRevenue9productId8currency5price5sceneySS_SSSdSSSgtF",
+            "mangledName": "$s14SnowBallEngine7TrackerC25trackInAppPurchaseRevenue9productId8currency5price5sceneySS_SSSdSSSgtF",
+            "moduleName": "SnowBallEngine",
+            "declAttributes": [
+              "AccessControl",
+              "RawDocComment"
+            ],
+            "isFromExtension": true,
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "trackSubsPurchaseRevenue",
+            "printedName": "trackSubsPurchaseRevenue(productId:currency:price:isFreeTrial:scene:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Double",
+                "printedName": "Swift.Double",
+                "usr": "s:Sd"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Bool",
+                "printedName": "Swift.Bool",
+                "usr": "s:Sb"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "Swift.String?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ],
+                "usr": "s:Sq"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:14SnowBallEngine7TrackerC24trackSubsPurchaseRevenue9productId8currency5price11isFreeTrial5sceneySS_SSSdSbSSSgtF",
+            "mangledName": "$s14SnowBallEngine7TrackerC24trackSubsPurchaseRevenue9productId8currency5price11isFreeTrial5sceneySS_SSSdSbSSSgtF",
+            "moduleName": "SnowBallEngine",
+            "declAttributes": [
+              "AccessControl",
+              "RawDocComment"
+            ],
+            "isFromExtension": true,
+            "funcSelfKind": "NonMutating"
+          }
+        ],
+        "declKind": "Class",
+        "usr": "s:14SnowBallEngine7TrackerC",
+        "mangledName": "$s14SnowBallEngine7TrackerC",
+        "moduleName": "SnowBallEngine",
+        "declAttributes": [
+          "AccessControl"
+        ],
+        "hasMissingDesignatedInitializers": true,
+        "conformances": [
+          {
+            "kind": "Conformance",
+            "name": "Copyable",
+            "printedName": "Copyable",
+            "usr": "s:s8CopyableP",
+            "mangledName": "$ss8CopyableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Escapable",
+            "printedName": "Escapable",
+            "usr": "s:s9EscapableP",
+            "mangledName": "$ss9EscapableP"
+          }
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "Foundation",
+        "printedName": "Foundation",
+        "declKind": "Import",
+        "moduleName": "SnowBallEngine",
+        "declAttributes": [
+          "RawDocComment"
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "Adjust",
+        "printedName": "Adjust",
+        "declKind": "Import",
+        "moduleName": "SnowBallEngine",
+        "declAttributes": [
+          "AccessControl"
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "Foundation",
+        "printedName": "Foundation",
+        "declKind": "Import",
+        "moduleName": "SnowBallEngine",
+        "declAttributes": [
+          "RawDocComment"
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "StoreKit",
+        "printedName": "StoreKit",
+        "declKind": "Import",
+        "moduleName": "SnowBallEngine"
+      },
+      {
+        "kind": "Import",
+        "name": "Adjust",
+        "printedName": "Adjust",
+        "declKind": "Import",
+        "moduleName": "SnowBallEngine",
+        "declAttributes": [
+          "AccessControl"
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "Foundation",
+        "printedName": "Foundation",
+        "declKind": "Import",
+        "moduleName": "SnowBallEngine",
+        "declAttributes": [
+          "RawDocComment"
+        ]
+      },
+      {
+        "kind": "TypeDecl",
+        "name": "SnowBall",
+        "printedName": "SnowBall",
+        "children": [
+          {
+            "kind": "Function",
+            "name": "setup",
+            "printedName": "setup(pushDelegate:adjustAppPurchaseToken:adjustAdRevenueToken:adjustAdTotalRevenueToken:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "(any SnowBallEngine.SnowBallPushDelegate)?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "SnowBallPushDelegate",
+                    "printedName": "any SnowBallEngine.SnowBallPushDelegate",
+                    "usr": "s:14SnowBallEngine0aB12PushDelegateP"
+                  }
+                ],
+                "usr": "s:Sq"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "Swift.String?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ],
+                "usr": "s:Sq"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "Swift.String?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ],
+                "usr": "s:Sq"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "Swift.String?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ],
+                "usr": "s:Sq"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:14SnowBallEngine0aB0C5setup12pushDelegate22adjustAppPurchaseToken0g9AdRevenueJ00gk5TotallJ0yAA0ab4PushF0_pSg_SSSgA2KtFZ",
+            "mangledName": "$s14SnowBallEngine0aB0C5setup12pushDelegate22adjustAppPurchaseToken0g9AdRevenueJ00gk5TotallJ0yAA0ab4PushF0_pSg_SSSgA2KtFZ",
+            "moduleName": "SnowBallEngine",
+            "static": true,
+            "declAttributes": [
+              "Final",
+              "AccessControl"
+            ],
+            "funcSelfKind": "NonMutating"
+          }
+        ],
+        "declKind": "Class",
+        "usr": "s:14SnowBallEngine0aB0C",
+        "mangledName": "$s14SnowBallEngine0aB0C",
+        "moduleName": "SnowBallEngine",
+        "declAttributes": [
+          "AccessControl"
+        ],
+        "hasMissingDesignatedInitializers": true,
+        "conformances": [
+          {
+            "kind": "Conformance",
+            "name": "Copyable",
+            "printedName": "Copyable",
+            "usr": "s:s8CopyableP",
+            "mangledName": "$ss8CopyableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Escapable",
+            "printedName": "Escapable",
+            "usr": "s:s9EscapableP",
+            "mangledName": "$ss9EscapableP"
+          }
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "Foundation",
+        "printedName": "Foundation",
+        "declKind": "Import",
+        "moduleName": "SnowBallEngine",
+        "declAttributes": [
+          "RawDocComment"
+        ]
+      },
+      {
+        "kind": "TypeDecl",
+        "name": "Bundle",
+        "printedName": "Bundle",
+        "children": [
+          {
+            "kind": "Var",
+            "name": "displayName",
+            "printedName": "displayName",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "Swift.String?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ],
+                "usr": "s:Sq"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:So8NSBundleC14SnowBallEngineE11displayNameSSSgvp",
+            "mangledName": "$sSo8NSBundleC14SnowBallEngineE11displayNameSSSgvp",
+            "moduleName": "SnowBallEngine",
+            "declAttributes": [
+              "AccessControl"
+            ],
+            "isFromExtension": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Optional",
+                    "printedName": "Swift.String?",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "String",
+                        "printedName": "Swift.String",
+                        "usr": "s:SS"
+                      }
+                    ],
+                    "usr": "s:Sq"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:So8NSBundleC14SnowBallEngineE11displayNameSSSgvg",
+                "mangledName": "$sSo8NSBundleC14SnowBallEngineE11displayNameSSSgvg",
+                "moduleName": "SnowBallEngine",
+                "isFromExtension": true,
+                "accessorKind": "get"
+              }
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "bundleName",
+            "printedName": "bundleName",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "Swift.String?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ],
+                "usr": "s:Sq"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:So8NSBundleC14SnowBallEngineE10bundleNameSSSgvp",
+            "mangledName": "$sSo8NSBundleC14SnowBallEngineE10bundleNameSSSgvp",
+            "moduleName": "SnowBallEngine",
+            "declAttributes": [
+              "AccessControl"
+            ],
+            "isFromExtension": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Optional",
+                    "printedName": "Swift.String?",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "String",
+                        "printedName": "Swift.String",
+                        "usr": "s:SS"
+                      }
+                    ],
+                    "usr": "s:Sq"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:So8NSBundleC14SnowBallEngineE10bundleNameSSSgvg",
+                "mangledName": "$sSo8NSBundleC14SnowBallEngineE10bundleNameSSSgvg",
+                "moduleName": "SnowBallEngine",
+                "isFromExtension": true,
+                "accessorKind": "get"
+              }
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "version",
+            "printedName": "version",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Int",
+                "printedName": "Swift.Int",
+                "usr": "s:Si"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:So8NSBundleC14SnowBallEngineE7versionSivp",
+            "mangledName": "$sSo8NSBundleC14SnowBallEngineE7versionSivp",
+            "moduleName": "SnowBallEngine",
+            "declAttributes": [
+              "AccessControl"
+            ],
+            "isFromExtension": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Int",
+                    "printedName": "Swift.Int",
+                    "usr": "s:Si"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:So8NSBundleC14SnowBallEngineE7versionSivg",
+                "mangledName": "$sSo8NSBundleC14SnowBallEngineE7versionSivg",
+                "moduleName": "SnowBallEngine",
+                "isFromExtension": true,
+                "accessorKind": "get"
+              }
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "shortVersionString",
+            "printedName": "shortVersionString",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "Swift.String?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ],
+                "usr": "s:Sq"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:So8NSBundleC14SnowBallEngineE18shortVersionStringSSSgvp",
+            "mangledName": "$sSo8NSBundleC14SnowBallEngineE18shortVersionStringSSSgvp",
+            "moduleName": "SnowBallEngine",
+            "declAttributes": [
+              "AccessControl"
+            ],
+            "isFromExtension": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Optional",
+                    "printedName": "Swift.String?",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "String",
+                        "printedName": "Swift.String",
+                        "usr": "s:SS"
+                      }
+                    ],
+                    "usr": "s:Sq"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:So8NSBundleC14SnowBallEngineE18shortVersionStringSSSgvg",
+                "mangledName": "$sSo8NSBundleC14SnowBallEngineE18shortVersionStringSSSgvg",
+                "moduleName": "SnowBallEngine",
+                "isFromExtension": true,
+                "accessorKind": "get"
+              }
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "buildDate",
+            "printedName": "buildDate",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "Foundation.Date?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Date",
+                    "printedName": "Foundation.Date",
+                    "usr": "s:10Foundation4DateV"
+                  }
+                ],
+                "usr": "s:Sq"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:So8NSBundleC14SnowBallEngineE9buildDate10Foundation0F0VSgvp",
+            "mangledName": "$sSo8NSBundleC14SnowBallEngineE9buildDate10Foundation0F0VSgvp",
+            "moduleName": "SnowBallEngine",
+            "declAttributes": [
+              "AccessControl"
+            ],
+            "isFromExtension": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Optional",
+                    "printedName": "Foundation.Date?",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "Date",
+                        "printedName": "Foundation.Date",
+                        "usr": "s:10Foundation4DateV"
+                      }
+                    ],
+                    "usr": "s:Sq"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:So8NSBundleC14SnowBallEngineE9buildDate10Foundation0F0VSgvg",
+                "mangledName": "$sSo8NSBundleC14SnowBallEngineE9buildDate10Foundation0F0VSgvg",
+                "moduleName": "SnowBallEngine",
+                "isFromExtension": true,
+                "accessorKind": "get"
+              }
+            ]
+          }
+        ],
+        "declKind": "Class",
+        "usr": "c:objc(cs)NSBundle",
+        "moduleName": "Foundation",
+        "isOpen": true,
+        "objc_name": "NSBundle",
+        "declAttributes": [
+          "ObjC",
+          "SynthesizedProtocol",
+          "NonSendable",
+          "Sendable",
+          "Dynamic"
+        ],
+        "superclassUsr": "c:objc(cs)NSObject",
+        "isExternal": true,
+        "inheritsConvenienceInitializers": true,
+        "superclassNames": [
+          "ObjectiveC.NSObject"
+        ],
+        "conformances": [
+          {
+            "kind": "Conformance",
+            "name": "Sendable",
+            "printedName": "Sendable",
+            "usr": "s:s8SendableP",
+            "mangledName": "$ss8SendableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Copyable",
+            "printedName": "Copyable",
+            "usr": "s:s8CopyableP",
+            "mangledName": "$ss8CopyableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Escapable",
+            "printedName": "Escapable",
+            "usr": "s:s9EscapableP",
+            "mangledName": "$ss9EscapableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Equatable",
+            "printedName": "Equatable",
+            "usr": "s:SQ",
+            "mangledName": "$sSQ"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Hashable",
+            "printedName": "Hashable",
+            "usr": "s:SH",
+            "mangledName": "$sSH"
+          },
+          {
+            "kind": "Conformance",
+            "name": "CVarArg",
+            "printedName": "CVarArg",
+            "usr": "s:s7CVarArgP",
+            "mangledName": "$ss7CVarArgP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "_KeyValueCodingAndObservingPublishing",
+            "printedName": "_KeyValueCodingAndObservingPublishing",
+            "usr": "s:10Foundation37_KeyValueCodingAndObservingPublishingP",
+            "mangledName": "$s10Foundation37_KeyValueCodingAndObservingPublishingP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "_KeyValueCodingAndObserving",
+            "printedName": "_KeyValueCodingAndObserving",
+            "usr": "s:10Foundation27_KeyValueCodingAndObservingP",
+            "mangledName": "$s10Foundation27_KeyValueCodingAndObservingP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "CustomStringConvertible",
+            "printedName": "CustomStringConvertible",
+            "usr": "s:s23CustomStringConvertibleP",
+            "mangledName": "$ss23CustomStringConvertibleP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "CustomDebugStringConvertible",
+            "printedName": "CustomDebugStringConvertible",
+            "usr": "s:s28CustomDebugStringConvertibleP",
+            "mangledName": "$ss28CustomDebugStringConvertibleP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "SendableMetatype",
+            "printedName": "SendableMetatype",
+            "usr": "s:s16SendableMetatypeP",
+            "mangledName": "$ss16SendableMetatypeP"
+          }
+        ]
+      },
+      {
+        "kind": "TypeDecl",
+        "name": "Locale",
+        "printedName": "Locale",
+        "children": [
+          {
+            "kind": "Function",
+            "name": "language",
+            "printedName": "language(withRegion:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Bool",
+                "printedName": "Swift.Bool",
+                "hasDefaultArg": true,
+                "usr": "s:Sb"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:10Foundation6LocaleV14SnowBallEngineE8language10withRegionSSSb_tF",
+            "mangledName": "$s10Foundation6LocaleV14SnowBallEngineE8language10withRegionSSSb_tF",
+            "moduleName": "SnowBallEngine",
+            "isFromExtension": true,
+            "funcSelfKind": "NonMutating"
+          }
+        ],
+        "declKind": "Struct",
+        "usr": "s:10Foundation6LocaleV",
+        "mangledName": "$s10Foundation6LocaleV",
+        "moduleName": "Foundation",
+        "intro_Macosx": "10.10",
+        "intro_iOS": "8.0",
+        "intro_tvOS": "9.0",
+        "intro_watchOS": "2.0",
+        "declAttributes": [
+          "Available",
+          "Available",
+          "Available",
+          "Available"
+        ],
+        "isExternal": true,
+        "conformances": [
+          {
+            "kind": "Conformance",
+            "name": "Hashable",
+            "printedName": "Hashable",
+            "usr": "s:SH",
+            "mangledName": "$sSH"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Equatable",
+            "printedName": "Equatable",
+            "usr": "s:SQ",
+            "mangledName": "$sSQ"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Sendable",
+            "printedName": "Sendable",
+            "usr": "s:s8SendableP",
+            "mangledName": "$ss8SendableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "SendableMetatype",
+            "printedName": "SendableMetatype",
+            "usr": "s:s16SendableMetatypeP",
+            "mangledName": "$ss16SendableMetatypeP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Copyable",
+            "printedName": "Copyable",
+            "usr": "s:s8CopyableP",
+            "mangledName": "$ss8CopyableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Escapable",
+            "printedName": "Escapable",
+            "usr": "s:s9EscapableP",
+            "mangledName": "$ss9EscapableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "ReferenceConvertible",
+            "printedName": "ReferenceConvertible",
+            "children": [
+              {
+                "kind": "TypeWitness",
+                "name": "ReferenceType",
+                "printedName": "ReferenceType",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "NSLocale",
+                    "printedName": "Foundation.NSLocale",
+                    "usr": "c:objc(cs)NSLocale"
+                  }
+                ]
+              }
+            ],
+            "usr": "s:10Foundation20ReferenceConvertibleP",
+            "mangledName": "$s10Foundation20ReferenceConvertibleP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "_ObjectiveCBridgeable",
+            "printedName": "_ObjectiveCBridgeable",
+            "children": [
+              {
+                "kind": "TypeWitness",
+                "name": "_ObjectiveCType",
+                "printedName": "_ObjectiveCType",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "NSLocale",
+                    "printedName": "Foundation.NSLocale",
+                    "usr": "c:objc(cs)NSLocale"
+                  }
+                ]
+              }
+            ],
+            "usr": "s:s21_ObjectiveCBridgeableP",
+            "mangledName": "$ss21_ObjectiveCBridgeableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "CustomDebugStringConvertible",
+            "printedName": "CustomDebugStringConvertible",
+            "usr": "s:s28CustomDebugStringConvertibleP",
+            "mangledName": "$ss28CustomDebugStringConvertibleP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "CustomStringConvertible",
+            "printedName": "CustomStringConvertible",
+            "usr": "s:s23CustomStringConvertibleP",
+            "mangledName": "$ss23CustomStringConvertibleP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "CustomReflectable",
+            "printedName": "CustomReflectable",
+            "usr": "s:s17CustomReflectableP",
+            "mangledName": "$ss17CustomReflectableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Decodable",
+            "printedName": "Decodable",
+            "usr": "s:Se",
+            "mangledName": "$sSe"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Encodable",
+            "printedName": "Encodable",
+            "usr": "s:SE",
+            "mangledName": "$sSE"
+          }
+        ]
+      }
+    ],
+    "json_format_version": 8
+  },
+  "ConstValues": [
+    {
+      "filePath": "\/Users\/lxd\/Desktop\/projects\/snowball_sdk_ios\/SnowBallEngine\/SnowBallEngine\/Extensions\/ExtensionLocale.swift",
+      "kind": "BooleanLiteral",
+      "offset": 168,
+      "length": 4,
+      "value": "true"
+    },
+    {
+      "filePath": "\/Users\/lxd\/Desktop\/projects\/snowball_sdk_ios\/SnowBallEngine\/SnowBallEngine\/Log\/Log.swift",
+      "kind": "IntegerLiteral",
+      "offset": 208,
+      "length": 1,
+      "value": "0"
+    },
+    {
+      "filePath": "\/Users\/lxd\/Desktop\/projects\/snowball_sdk_ios\/SnowBallEngine\/SnowBallEngine\/Log\/Log.swift",
+      "kind": "IntegerLiteral",
+      "offset": 225,
+      "length": 1,
+      "value": "1"
+    },
+    {
+      "filePath": "\/Users\/lxd\/Desktop\/projects\/snowball_sdk_ios\/SnowBallEngine\/SnowBallEngine\/Log\/Log.swift",
+      "kind": "IntegerLiteral",
+      "offset": 241,
+      "length": 1,
+      "value": "2"
+    },
+    {
+      "filePath": "\/Users\/lxd\/Desktop\/projects\/snowball_sdk_ios\/SnowBallEngine\/SnowBallEngine\/Log\/Log.swift",
+      "kind": "IntegerLiteral",
+      "offset": 260,
+      "length": 1,
+      "value": "3"
+    },
+    {
+      "filePath": "\/Users\/lxd\/Desktop\/projects\/snowball_sdk_ios\/SnowBallEngine\/SnowBallEngine\/Log\/Log.swift",
+      "kind": "IntegerLiteral",
+      "offset": 277,
+      "length": 1,
+      "value": "4"
+    },
+    {
+      "filePath": "\/Users\/lxd\/Desktop\/projects\/snowball_sdk_ios\/SnowBallEngine\/SnowBallEngine\/Push\/Push.swift",
+      "kind": "StringLiteral",
+      "offset": 2402,
+      "length": 23,
+      "value": "\"SubscribedTopicRegion\""
+    },
+    {
+      "filePath": "\/Users\/lxd\/Desktop\/projects\/snowball_sdk_ios\/SnowBallEngine\/SnowBallEngine\/Push\/Push.swift",
+      "kind": "StringLiteral",
+      "offset": 2480,
+      "length": 25,
+      "value": "\"SubscribedTopicLanguage\""
+    },
+    {
+      "filePath": "\/Users\/lxd\/Desktop\/projects\/snowball_sdk_ios\/SnowBallEngine\/SnowBallEngine\/Push\/Push.swift",
+      "kind": "StringLiteral",
+      "offset": 2560,
+      "length": 25,
+      "value": "\"SubscribedTopicLocaleId\""
+    },
+    {
+      "filePath": "\/Users\/lxd\/Desktop\/projects\/snowball_sdk_ios\/SnowBallEngine\/SnowBallEngine\/Push\/Push.swift",
+      "kind": "StringLiteral",
+      "offset": 2639,
+      "length": 24,
+      "value": "\"SubscribedTopicLicense\""
+    },
+    {
+      "filePath": "\/Users\/lxd\/Desktop\/projects\/snowball_sdk_ios\/SnowBallEngine\/SnowBallEngine\/Push\/Push.swift",
+      "kind": "StringLiteral",
+      "offset": 2721,
+      "length": 28,
+      "value": "\"SubscribedTopicTimezoneStr\""
+    },
+    {
+      "filePath": "\/Users\/lxd\/Desktop\/projects\/snowball_sdk_ios\/SnowBallEngine\/SnowBallEngine\/Push\/Push.swift",
+      "kind": "StringLiteral",
+      "offset": 2801,
+      "length": 19,
+      "value": "\"DidTrackPushToken\""
+    },
+    {
+      "filePath": "\/Users\/lxd\/Desktop\/projects\/snowball_sdk_ios\/SnowBallEngine\/SnowBallEngine\/Push\/Push.swift",
+      "kind": "StringLiteral",
+      "offset": 2893,
+      "length": 17,
+      "value": "\"se_push_receive\""
+    },
+    {
+      "filePath": "\/Users\/lxd\/Desktop\/projects\/snowball_sdk_ios\/SnowBallEngine\/SnowBallEngine\/Push\/Push.swift",
+      "kind": "StringLiteral",
+      "offset": 2950,
+      "length": 19,
+      "value": "\"se_push_token_new\""
+    },
+    {
+      "filePath": "\/Users\/lxd\/Desktop\/projects\/snowball_sdk_ios\/SnowBallEngine\/SnowBallEngine\/Push\/Push.swift",
+      "kind": "StringLiteral",
+      "offset": 3009,
+      "length": 22,
+      "value": "\"se_push_token_update\""
+    },
+    {
+      "filePath": "\/Users\/lxd\/Desktop\/projects\/snowball_sdk_ios\/SnowBallEngine\/SnowBallEngine\/Tracker\/Tracker.swift",
+      "kind": "StringLiteral",
+      "offset": 2496,
+      "length": 21,
+      "value": "\"se_install_referrer\""
+    },
+    {
+      "filePath": "\/Users\/lxd\/Desktop\/projects\/snowball_sdk_ios\/SnowBallEngine\/SnowBallEngine\/Tracker\/Tracker.swift",
+      "kind": "StringLiteral",
+      "offset": 2564,
+      "length": 28,
+      "value": "\"se_install_referrer_failed\""
+    },
+    {
+      "filePath": "\/Users\/lxd\/Desktop\/projects\/snowball_sdk_ios\/SnowBallEngine\/SnowBallEngine\/Tracker\/Tracker.swift",
+      "kind": "StringLiteral",
+      "offset": 2630,
+      "length": 19,
+      "value": "\"se_asa_user_track\""
+    },
+    {
+      "filePath": "\/Users\/lxd\/Desktop\/projects\/snowball_sdk_ios\/SnowBallEngine\/SnowBallEngine\/Tracker\/Tracker.swift",
+      "kind": "StringLiteral",
+      "offset": 2688,
+      "length": 18,
+      "value": "\"se_ad_impression\""
+    },
+    {
+      "filePath": "\/Users\/lxd\/Desktop\/projects\/snowball_sdk_ios\/SnowBallEngine\/SnowBallEngine\/Tracker\/Tracker.swift",
+      "kind": "StringLiteral",
+      "offset": 2742,
+      "length": 15,
+      "value": "\"ad_impression\""
+    },
+    {
+      "filePath": "\/Users\/lxd\/Desktop\/projects\/snowball_sdk_ios\/SnowBallEngine\/SnowBallEngine\/Tracker\/Tracker.swift",
+      "kind": "StringLiteral",
+      "offset": 2795,
+      "length": 23,
+      "value": "\"Total_Ads_Revenue_001\""
+    },
+    {
+      "filePath": "\/Users\/lxd\/Desktop\/projects\/snowball_sdk_ios\/SnowBallEngine\/SnowBallEngine\/Tracker\/Tracker.swift",
+      "kind": "StringLiteral",
+      "offset": 2866,
+      "length": 20,
+      "value": "\"se_in_app_purchase\""
+    },
+    {
+      "filePath": "\/Users\/lxd\/Desktop\/projects\/snowball_sdk_ios\/SnowBallEngine\/SnowBallEngine\/Tracker\/Tracker.swift",
+      "kind": "StringLiteral",
+      "offset": 2950,
+      "length": 8,
+      "value": "\"reason\""
+    },
+    {
+      "filePath": "\/Users\/lxd\/Desktop\/projects\/snowball_sdk_ios\/SnowBallEngine\/SnowBallEngine\/Tracker\/Tracker.swift",
+      "kind": "StringLiteral",
+      "offset": 3063,
+      "length": 18,
+      "value": "\"AttributionToken\""
+    },
+    {
+      "filePath": "\/Users\/lxd\/Desktop\/projects\/snowball_sdk_ios\/SnowBallEngine\/SnowBallEngine\/Tracker\/Tracker.swift",
+      "kind": "StringLiteral",
+      "offset": 3145,
+      "length": 28,
+      "value": "\"ShouldPostAttributionToken\""
+    },
+    {
+      "filePath": "\/Users\/lxd\/Desktop\/projects\/snowball_sdk_ios\/SnowBallEngine\/SnowBallEngine\/Tracker\/Tracker.swift",
+      "kind": "StringLiteral",
+      "offset": 3226,
+      "length": 17,
+      "value": "\"TotalAdsRevenue\""
+    },
+    {
+      "filePath": "\/Users\/lxd\/Desktop\/projects\/snowball_sdk_ios\/SnowBallEngine\/SnowBallEngine\/Tracker\/Tracker.swift",
+      "kind": "StringLiteral",
+      "offset": 3301,
+      "length": 3,
+      "value": "\"1\""
+    },
+    {
+      "filePath": "\/Users\/lxd\/Desktop\/projects\/snowball_sdk_ios\/SnowBallEngine\/SnowBallEngine\/Tracker\/Tracker.swift",
+      "kind": "IntegerLiteral",
+      "offset": 4232,
+      "length": 1,
+      "value": "0"
+    },
+    {
+      "filePath": "\/Users\/lxd\/Desktop\/projects\/snowball_sdk_ios\/SnowBallEngine\/SnowBallEngine\/Tracker\/Tracker.swift",
+      "kind": "IntegerLiteral",
+      "offset": 5967,
+      "length": 1,
+      "value": "0"
+    },
+    {
+      "filePath": "\/Users\/lxd\/Desktop\/projects\/snowball_sdk_ios\/SnowBallEngine\/SnowBallEngine\/Tracker\/Tracker.swift",
+      "kind": "IntegerLiteral",
+      "offset": 5994,
+      "length": 1,
+      "value": "3"
+    },
+    {
+      "filePath": "\/Users\/lxd\/Desktop\/projects\/snowball_sdk_ios\/SnowBallEngine\/SnowBallEngine\/Tracker\/Tracker.swift",
+      "kind": "BooleanLiteral",
+      "offset": 6049,
+      "length": 5,
+      "value": "false"
+    },
+    {
+      "filePath": "\/Users\/lxd\/Desktop\/projects\/snowball_sdk_ios\/SnowBallEngine\/SnowBallEngine\/Tracker\/Tracker.swift",
+      "kind": "IntegerLiteral",
+      "offset": 6195,
+      "length": 1,
+      "value": "0"
+    },
+    {
+      "filePath": "\/Users\/lxd\/Desktop\/projects\/snowball_sdk_ios\/SnowBallEngine\/SnowBallEngine\/Tracker\/Tracker.swift",
+      "kind": "BooleanLiteral",
+      "offset": 6250,
+      "length": 5,
+      "value": "false"
+    },
+    {
+      "filePath": "\/Users\/lxd\/Desktop\/projects\/snowball_sdk_ios\/SnowBallEngine\/SnowBallEngine\/Tracker\/Tracker.swift",
+      "kind": "StringLiteral",
+      "offset": 6873,
+      "length": 42,
+      "value": "\"https:\/\/api-adservices.apple.com\/api\/v1\/\""
+    },
+    {
+      "filePath": "\/Users\/lxd\/Desktop\/projects\/snowball_sdk_ios\/SnowBallEngine\/SnowBallEngine\/Tracker\/Tracker.swift",
+      "kind": "StringLiteral",
+      "offset": 6947,
+      "length": 13,
+      "value": "\"Invalid URL\""
+    },
+    {
+      "filePath": "\/Users\/lxd\/Desktop\/projects\/snowball_sdk_ios\/SnowBallEngine\/SnowBallEngine\/Tracker\/Tracker.swift",
+      "kind": "StringLiteral",
+      "offset": 7102,
+      "length": 6,
+      "value": "\"POST\""
+    },
+    {
+      "filePath": "\/Users\/lxd\/Desktop\/projects\/snowball_sdk_ios\/SnowBallEngine\/SnowBallEngine\/Tracker\/Tracker.swift",
+      "kind": "StringLiteral",
+      "offset": 7134,
+      "length": 12,
+      "value": "\"text\/plain\""
+    },
+    {
+      "filePath": "\/Users\/lxd\/Desktop\/projects\/snowball_sdk_ios\/SnowBallEngine\/SnowBallEngine\/Tracker\/Tracker.swift",
+      "kind": "StringLiteral",
+      "offset": 7168,
+      "length": 14,
+      "value": "\"Content-Type\""
+    },
+    {
+      "filePath": "\/Users\/lxd\/Desktop\/projects\/snowball_sdk_ios\/SnowBallEngine\/SnowBallEngine\/Tracker\/Tracker.swift",
+      "kind": "IntegerLiteral",
+      "offset": 7385,
+      "length": 1,
+      "value": "5"
+    },
+    {
+      "filePath": "\/Users\/lxd\/Desktop\/projects\/snowball_sdk_ios\/SnowBallEngine\/SnowBallEngine\/Tracker\/Tracker.swift",
+      "kind": "IntegerLiteral",
+      "offset": 7444,
+      "length": 1,
+      "value": "1"
+    },
+    {
+      "filePath": "\/Users\/lxd\/Desktop\/projects\/snowball_sdk_ios\/SnowBallEngine\/SnowBallEngine\/Tracker\/Tracker.swift",
+      "kind": "StringLiteral",
+      "offset": 7635,
+      "length": 17,
+      "value": "\"Error: \""
+    },
+    {
+      "filePath": "\/Users\/lxd\/Desktop\/projects\/snowball_sdk_ios\/SnowBallEngine\/SnowBallEngine\/Tracker\/Tracker.swift",
+      "kind": "StringLiteral",
+      "offset": 7651,
+      "length": 2,
+      "value": "\"\""
+    },
+    {
+      "filePath": "\/Users\/lxd\/Desktop\/projects\/snowball_sdk_ios\/SnowBallEngine\/SnowBallEngine\/Tracker\/Tracker.swift",
+      "kind": "StringLiteral",
+      "offset": 7804,
+      "length": 18,
+      "value": "\"No data received\""
+    },
+    {
+      "filePath": "\/Users\/lxd\/Desktop\/projects\/snowball_sdk_ios\/SnowBallEngine\/SnowBallEngine\/Tracker\/Tracker.swift",
+      "kind": "StringLiteral",
+      "offset": 8042,
+      "length": 30,
+      "value": "\"Response data: \""
+    },
+    {
+      "filePath": "\/Users\/lxd\/Desktop\/projects\/snowball_sdk_ios\/SnowBallEngine\/SnowBallEngine\/Tracker\/Tracker.swift",
+      "kind": "StringLiteral",
+      "offset": 8071,
+      "length": 2,
+      "value": "\"\""
+    },
+    {
+      "filePath": "\/Users\/lxd\/Desktop\/projects\/snowball_sdk_ios\/SnowBallEngine\/SnowBallEngine\/Tracker\/Tracker.swift",
+      "kind": "BooleanLiteral",
+      "offset": 8295,
+      "length": 5,
+      "value": "false"
+    },
+    {
+      "filePath": "\/Users\/lxd\/Desktop\/projects\/snowball_sdk_ios\/SnowBallEngine\/SnowBallEngine\/Tracker\/Tracker.swift",
+      "kind": "StringLiteral",
+      "offset": 8386,
+      "length": 13,
+      "value": "\"campaign_id\""
+    },
+    {
+      "filePath": "\/Users\/lxd\/Desktop\/projects\/snowball_sdk_ios\/SnowBallEngine\/SnowBallEngine\/Tracker\/Tracker.swift",
+      "kind": "StringLiteral",
+      "offset": 8429,
+      "length": 2,
+      "value": "\"\""
+    },
+    {
+      "filePath": "\/Users\/lxd\/Desktop\/projects\/snowball_sdk_ios\/SnowBallEngine\/SnowBallEngine\/Tracker\/Tracker.swift",
+      "kind": "StringLiteral",
+      "offset": 8471,
+      "length": 12,
+      "value": "\"adgroup_id\""
+    },
+    {
+      "filePath": "\/Users\/lxd\/Desktop\/projects\/snowball_sdk_ios\/SnowBallEngine\/SnowBallEngine\/Tracker\/Tracker.swift",
+      "kind": "StringLiteral",
+      "offset": 8512,
+      "length": 2,
+      "value": "\"\""
+    },
+    {
+      "filePath": "\/Users\/lxd\/Desktop\/projects\/snowball_sdk_ios\/SnowBallEngine\/SnowBallEngine\/Tracker\/Tracker.swift",
+      "kind": "StringLiteral",
+      "offset": 8554,
+      "length": 9,
+      "value": "\"country\""
+    },
+    {
+      "filePath": "\/Users\/lxd\/Desktop\/projects\/snowball_sdk_ios\/SnowBallEngine\/SnowBallEngine\/Tracker\/Tracker.swift",
+      "kind": "StringLiteral",
+      "offset": 8598,
+      "length": 2,
+      "value": "\"\""
+    },
+    {
+      "filePath": "\/Users\/lxd\/Desktop\/projects\/snowball_sdk_ios\/SnowBallEngine\/SnowBallEngine\/Tracker\/Tracker.swift",
+      "kind": "StringLiteral",
+      "offset": 8697,
+      "length": 12,
+      "value": "\"click_date\""
+    },
+    {
+      "filePath": "\/Users\/lxd\/Desktop\/projects\/snowball_sdk_ios\/SnowBallEngine\/SnowBallEngine\/Tracker\/Tracker.swift",
+      "kind": "BooleanLiteral",
+      "offset": 8901,
+      "length": 5,
+      "value": "false"
+    },
+    {
+      "filePath": "\/Users\/lxd\/Desktop\/projects\/snowball_sdk_ios\/SnowBallEngine\/SnowBallEngine\/Tracker\/Tracker.swift",
+      "kind": "StringLiteral",
+      "offset": 8997,
+      "length": 31,
+      "value": "\"Error decoding data: \""
+    },
+    {
+      "filePath": "\/Users\/lxd\/Desktop\/projects\/snowball_sdk_ios\/SnowBallEngine\/SnowBallEngine\/Tracker\/Tracker.swift",
+      "kind": "StringLiteral",
+      "offset": 9027,
+      "length": 2,
+      "value": "\"\""
+    },
+    {
+      "filePath": "\/Users\/lxd\/Desktop\/projects\/snowball_sdk_ios\/SnowBallEngine\/SnowBallEngine\/Tracker\/Tracker + Ads.swift",
+      "kind": "StringLiteral",
+      "offset": 3701,
+      "length": 10,
+      "value": "\"adcolony\""
+    },
+    {
+      "filePath": "\/Users\/lxd\/Desktop\/projects\/snowball_sdk_ios\/SnowBallEngine\/SnowBallEngine\/Tracker\/Tracker + Ads.swift",
+      "kind": "StringLiteral",
+      "offset": 3750,
+      "length": 10,
+      "value": "\"facebook\""
+    },
+    {
+      "filePath": "\/Users\/lxd\/Desktop\/projects\/snowball_sdk_ios\/SnowBallEngine\/SnowBallEngine\/Tracker\/Tracker + Ads.swift",
+      "kind": "StringLiteral",
+      "offset": 3797,
+      "length": 8,
+      "value": "\"tapjoy\""
+    },
+    {
+      "filePath": "\/Users\/lxd\/Desktop\/projects\/snowball_sdk_ios\/SnowBallEngine\/SnowBallEngine\/Tracker\/Tracker + Ads.swift",
+      "kind": "StringLiteral",
+      "offset": 3841,
+      "length": 14,
+      "value": "\"admob_native\""
+    },
+    {
+      "filePath": "\/Users\/lxd\/Desktop\/projects\/snowball_sdk_ios\/SnowBallEngine\/SnowBallEngine\/Tracker\/Tracker + Ads.swift",
+      "kind": "StringLiteral",
+      "offset": 3894,
+      "length": 14,
+      "value": "\"applovin_sdk\""
+    },
+    {
+      "filePath": "\/Users\/lxd\/Desktop\/projects\/snowball_sdk_ios\/SnowBallEngine\/SnowBallEngine\/Tracker\/Tracker + Ads.swift",
+      "kind": "StringLiteral",
+      "offset": 3945,
+      "length": 8,
+      "value": "\"pangle\""
+    },
+    {
+      "filePath": "\/Users\/lxd\/Desktop\/projects\/snowball_sdk_ios\/SnowBallEngine\/SnowBallEngine\/Tracker\/Tracker + Ads.swift",
+      "kind": "StringLiteral",
+      "offset": 3989,
+      "length": 7,
+      "value": "\"unity\""
+    },
+    {
+      "filePath": "\/Users\/lxd\/Desktop\/projects\/snowball_sdk_ios\/SnowBallEngine\/SnowBallEngine\/Tracker\/Tracker + Ads.swift",
+      "kind": "StringLiteral",
+      "offset": 4037,
+      "length": 12,
+      "value": "\"ironsource\""
+    },
+    {
+      "filePath": "\/Users\/lxd\/Desktop\/projects\/snowball_sdk_ios\/SnowBallEngine\/SnowBallEngine\/Tracker\/Tracker + Ads.swift",
+      "kind": "StringLiteral",
+      "offset": 4086,
+      "length": 8,
+      "value": "\"vungle\""
+    },
+    {
+      "filePath": "\/Users\/lxd\/Desktop\/projects\/snowball_sdk_ios\/SnowBallEngine\/SnowBallEngine\/Tracker\/Tracker + Ads.swift",
+      "kind": "StringLiteral",
+      "offset": 4131,
+      "length": 8,
+      "value": "\"inmobi\""
+    },
+    {
+      "filePath": "\/Users\/lxd\/Desktop\/projects\/snowball_sdk_ios\/SnowBallEngine\/SnowBallEngine\/Tracker\/Tracker + Ads.swift",
+      "kind": "StringLiteral",
+      "offset": 4176,
+      "length": 8,
+      "value": "\"smaato\""
+    },
+    {
+      "filePath": "\/Users\/lxd\/Desktop\/projects\/snowball_sdk_ios\/SnowBallEngine\/SnowBallEngine\/Tracker\/Tracker + Ads.swift",
+      "kind": "StringLiteral",
+      "offset": 4220,
+      "length": 7,
+      "value": "\"fyber\""
+    },
+    {
+      "filePath": "\/Users\/lxd\/Desktop\/projects\/snowball_sdk_ios\/SnowBallEngine\/SnowBallEngine\/Tracker\/Tracker + Ads.swift",
+      "kind": "StringLiteral",
+      "offset": 5541,
+      "length": 10,
+      "value": "\"app_open\""
+    },
+    {
+      "filePath": "\/Users\/lxd\/Desktop\/projects\/snowball_sdk_ios\/SnowBallEngine\/SnowBallEngine\/Tracker\/Tracker + Ads.swift",
+      "kind": "StringLiteral",
+      "offset": 5592,
+      "length": 12,
+      "value": "\"Fullscreen\""
+    },
+    {
+      "filePath": "\/Users\/lxd\/Desktop\/projects\/snowball_sdk_ios\/SnowBallEngine\/SnowBallEngine\/Tracker\/Tracker + Ads.swift",
+      "kind": "StringLiteral",
+      "offset": 5641,
+      "length": 8,
+      "value": "\"Native\""
+    },
+    {
+      "filePath": "\/Users\/lxd\/Desktop\/projects\/snowball_sdk_ios\/SnowBallEngine\/SnowBallEngine\/Tracker\/Tracker + Ads.swift",
+      "kind": "StringLiteral",
+      "offset": 5688,
+      "length": 16,
+      "value": "\"Rewarded Video\""
+    },
+    {
+      "filePath": "\/Users\/lxd\/Desktop\/projects\/snowball_sdk_ios\/SnowBallEngine\/SnowBallEngine\/Tracker\/Tracker + Ads.swift",
+      "kind": "StringLiteral",
+      "offset": 5750,
+      "length": 8,
+      "value": "\"Banner\""
+    },
+    {
+      "filePath": "\/Users\/lxd\/Desktop\/projects\/snowball_sdk_ios\/SnowBallEngine\/SnowBallEngine\/Tracker\/Tracker + Ads.swift",
+      "kind": "StringLiteral",
+      "offset": 5798,
+      "length": 18,
+      "value": "\"Medium Rectangle\""
+    },
+    {
+      "filePath": "\/Users\/lxd\/Desktop\/projects\/snowball_sdk_ios\/SnowBallEngine\/SnowBallEngine\/Tracker\/Tracker + Ads.swift",
+      "kind": "StringLiteral",
+      "offset": 5871,
+      "length": 17,
+      "value": "\"rewarded_inters\""
+    },
+    {
+      "filePath": "\/Users\/lxd\/Desktop\/projects\/snowball_sdk_ios\/SnowBallEngine\/SnowBallEngine\/SnowBall.swift",
+      "kind": "StringLiteral",
+      "offset": 338,
+      "length": 28,
+      "value": "\"SnowBallEngineUserDefaults\""
+    }
+  ]
+}
