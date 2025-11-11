@@ -61,7 +61,8 @@ xcodebuild archive \
     -archivePath "${ARCHIVES_DIR}/ios.xcarchive" \
     -sdk iphoneos \
     SKIP_INSTALL=NO \
-    BUILD_LIBRARY_FOR_DISTRIBUTION=YES
+    BUILD_LIBRARY_FOR_DISTRIBUTION=YES \
+    MACH_O_TYPE=staticlib
 
 # iOS 模拟器架构
 echo "🖥️ 构建 iOS 模拟器版本..."
@@ -72,7 +73,8 @@ xcodebuild archive \
     -archivePath "${ARCHIVES_DIR}/ios-simulator.xcarchive" \
     -sdk iphonesimulator \
     SKIP_INSTALL=NO \
-    BUILD_LIBRARY_FOR_DISTRIBUTION=YES
+    BUILD_LIBRARY_FOR_DISTRIBUTION=YES \
+    MACH_O_TYPE=staticlib
 
 # 验证 archive 是否成功创建
 echo "🔍 验证 archive..."
